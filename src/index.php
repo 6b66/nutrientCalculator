@@ -13,6 +13,7 @@ if (isset($_POST['name'])) {
 <body>
 <form method="POST" action="http://localhost:80">
   <input type="text" name="name"/>
+  <input type="submit" value="確定">
 </form>
 </body>
 </html>
