@@ -20,3 +20,10 @@ Client : javascript / html / css
 
 - VScode
 - docker
+
+コンテナの立ち上げコマンド
+カレントディレクトリが /nutrientCalculator で以下のコマンドを実行
+
+> docker-compose -f docker-compose.yml up -d
+
+※ 再起動する際はコンテナをRemove
