@@ -4,8 +4,8 @@ CREATE DATABASE NutrientDB;
 
 CREATE TABLE NutrientDB.NutrientTable (
     Id          INT NOT NULL PRIMARY KEY,
-    Name        BLOB NOT NULL,
-    KanaName    BLOB NOT NULL,
+    Name        TEXT NOT NULL,
+    KanaName    TEXT NOT NULL,
     Kcalorie    FLOAT DEFAULT 0 NOT NULL,
     Protein     FLOAT DEFAULT 0 NOT NULL,
     Fat         FLOAT DEFAULT 0 NOT NULL,
