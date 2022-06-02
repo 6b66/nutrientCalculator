@@ -9,6 +9,7 @@ CREATE TABLE NutrientDB.NutrientTable (
     Kcalorie    FLOAT DEFAULT 0 NOT NULL,
     Protein     FLOAT DEFAULT 0 NOT NULL,
     Fat         FLOAT DEFAULT 0 NOT NULL,
+    Fiber       FLOAT DEFAULT 0 NOT NULL,
     Calcium     FLOAT DEFAULT 0 NOT NULL,
     NaCL        FLOAT DEFAULT 0 NOT NULL
 );
