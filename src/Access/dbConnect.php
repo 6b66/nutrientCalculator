@@ -1,9 +1,6 @@
 <?php
-$mysqli = new mysqli('db', 'root', 'testpass', 'mysql');
-if($mysqli->connect_error) {
-    echo '接続失敗'.PHP_EOL;
-    exit();
-} else {
-    echo '接続成功'.PHP_EOL;
-}
+$pdo = new pdo('mysql:host=localhost;dbname=NutrientTable', 'root', 'testpass');
+
+$pdo->query('SELECT * from NutrientTable WHERE Id = 1');
+
 ?>
