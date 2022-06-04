@@ -1,7 +1,7 @@
 from multiprocessing.dummy import Array
 import pykakasi
 import re
-import csv
+import os
 
 kks = pykakasi.kakasi()
 
@@ -12,8 +12,8 @@ TEMPLATE = (
     "    KanaName,\n"
     "    Kcalorie,\n"
     "    Protein,\n"
-    "    Fiber,\n"
     "    Fat,\n"
+    "    Fiber,\n"
     "    Calcium,\n"
     "    NaCL\n"
     ") VALUES (\n"
@@ -22,8 +22,8 @@ TEMPLATE = (
     "    {KanaName},\n"
     "    {Kcalorie},\n"
     "    {Protein},\n"
-    "    {Fiber},\n"
     "    {Fat},\n"
+    "    {Fiber},\n"
     "    {Calcium},\n"
     "    {NaCl}\n"
     ");\n"
@@ -34,8 +34,8 @@ NAME = 1
 KANANAME = 2
 KCALORIE = 3
 PROTEIN = 4
-FIBER = 5
-FAT = 6
+FAT = 5
+FIBER = 6
 CALCIUM = 7
 NACL = 8
 
@@ -43,11 +43,14 @@ DATACOUNT = 9
 
 def main():
     # データファイルの読み込み
-    dataFile = open("./originalData.csv", "r", encoding="utf-8_sig")
+    dataFile = open("D:\\webpage\\nutrientCalculator\\tools\\originalData.csv", "r", encoding="utf-8_sig")
+    
     dataList = dataFile.readlines()
     dataFile.close();
 
     # 出力ファイル
+    if( not os.path.isfile("./InsertSQL.txt")):
+        os.remove("./InsertSQL.txt")
     resultFile = open("./InsertSQL.txt", "w", encoding="utf-8_sig")
 
     for dataListItemStr in dataList:
@@ -110,10 +113,11 @@ def CreateInsertByTEMPLATE(data):
         KanaName = data[KANANAME],
         Kcalorie = format(float(data[KCALORIE]), '.1f'),
         Protein = format(float(data[PROTEIN]), '.1f'),
-        Fiber = format(float(data[FIBER]), '.1f'),
         Fat = format(float(data[FAT]), '.1f'),
+        Fiber = format(float(data[FIBER]), '.1f'),
         Calcium = format(float(data[CALCIUM]), '.1f'),
         NaCl = format(float(data[NACL]), '.1f')
     )
 
 main()
+
