@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>栄養成分計算</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <input type="text" id="fullName" placeholder="食品名で探す">
+      <input type="text" id="hiraName" placeholder="ひらがなで探す">
+    </div>
+  </header>
+  <main>
+    <ul>
+      <li class="card">
+        <div class="iteminf">
+          <div class="cIndex">
+            <p>1</p>
+          </div>
+          <div class="cName">
+            <p>たまごとまとじゅーす煮込み斜め前に...</p>
+          </div>
+        </div>      
+      </li>
+      <li class="card">
+        <div class="iteminf">
+          <div class="cIndex">
+            <p>1</p>
+          </div>
+          <div class="cName">
+            <p>たまごとまとじゅーす煮込み斜め前に...</p>
+          </div>
+        </div>     
+      </li>
+      <li class="card">
+        <div class="iteminf">
+          <div class="cIndex">
+            <p>1</p>
+          </div>
+          <div class="cName">
+            <p>たまごとまとじゅーす煮込み斜め前に...</p>
+          </div>
+        </div>     
+      </li>
+      <li class="card">
+        <div class="iteminf">
+          <div class="cIndex">
+            <p>1</p>
+          </div>
+          <div class="cName">
+            <p>たまごとまとじゅーす煮込み斜め前に...</p>
+          </div>
+        </div>     
+      </li>
+      <li class="card">
+        <div class="iteminf">
+          <div class="cIndex">
+            <p>1</p>
+          </div>
+          <div class="cName">
+            <p>たまごとまとじゅーす煮込み斜め前に...</p>
+          </div>
+        </div>    
+      </li>
+    </ul>  
+  </main>
+  <div class="menusection dispNone">
+    <section id="listPage" class="dispNone">
+      <div></div>
+    </section>
+    <section id="addPage" class="dispNone">
+      <div></div>
+    </section>
+    <section id="compositionPage" class="dispNone">
+      <div></div>
+    </section>
+    <section id="changePage" class="dispNone">
+      <div></div>
+    </section>
+    <section id="resultPage" class="dispBlock">
+      <div></div>
+    </section>
+  </div>
+  <div class="graybg dispNone"></div>
+  <div id="menu">
+    <div id="menuIcon">
+      <p>MENU</p>
+    </div>
+    <nav id="menuNav" class="dispNone">
+      <ul>
+        <li id="search">
+          <p>検索<br>に戻る</p>
+        </li>
+        <li id="list" value="listPage">
+          <p>選んだ<br>一覧</p>
+        </li>
+        <li id="add" value="addPage">
+          <p>追加<br>する</p>
+        </li><li id="clea">
+          <p>すべて<br>クリア</p>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div id="footTop">
+    <div id="composition" value="compositionPage">
+      <p>今選択している食品の<br>成分表を見る</p>
+    </div>
+    <div id="result" value="resultPage">
+      <p>選んだ食品で計算する</p>
+    </div>
+  </div>
+  <footer></footer>
+  <script src="./js/script.js"></script>
+</body>
+</html>
