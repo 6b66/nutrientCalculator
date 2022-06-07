@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>DEMO</title>
+    </head>
+    <body>
+        <div id="wrapper"></div>
+    </body>
+    <script>
+        /* データオブジェクトの型
+        type NutrientData = {
+            Id: int,
+            Name: string,
+            Kcalorie: float,
+            Protein: float,
+            Fat: float,
+            Fiber: float,
+            Calcium: float,
+            NaCL: float
+        }
+        */
+
+        // カードを管理するクラス
+        var CardManager = class {
+            constructor(dataList) {
+                this.cards = dataList.map(x => new Card(x));
+            }
+            CreateHtml() {
+                let html = "<div id=\"CardManagerRoot\">\n";
+                this.cards.map(x => html += x.CreateHtml());
+                html += "</div>";
+                return html;
+            }
+            GetCardData(index) {
+                return this.cards[index].GetCardData();
+            }
+        }
+
+        // 1つのカードを表すクラス
+        var Card = class {
+            constructor(data) {
+                this.data = data;
+            }
+            CreateHtml() {
+                let html = "<div id=\"cardIdOf"+this.data.Id+"\" width=\"300px\" height=\"200px\">"+ this.data.Name +"</div>\n";
+                return html;
+            }
+            GetCardData() {
+                return this.data;
+            }
+        }
+
+        // メイン処理
+        // 本来は取得するが仮作成のためここで作成する
+        let dataList = [
+            {
+                Id: 1,
+                Name: "りんご"
+            },
+            {
+                Id: 2,
+                Name: "ごま"
+            },
+            {
+                Id: 3,
+                Name: "まめ"
+            },
+            {
+                Id: 4,
+                Name: "めかぶ"
+            },
+            {
+                Id: 5,
+                Name: "ぶり"
+            },
+        ]
+        let cardManager = new CardManager(dataList);
+        // document.getElementById("wrapper").innerHTML = cardManager.CreateHtml();
+        document.getElementById("wrapper").innerHTML = cardManager.GetCardData(0);
+
+
+    </script>
+</html>
