@@ -120,6 +120,8 @@ var CardManager = class {
         this.cards = dataList.map(x => new Card(x));
     }
     CreateHtml() {
+        console.log(this.cards)
+        console.log(this.cards[0])
         let html = "<div id=\"CardManagerRoot\">\n";
         this.cards.map(x => html += x.CreateHtml());
         html += "</div>";
