@@ -36,6 +36,9 @@ main {
     width: 100;
     height: auto;
 }
+.min-height{
+    min-height: 100vh;
+}
 /*検索アイテムカード*/
 .itemcard{
     height: 95px;
@@ -48,7 +51,7 @@ main {
 .itemcard div label input::placeholder {
     text-align: right;
 }
-
+/*カードインフォ*/
 @media screen and (min-width:768px) {
     .mediaitem1 {
         height: 150px;
@@ -58,5 +61,8 @@ main {
     }
     .mediatext2{
         font-size: 15px;
+    }
+    .mediatransition {
+        transition: 0.2s;
     }
 }

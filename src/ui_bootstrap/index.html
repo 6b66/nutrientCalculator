@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="./css/style.css">
       <title>Document</title>
   </head>
-  <body style="width: 100%;" class="d-flex align-items-center justify-content-center">
+  <body style="width: 100%;" class="d-flex flex-column align-items-center justify-content-center">
     <!--ヘッダー　ナビ-->
     <div class="bg-dark container-fluid d-flex align-items-center justify-content-center fixed-top" 
     style="
@@ -43,13 +43,12 @@
       </div>
     </div>
     <!--メニュー選択-->
-    <div class="d-flex align-items-center justify-content-center transition menutoggle" id="menuPage"
+    <div class="mediatransition d-flex align-items-center justify-content-center menutoggle" id="menuPage"
       style="
         background-color: none;
         position: fixed;
         top: 80px;
         width: auto;
-        transition: 0.2s;
         z-index: 3;
       "
     >
@@ -67,7 +66,7 @@
       </div>
     </div>
     <!--メインコンテンツ-->
-    <main class="container-fluid">
+    <main class="container-fluid min-height d-flex flex-column justify-content-between">
       <!--検索-->
       <div id="searchPage" class="page row d-flex flex-row align-items-center justify-content-center"
         style="
@@ -177,11 +176,10 @@
         </div>
         <div style="height: 40px;"></div>
         <div>
-
         </div>
       </div>
       <!--計算結果-->
-      <div id="resultPage" class="page row d-flex flex-row align-items-center justify-content-center visually-hidden"
+      <div id="resultPage" class=" page row d-flex flex-row align-items-center justify-content-center visually-hidden"
         style="
           margin-top: 80px;
           padding-bottom: 110px;
@@ -441,7 +439,7 @@
         </div>
       </div>
       <!--成分表-->
-      <div id="nutritionTablePage" class="page row d-flex flex-row align-items-center justify-content-center visually-hidden"
+      <div id="nutritionTablePage" class=" page row d-flex flex-row align-items-center justify-content-center visually-hidden"
         style="
           margin-top: 80px;
           padding-bottom: 110px;
@@ -605,7 +603,7 @@
         </div>
       </div>
       <!--選択一覧-->
-      <div id="selectListPage" class="page row d-flex flex-row align-items-center justify-content-center visually-hidden"
+      <div id="selectListPage" class=" page row d-flex flex-row align-items-center justify-content-center visually-hidden"
         style="
           margin-top: 80px;
         "
@@ -695,6 +693,16 @@
           </div>
         </div>
       </div>
+      <!--フッター-->
+      <footer class="bg-dark"
+      style="
+        width: 100vw;
+        left: 0%;
+        height: 60px;
+        z-index: 1;
+      "
+    >
+    </footer>
     </main>
     <!--リザルトボタン-->
     <div id="resultBox" class="container col-6 d-flex justify-content-center visually-hidden" 
@@ -721,15 +729,66 @@
       </div>
     </div>    
     <div class="" id="bggray"></div>
+    <!--カードインフォ-->
+    <div class="card d-flex position-absolute border-dark border-2 visually-hidden" style="top: 20%; width: 18rem;">
+      <div class="card-body">
+        <h4 class="card-title border-bottom border-info border-2" >Some quick example text to build on the carddasdasdadasdasda title and make up the bulk of the card's content.</h4>
+        <div class="">
+          <table class="table">
+            <thead>
+              <tr class="p-0">
+                <th scope="col" class="p-0 text-center">成分名</th>
+                <th scope="col" class="p-0 text-center">カロリー</th>
+                <th scope="col" class="p-0 text-center">タンパク質</th>                  
+                <th scope="col" class="p-0 text-center">脂肪</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-info">
+                <th scope="row" class="p-0 text-center">100g</th>
+                <td class="p-0 text-center cardInfo" data-name="kal">kcal</td>
+                <td class="p-0 text-center cardInfo" data-name="protainc">g</td>
+                <td class="p-0 text-center cardInfo" data-name="fat">g</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+          <div class="">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" class="p-0"></th>
+                <th scope="col" class="p-0 text-center">食物繊維</th>
+                <th scope="col" class="p-0 text-center">カルシウム</th>                  
+                <th scope="col" class="p-0 text-center">食塩相当量</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-info">
+                <th scope="row" class="p-0"></th>
+                <td class="p-0 text-center cardInfo" data-name="fiber">g</td>
+                <td class="p-0 text-center cardInfo" data-name="k">g</td>
+                <td class="p-0 text-center cardInfo" data-name="nacl">g</td>
+              </tr>
+            </tbody>
+          </table>              
+        </div>
+      </div>
+    </div>
     <!--フッター-->
-    <footer class="fixed-bottom bg-dark"
+    <!--
+    <footer class="container-fluid bg-dark"
       style="
+        bottom: -60px;
         height: 60px;
         z-index: 1;
       "
     >
-
     </footer>
+    -->
+    <div style="width: 200px; height: 200px; background-color: red" class="position-relative">
+      <input id="test" type="text" style="width: 20px; height: 20px; right: 0%; transition: 0.3s;" placeholder="p" class="position-absolute">
+    </div>
     <script src="./js/script.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
