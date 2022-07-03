@@ -19,7 +19,7 @@
   };
 
   document.getElementById("getBtn").onclick = () => {
-    xhr.open('POST', '/Access/dbAccess.php?command=GetAllData', true);
+    xhr.open('POST', '/Access/dbAccess.php?command=GetDataSearch&keyword=り', true);
     xhr.setRequestHeader('content-type', 'application/json');
     xhr.send();
   }

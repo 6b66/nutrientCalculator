@@ -9,11 +9,11 @@ if ($_GET["command"]) {
     $res = [];
     if ($_GET["command"] == "GetAllData") {
 
-        $res = $db->GetAllData($_POST["keyword"]);
+        $res = $db->GetAllData();
 
     } else if ($_GET["command"] == "GetDataSearch") {
-        if (isset($_POST["keyword"])) {
-            $res = $db->GetDataSearchByName($_POST["keyword"]);
+        if (isset($_GET["keyword"])) {
+            $res = $db->GetDataSearchByName($_GET["keyword"]);
         }
     }
 
