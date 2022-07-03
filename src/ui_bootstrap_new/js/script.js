@@ -10,13 +10,12 @@ const selectsNum = document.querySelector("#selectNum")
 const openCardbox = document.querySelector("#openCardbox")
 const opencard = document.querySelector("#opencard")
 const bgclose = document.querySelector("#bgclose")
+const allDelete = document.querySelector("#allDelete")
 
 let selectCard = []
 let selectNum = []
 let selectItemNum = ""
 let selectData = []
-let checkon = ""
-let checkimg = ""
 
 /*　　仮データ */
 let n = 0
@@ -48,21 +47,24 @@ dataList.forEach(x => {
     x.inval = 1;
 })
 
-console.log(dataList[1])
+//console.log(dataList[1])
 const footer = 
         `<footer class="col-12 bg-dark position-absolute mt-5" style="height: 50px;">`+
         `</footer>`;
 
 /*メニューページ開閉*/
 menuBtn.forEach(x => {
-    
     x.addEventListener("click", () => {
+        menuBtn.forEach(x => {
+            x.classList.remove("bg-green")
+        })
+        x.classList.add("bg-green")
         Page.forEach(y => {
             if(y.id == x.dataset.id) {
                 Page.forEach(z => {
                     z.style.visibility = "hidden";
                 })
-                console.log(y.id)
+                //console.log(y.id)
                 if(y.id == "searchPage") {
                     searchCardMaker(dataList)
                 }else if(y.id == "selectPage") {
@@ -76,6 +78,13 @@ menuBtn.forEach(x => {
     })
     
 })
+/*全部削除*/
+allDelete.addEventListener("click", () => {
+    selectData.splice(0)
+    let i = document.querySelectorAll("")
+    
+})
+
 /*トップ検索バーオープン*/
 search.addEventListener("focusin", () => {
     search.style.width = "500%"
@@ -93,11 +102,15 @@ function fn() {
 
 //名前の長さ変更
 function nameLength(name) {
-    let maxLen = 27
-    if(window.innerWidth >= 532 && window.innerWidth <= 690){
-        maxLen = 47
+    let maxLen = 23
+    if(window.innerWidth >= 400 && window.innerWidth <= 532){
+        maxLen = 27
+    }else if(window.innerWidth >= 532 && window.innerWidth <= 690){
+        maxLen = 40
     }else if(window.innerWidth >= 690 && window.innerWidth <= 765) {
         maxLen = 50
+    }else if(window.innerWidth >= 765 && window.innerWidth <= 1350){
+        maxLen = 29
     }else if(window.innerWidth >= 1350){
         maxLen = 57
     }
@@ -163,7 +176,7 @@ function searchCardMaker(list) {
                             `</div>`+
                             `<div class="col-2 d-flex align-items-center justify-content-center">`+
                                 `<div class="s_c_check_on" data-id="${x.Id}">`+
-                                    `<img src="./img/plus (1).svg" alt="" style="margin-top: 3px; margin-left: 3px;" class="checkimg">`+
+                                    `<img src="./img/plus (1).svg" alt="" style="margin-top: 3px; margin-left: 3px;">`+
                                     `<img src="./img/trash.svg" alt="" style="margin-top: 7px; margin-left: 7px;" class="visually-hidden outimg"></img>`+
                                 `</div>`+
                             `</div>`+
@@ -211,7 +224,7 @@ function selectCardMaker(list) {
                         `</div>`+
                         `<div class="col-2 d-flex align-items-center justify-content-center">`+
                             `<div class="s_c_check_on" data-id="${x.Id}">`+
-                                `<img src="./img/plus (1).svg" alt="" style="margin-top: 3px; margin-left: 3px;" class="checkimg visually-hidden">`+
+                                `<img src="./img/plus (1).svg" alt="" style="margin-top: 3px; margin-left: 3px;" class="visually-hidden">`+
                                 `<img src="./img/trash.svg" alt="" style="margin-top: 7px; margin-left: 7px;" class=""></img>`+
                             `</div>`+
                         `</div>`+
@@ -275,7 +288,7 @@ function tableCardMaker(list) {
                                     <th scope="col" class="tablename">ビタミンA</th>
                                     <th scope="col" class="tablename">ビタミンB1</th>
                                     <th scope="col" class="tablename">ビタミンB2</th>
-                                    <th scope="col" class="tablename">ビタミンc</th>
+                                    <th scope="col" class="tablename">ビタミンC</th>
                                     <th scope="col" class="tablename">食塩相当量</th>
                                     <th scope="col" class="tablename">葉酸</th>
                                 </tr>
@@ -342,7 +355,7 @@ function clacResult(value, inval) {
 /*検索で追加した配列操作*/
 function selected(div) {
     //console.log(div.value)
-    console.log(dataList[div.dataset.id])
+    //console.log(dataList[div.dataset.id])
     if(!selectData.includes(dataList[div.dataset.id])){
         //console.log("a")
         selectData.push(dataList[div.dataset.id])
@@ -417,13 +430,13 @@ function tableCalcfn(listname) {
 function cardInfo(div,listname) {
     div.forEach(y => {
         y.addEventListener("click", () => {
-            openCardbox.classList.toggle("dispnone")
+            openCardbox.classList.remove("dispnone")
             //console.log(listname[y.dataset.id])
             let x = listname[y.dataset.id]
             //console.log(x.Name)
             let card =
-                `<div id="card" class="col-12 m-auto">
-                <div class="col-12 col-md-6 d-flex justify-content-center">
+                `<div id="card" class="col-12 m-auto d-flex align-items-center justify-content-center">
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
                     <div class="col-10 c tablecard d-flex flex-column mx-1 d-flex align-items-center justify-content-center">
                         <div class="row d-flex flex-row col-12 m-0 align-items-center justify-content-center" style="height: 50px;">
                             <div class="col-1 h-75 d-flex align-items-center justify-content-center p-0"
@@ -458,7 +471,7 @@ function cardInfo(div,listname) {
                                         <th scope="col" class="tablename">ビタミンA</th>
                                         <th scope="col" class="tablename">ビタミンB1</th>
                                         <th scope="col" class="tablename">ビタミンB2</th>
-                                        <th scope="col" class="tablename">ビタミンc</th>
+                                        <th scope="col" class="tablename">ビタミンC</th>
                                         <th scope="col" class="tablename">食塩相当量</th>
                                         <th scope="col" class="tablename">葉酸</th>
                                     </tr>
@@ -508,8 +521,8 @@ function cardInfo(div,listname) {
         })        
     })
     bgclose.addEventListener("click", () => {
-
-        openCardbox.classList.toggle("dispnone")
+        //console.log("on")
+        openCardbox.classList.add("dispnone")
     })
 
 }
