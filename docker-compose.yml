@@ -16,7 +16,8 @@ services:
       context: ./docker/mysql
       dockerfile: Dockerfile
     volumes:
-      - ./docker/mysql:/docker-entrypoint-initdb.d
+      - ./docker/mysql/DBSetUp.sql:/docker-entrypoint-initdb.d/DBSetUp.sql
+      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/mysql.cnf
     ports:
       - "3306:3306"
     environment:
