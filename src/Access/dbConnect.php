@@ -6,20 +6,35 @@ if($mysqli->connect_error) {
 } else {
     echo '接続成功'.PHP_EOL;
 } */
+class dbConnecter {
+    private static $pdo = null;
+    private static $isConnected = false;
 
-$pdo = new pdo("mysql:host=db;dbname=NutrientDB;charset=utf8;", "root", "testpass");
-
-$stmt = $pdo->query("SELECT * FROM NutrientTable");
-
-$result = $stmt->fetch(PDO::FETCH_NUM);
-
-$dataCount = $stmt->rowCount();
-for ($i = 0;$i < $dataCount;$i++) {
-    foreach ($result as $data) {
-        echo $data." ";
+    public function Connect() {
+        if (self::$isConnected) return;
+        self::$pdo = new pdo("mysql:host=db;dbname=NutrientDB;charset=utf8;", "root", "testpass");
+        self::$isConnected = true;
     }
-    echo "<br>";
-    $result = $stmt->fetch(PDO::FETCH_NUM);
-}
 
+    public function GetAllData() {
+        if (!self::$isConnected) return;
+
+        $resultData = "";
+
+        $stmt = self::$pdo->query("SELECT * FROM NutrientTable");
+
+        $result = $stmt->fetch(PDO::FETCH_NUM);
+
+        $dataCount = $stmt->rowCount();
+        for ($i = 0;$i < $dataCount;$i++) {
+            foreach ($result as $data) {
+                $resultData .= $data.", ";
+            }
+            $resultData .= "<br>";
+            $result = $stmt->fetch(PDO::FETCH_NUM);
+        }
+
+        return $resultData;
+    }
+}
 ?>

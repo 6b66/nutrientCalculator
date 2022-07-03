@@ -1,7 +1,11 @@
 <?php
-if (isset($_POST['name'])) {
-  echo 'ようこそ!  '.$_POST['name'].'さん';
-}
+require_once("./Access/dbConnect.php");
+
+$db = new dbConnecter();
+$db->Connect();
+$res = $db->GetAllData();
+echo $res;
+
 ?>
 
 <!DOCTYPE html>

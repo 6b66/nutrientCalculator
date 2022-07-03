@@ -1,8 +1,9 @@
 ALTER USER 'root'@'%' IDENTIFIED WITH  mysql_native_password BY 'testpass';
 
-SET SESSION character_set_database = utf8;
-SET SESSION character_set_results = utf8;
-SET SESSION character_set_client = utf8;
+SET SESSION character_set_database = utf8mb4;
+SET SESSION character_set_results = utf8mb4;
+SET SESSION character_set_client = utf8mb4;
+SET SESSION character_set_server = utf8mb4;
 
 CREATE DATABASE NutrientDB;
 
