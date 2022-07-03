@@ -1,13 +1,3 @@
-<?php
-require_once("./Access/dbConnect.php");
-
-$db = new dbConnecter();
-$db->Connect();
-$res = $db->GetAllData();
-echo $res;
-
-?>
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -15,9 +5,23 @@ echo $res;
   <title></title>
 </head>
 <body>
-<form method="POST" action="http://localhost:80">
-  <input type="text" name="name"/>
-  <input type="submit" value="確定">
-</form>
+  <input id="getBtn" type="button" value="取得">
 </body>
+<script>
+  const xhr = new XMLHttpRequest();
+
+  xhr.onload = function (e) {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        document.body.innerHTML += xhr.responseText;
+      }
+    }
+  };
+
+  document.getElementById("getBtn").onclick = () => {
+    xhr.open('POST', '/Access/dbAccess.php?command=GetAllData', true);
+    xhr.setRequestHeader('content-type', 'application/json');
+    xhr.send();
+  }
+</script>
 </html>

@@ -19,19 +19,32 @@ class dbConnecter {
     public function GetAllData() {
         if (!self::$isConnected) return;
 
-        $resultData = "";
+        $resultData = [];
 
         $stmt = self::$pdo->query("SELECT * FROM NutrientTable");
 
-        $result = $stmt->fetch(PDO::FETCH_NUM);
+        array_push($resultData, $stmt->fetch(PDO::FETCH_OBJ));
 
         $dataCount = $stmt->rowCount();
         for ($i = 0;$i < $dataCount;$i++) {
-            foreach ($result as $data) {
-                $resultData .= $data.", ";
-            }
-            $resultData .= "<br>";
-            $result = $stmt->fetch(PDO::FETCH_NUM);
+            array_push($resultData, $stmt->fetch(PDO::FETCH_OBJ));
+        }
+
+        return $resultData;
+    }
+
+    public function GetDataSearchByName($keyword) {
+        if (!self::$isConnected) return;
+
+        $resultData = [];
+
+        $stmt = self::$pdo->query("SELECT * FROM NutrientTable WHERE Name LIKE '%".$keyword."%' OR KanaName LIKE '%".$keyword."%'");
+
+        array_push($resultData, $stmt->fetch(PDO::FETCH_OBJ));
+
+        $dataCount = $stmt->rowCount();
+        for ($i = 0;$i < $dataCount;$i++) {
+            array_push($resultData, $stmt->fetch(PDO::FETCH_OBJ));
         }
 
         return $resultData;
