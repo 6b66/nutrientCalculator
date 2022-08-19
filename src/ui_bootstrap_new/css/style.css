@@ -49,6 +49,10 @@ ul > li:hover > i >  .name {
 /*ページ*/
 .Page {
     visibility: hidden;
+
+}
+.holder {
+    margin-top: 150px;
 }
 /*検索カード*/
 .searchcard {
@@ -61,12 +65,13 @@ ul > li:hover > i >  .name {
     border: none;
     background-color: black;
 }
-.s_c_check_on {
+.searchCheck {
     width: 38px;
     height: 38px;
     background-color: white;
     border-radius: 50px;
 }
+
 /*成分表*/
 .tablecard {
     background-color: #CDE9E3;
@@ -106,6 +111,31 @@ ul > li:hover > i >  .name {
     justify-content: center;
     z-index: 100000;
     
+}
+#openDelCheck {
+    background-color: rgba(128, 128, 128, 0.418);
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    position: relative;
+    position: fixed;
+    top: 0;
+    padding-top: 100px;
+}
+#opendel {
+    position: fixed;
+    top: 250px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    z-index: 100000;
+    height: 100%;
+    width: 100%;
+    
+}
+#delCheck {
+    height: 150px;
+    background-color: white;
 }
 .dispnone {
     display: none;
