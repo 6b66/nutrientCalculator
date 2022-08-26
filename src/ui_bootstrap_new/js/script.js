@@ -9,9 +9,6 @@ search.addEventListener("focusout", () => {
     search.style.height = "0px"
     search.style.opacity = "0"
 });
-function fn() {
-    search.focus()
-}
 
 //メニューボタンとページ遷移
 let menuBtn = document.querySelectorAll(".menuBtn")
@@ -87,12 +84,14 @@ let cards =  card.selectCard()
 console.log(cards)
 */
 
+//カード作成
 let searchCardHolder = document.querySelector("#searchCardHolder")
 let selectCardHolder = document.querySelector("#selectCardHolder")
 let tableCardHolder = document.querySelector("#tableCardHolder")
 let searchIdLsit = []
 let selectIdList = []
 let selectDataList = []
+/*
 const CardManager = class {
     constructor(list,type){
         this.list = list
@@ -100,6 +99,7 @@ const CardManager = class {
         this.selectnum = 0
         this.Items = list.map(x => new Card(x))
     }
+
     InSelectList(x) {
         selectIdList.push(String(x.dataset.id))
         selectDataList.push(dataList[x.dataset.num-1])
@@ -125,7 +125,7 @@ const CardManager = class {
         //選択されいないアイテムだったら
         if(!selectIdList.includes(x.dataset.id)){
             this.InSelectList(x)
-            console.log("search")
+            //console.log("search")
             //選択ページに要素の複製
             this.MoveSelectItem(cards[x.dataset.num-1])
             //console.log(selectDataList)
@@ -148,6 +148,7 @@ const CardManager = class {
         })
     }
 }
+*/
 
 //名前の長さ変更
 function nameLength(name) {
@@ -170,7 +171,30 @@ function nameLength(name) {
     return nameAfter
 }
 
-//選択ページ
+/*選択したアイテム数のポップ表示*/
+let selectItemNum = 0
+let selectsNum = document.querySelector("#selectNum")
+console.log(selectsNum)
+let selectNumBox = document.querySelector("#selectNumBox")
+function searchAddNumFn(x) {
+    console.log(dataList[x.dataset.id])
+    console.log(selectDataList)
+    if(selectDataList.includes(dataList[x.dataset.id])) {
+        selectItemNum++
+    }else {
+        selectItemNum--
+    }
+    //console.log(selectDataList)
+    if(selectItemNum <= 0){
+        selectNumBox.classList.add("visually-hidden")
+    }else {
+        selectNumBox.classList.remove("visually-hidden")
+
+    }
+    selectsNum.textContent = selectItemNum
+}
+
+//選択ページのカード作成
 function selectCardCreate(x,num) {
     let card =
         `<div class="col-12 col-md-6 cards" data-id="${x.Id}" data-num="${num}">`+
@@ -199,7 +223,7 @@ function selectCardCreate(x,num) {
     return card
 }
 
-//成分表ページ
+//成分表ページのカード作成
 function tableCardCreate(x) {
     let html = document.createElement("div")
     html.classList.add("col-12","col-md-6", "tables")
@@ -298,11 +322,12 @@ function CardMaker(List) {
     return html;
 }
 
-
+//選んだアイテムをIDリストに追加
 function InSelectList(x) {
     selectIdList.push(String(x.dataset.id))
     selectDataList.push(dataList[x.dataset.id])
 }
+//選んだアイテムをIDリストから削除
 function  outSelectList(x) {
     let delId = selectIdList.indexOf(x.dataset.id)
     if(delId != -1){
@@ -311,12 +336,15 @@ function  outSelectList(x) {
     }
      
 }
+//追加ボタンと削除ボタンの入れ替え
 function CangeImg(x) {
     x.firstElementChild.classList.toggle("visually-hidden")
     x.lastElementChild.classList.toggle("visually-hidden")
+    searchAddNumFn(x)
 }
+
+//検索カードに付与する機能
 function SearchCardAbility() {
-    
     let searchCards = searchCardHolder.querySelectorAll(".searchCheck")
     console.log(typeof(searchCards))
     searchCards.forEach(x => {
@@ -343,12 +371,12 @@ function SearchCardAbility() {
         })
     })
 }
-
+//選択カードに付与する機能
 function SelectCardAbility() {
     let selecthCard = selectCardHolder.lastElementChild
     selecthCard.addEventListener("click", () => {
         //console.log("a")
-        CangeImg(selecthCard)
+        //CangeImg(selecthCard)
         //console.log(selecthCard)
         //console.log(selecthCard.dataset.id)
         outSelectList(selecthCard)
@@ -359,7 +387,7 @@ function SelectCardAbility() {
     })
 }
 
-
+//検索のボタンを変える
 function searchBthChange(div) {
     //console.log(div)
     let searchcards = searchCardHolder.querySelectorAll(".searchCheck")
@@ -367,12 +395,14 @@ function searchBthChange(div) {
     //console.log(div.dataset.num - 1)
 }
 
-
+//検索ページのカードを複製して選択ページに移動
 function MoveSelectItem(div) {
     let clone_div = div.cloneNode(true);
     selectCardHolder.appendChild(clone_div)
     SelectCardAbility()
 }
+
+//検索ページのカードを複製して成分表ページに移動
 function MoveTableItem(div) {
     //console.log(div.dataset.id)
     //console.log(selectIdList)
@@ -381,6 +411,8 @@ function MoveTableItem(div) {
     tableCardHolder.appendChild(tableCardCreate(selectDataList[dataAdress]))
     tableCalcFn()
 }
+
+//成分表計算関数
 function tableCalcFn() {
     let table = tableCardHolder.lastElementChild
     let tableInput = table.querySelectorAll(".tableInput")
@@ -397,9 +429,11 @@ function tableCalcFn() {
         })
     })
 }
+
+//カードクリックで成分カード表示
 let openCardbox = document.querySelector("#openCardbox")
 let opencard = document.querySelector("#opencard")
-
+//検索カードver
 function searchTextFn() {
     let text = searchCardHolder.querySelectorAll(".getText")
     //console.log(text.length)
@@ -433,17 +467,23 @@ function searchTextFn() {
             bgcloseTableCalcFn()
         })
     })
-}  
+} 
+
+//選択カードver
 function selectTextFn() {
     
 }
+
+//表示されているカードを閉じる
 let bgclose = document.querySelector("#bgclose")
-console.log(bgclose)
+//console.log(bgclose)
 function bgcloseFn() {
     bgclose.addEventListener("click", () => {
         openCardbox.classList.add("dispnone")
     })
 }
+
+//表示されているカードの計算
 function bgcloseTableCalcFn() {
     let tableInput = openCardbox.querySelectorAll(".tableInput")
     let tableperin = openCardbox.querySelectorAll(".tableperin")
@@ -459,12 +499,14 @@ function bgcloseTableCalcFn() {
         })
     })
 }
+
 //数値を半角に変換
 function hankaku2Zenkaku(str) {
     return str.replace(/[０-９]/g, function(s) {
         return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
     });
 }
+
 /*100gあたりの計算*/
 function clacResult(value, inval) {
     //console.log(value)
@@ -479,6 +521,7 @@ function ScrollTop() {
     window.scroll(0,0)
 }
 
+//選択ページにあるカードを削除
 function RemoveSelectItem(cards,id){
     //console.log(cards)
     cards.forEach(x => {
@@ -487,6 +530,7 @@ function RemoveSelectItem(cards,id){
         }
     })   
 }
+//成分表ページにあるカードを削除
 function RemoveTableItem(id){
     //console.log(id)
     let cards = tableCardHolder.querySelectorAll(".tables")
@@ -497,8 +541,13 @@ function RemoveTableItem(id){
         }
     })   
 }
+
+//検索ページにカードを表示
 searchCardHolder.innerHTML = CardMaker(dataList)
+//検索ページのカードに機能追加
 SearchCardAbility()
+//検索カードクリックで成分表を表示機能追加
 searchTextFn()
+//searchTextFn()を閉じる----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 bgcloseFn()
 
