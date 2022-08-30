@@ -1,13 +1,36 @@
+const xhr = new XMLHttpRequest();
+xhr.onload = function(e) {
+    if(xhr.readyState === 4) {
+        if(xhr.status === 200) {
+            document.body.innerHTML += xhr.responseText;
+            console.log(xhr.responseText)
+        }
+    }
+};
+
+window.onload = () => {
+    xhr.open('POST', '/Access/dbConnect.php?command=GetDataSearch&keyword=り',true);
+    xhr.setRequestHeader('content-type','application/json');
+    xhr.send();
+}
+
 //検索ボタンオープン
-search.addEventListener("focusin", () => {
+const searchBtn = document.querySelector("#searchBtn")
+searchBtn.addEventListener("focusin", () => {
     search.style.width = "500%"
     search.style.height = "35px"
     search.style.opacity = "1"
+    search.style.top = "5px"
+    search.style.right = "60px"
+
+    console.log("a")
 });
-search.addEventListener("focusout", () => {
-    search.style.width = "0px"
-    search.style.height = "0px"
+searchBtn.addEventListener("focusout", () => {
+    search.style.width = "50px"
+    search.style.height = "50px"
     search.style.opacity = "0"
+    search.style.top = "-5px"
+    search.style.right = "0px"
 });
 
 //メニューボタンとページ遷移
@@ -36,6 +59,7 @@ menuBtn.forEach(x => {
     })
     
 })
+//全削除
 const alldel = document.querySelector("#allDelete")
 alldel.addEventListener("click", () => {
     selectIdList.splice(0)
@@ -43,6 +67,8 @@ alldel.addEventListener("click", () => {
     selectCardHolder.innerHTML = ""
     tableCardHolder.innerHTML = ""
     searchCardHolder.innerHTML = CardMaker(dataList)
+    selectItemNum = 0
+    selectNumBox.classList.add("visually-hidden")
     SearchCardAbility()
     searchTextFn()
 })
@@ -173,16 +199,26 @@ function nameLength(name) {
 
 /*選択したアイテム数のポップ表示*/
 let selectItemNum = 0
+let beforeNum = 10
 let selectsNum = document.querySelector("#selectNum")
-console.log(selectsNum)
+let searchPage = document.querySelector("#searchPage")
+//console.log(selectsNum)
 let selectNumBox = document.querySelector("#selectNumBox")
 function searchAddNumFn(x) {
-    console.log(dataList[x.dataset.id])
-    console.log(selectDataList)
+    //console.log(dataList[x.dataset.id])
+    //console.log(selectDataList)
     if(selectDataList.includes(dataList[x.dataset.id])) {
-        selectItemNum++
+        if(searchPage.style.visibility == "hidden"){
+            selectItemNum++
+        }else{
+            selectItemNum--
+        }   
     }else {
-        selectItemNum--
+        if(searchPage.style.visibility == "hidden"){
+            selectItemNum--
+        }else{
+            selectItemNum++
+        }  
     }
     //console.log(selectDataList)
     if(selectItemNum <= 0){
@@ -346,7 +382,7 @@ function CangeImg(x) {
 //検索カードに付与する機能
 function SearchCardAbility() {
     let searchCards = searchCardHolder.querySelectorAll(".searchCheck")
-    console.log(typeof(searchCards))
+    //console.log(typeof(searchCards))
     searchCards.forEach(x => {
         if(selectIdList.includes(x.dataset.id)){
             CangeImg(x)
@@ -407,7 +443,7 @@ function MoveTableItem(div) {
     //console.log(div.dataset.id)
     //console.log(selectIdList)
     let dataAdress = selectIdList.indexOf(div.dataset.id)
-    console.log(tableCardCreate(selectDataList[dataAdress]))    
+    //console.log(tableCardCreate(selectDataList[dataAdress]))    
     tableCardHolder.appendChild(tableCardCreate(selectDataList[dataAdress]))
     tableCalcFn()
 }
@@ -424,7 +460,7 @@ function tableCalcFn() {
             //console.log(typeof(Number(x.textContent)))
             //console.log(typeof(Number(tableInput[0].value)))
             //console.log(typeof(Number(tableValNum[i].textContent)))
-            tableValNum[i].textContent = clacResult(Number(x.textContent), Number(tableInput[0].value))
+            tableValNum[i].textContent = clacResult(Number(x.textContent), Number(hankaku2Zenkaku(tableInput[0].value)))
             i++
         })
     })
@@ -494,7 +530,7 @@ function bgcloseTableCalcFn() {
             //console.log(typeof(Number(x.textContent)))
             //console.log(typeof(Number(tableInput[0].value)))
             //console.log(typeof(Number(tableValNum[i].textContent)))
-            tableValNum[i].textContent = clacResult(Number(x.textContent), Number(tableInput[0].value))
+            tableValNum[i].textContent = clacResult(Number(x.textContent), Number(hankaku2Zenkaku(tableInput[0].value)))
             i++
         })
     })
@@ -517,7 +553,7 @@ function clacResult(value, inval) {
 
 //ページクリックでスクロールトップへ
 function ScrollTop() {
-    console.log("test")
+    //console.log("test")
     window.scroll(0,0)
 }
 
