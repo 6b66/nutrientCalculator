@@ -300,88 +300,11 @@
         <div id="openCardbox" class="dispnone">
             <div id="bgclose"></div>
             <div id="opencard" class="col-12 m-auto d-flex align-items-center justify-content-center">
-                <!--
-                <div class="col-12 col-md-6 d-flex justify-content-center">
-                    <div class="col-10 c tablecard d-flex flex-column mx-1 d-flex align-items-center justify-content-center">
-                        <div class="row d-flex flex-row col-12 m-0 align-items-center justify-content-center" style="height: 50px;">
-                            <div class="col-1 h-75 d-flex align-items-center justify-content-center p-0"
-                                style="
-                                font-size: 23px;
-                                font-weight: 500;
-                                color: #00946C;
-                            "
-                            >
-                                ${num}
-                            </div>
-                            <div class="col-8 h-75 mx-2 d-flex align-items-center justify-content-center p-0">
-                                <p style="font-weight: 500; opacity: 0.9;" class="text-center m-0 p-0 mt-2">${nameLength(x.Name)}</p>
-                            </div>
-                            <div class="col-2 h-75 p-0 position-relative">
-                                <input type="text" class="col-11 h-100 rounded-3 tableInput" data-id="${x.Id}" placeholder="${x.inval}" style="border: 0; border-bottom: 2px solid black; text-align: right; padding-right: 15px;">
-                                <p class="position-absolute" style="top: 5px; right: 10%;">g</p>
-                            </div>
-                        
-                        </div>
-                        <div class="row m-0 table-responsive mt-2 rounded-3" style="height: 142px; width: 95%;">
-                            <table class="table bg-light m-0">
-                                <thead  class="table-dark">
-                                    <tr>
-                                        <th scope="col" class="tablename">成分名</th>
-                                        <th scope="col" class="tablename">エネルギー</th>
-                                        <th scope="col" class="tablename">タンパク質</th>
-                                        <th scope="col" class="tablename">脂質</th>
-                                        <th scope="col" class="tablename">炭水化物</th>
-                                        <th scope="col" class="tablename">食物繊維総量</th>
-                                        <th scope="col" class="tablename">カルシウム</th>
-                                        <th scope="col" class="tablename">鉄</th>
-                                        <th scope="col" class="tablename">ビタミンA</th>
-                                        <th scope="col" class="tablename">ビタミンB1</th>
-                                        <th scope="col" class="tablename">ビタミンB2</th>
-                                        <th scope="col" class="tablename">ビタミンc</th>
-                                        <th scope="col" class="tablename">食塩相当量</th>
-                                        <th scope="col" class="tablename">葉酸</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row" class="clacDataFront">100g</th>
-                                        <td class="tableper">${x.kal}<span>kcal</span></td>
-                                        <td class="tableper">${x.protain}<span>g</span></td>
-                                        <td class="tableper">${x.fat}<span>g</span></td>
-                                        <td class="tableper">${x.carbohydrate}<span>g</span></td>
-                                        <td class="tableper">${x.fiber}<span>g</span></td>
-                                        <td class="tableper">${x.k}<span>mg</span></td>
-                                        <td class="tableper">${x.fe}<span>mg</span></td>
-                                        <td class="tableper">${x.vitaminA}<span>μg</span></td>
-                                        <td class="tableper">${x.vitaminB1}<span>mg</span></td>
-                                        <td class="tableper">${x.vitaminB2}<span>mg</span></td>
-                                        <td class="tableper">${x.vitaminC}<span>mg</span></td>
-                                        <td class="tableper">${x.nacl}<span>g</span></td>
-                                        <td class="tableper">${x.folacin}<span>μg</span></td>
-                                    </tr>
-                                    <tr class="table-secondary clacData" data-id="${x.Id}">
-                                        <th scope="row"><span>${x.inval}</span><span>g</span></th>
-                                        <td class="tableval"><span>${clacResult(x.kal, x.inval)}</span><span>kcal</span></td>
-                                        <td class="tableval"><span>${clacResult(x.protain, x.inval)}</span><span>g</span></td>
-                                        <td class="tableval"><span>${clacResult(x.fat, x.inval)}</span><span>g</span></td>
-                                        <td class="tableval"><span>${clacResult(x.carbohydrate, x.inval)}</span><span>g</span></td>
-                                        <td class="tableval"><span>${clacResult(x.fiber, x.inval)}</span><span>g</span></td>
-                                        <td class="tableval"><span>${clacResult(x.k, x.inval)}</span><span>mg</span></td>
-                                        <td class="tableval"><span>${clacResult(x.fe, x.inval)}</span><span>mg</span></td>
-                                        <td class="tableval"><span>${clacResult(x.vitaminA, x.inval)}</span><span>μg</span></td>
-                                        <td class="tableval"><span>${clacResult(x.vitaminB1, x.inval)}</span><span>mg</span></td>
-                                        <td class="tableval"><span>${clacResult(x.vitaminB2, x.inval)}</span><span>mg</span></td>
-                                        <td class="tableval"><span>${clacResult(x.vitaminC, x.inval)}</span><span>mg</span></td>
-                                        <td class="tableval"><span>${clacResult(x.nacl, x.inval)}</span><span>g</span></td>
-                                        <td class="tableval"><span>${clacResult(x.folacin, x.inval)}</span><span>μg</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>                    
-                </div>-->
             </div>
-            
+            <div id="test">
+                <div class="closeCardBtnRight col-3"></div>
+                <div class="closeCardBtnLeft col-3"></div>
+            </div>
         </div>
         <!--削除の確認-->
         <div id="openDelCheck" class="dispnone">

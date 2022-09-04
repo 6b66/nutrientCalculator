@@ -11,9 +11,7 @@ if (isset($_POST['name'])) {
   <title></title>
 </head>
 <body>
-<form method="POST" action="http://localhost:80">
-  <input type="text" name="name"/>
-  <input type="submit" value="確定">
-</form>
+  <a href="/ui_bootstrap_new/index.html">a</a>
+  <input id="getBtn" type="button" value="取得">
 </body>
 </html>
