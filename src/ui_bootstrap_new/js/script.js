@@ -601,7 +601,6 @@ function start(firstData) {
         return newStr
     }
     
-
     /*100gあたりの計算*/
     function clacResult(value, inval) {
         //console.log(value)
@@ -689,7 +688,6 @@ menuBtn.forEach(x => {
         })
         ScrollTop()
     })
-    
 })
 
 
