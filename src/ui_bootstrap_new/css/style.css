@@ -1,5 +1,5 @@
 .a {
-    background-color: aquamarine;
+    background-color: #CDE9E3;
 }
 .b {
     background-color: red;
@@ -8,6 +8,14 @@
     background-color: black;
 }
 
+
+@media screen and (min-width:480px) { 
+    /*　画面サイズが480pxからはここを読み込む　*/
+    ul > li:hover {
+        background-color: #34bd34;
+        transition: 0.2s;
+    }
+}
 #search {
     width: 0%;
     z-index: 0;
@@ -24,10 +32,7 @@
 ul > li{
     transition: 0.3s;
 }
-ul > li:hover {
-    background-color: #34bd34;
-    transition: 0.2s;
-}
+
 .bg-green {
     background-color: #02A893;
     transition: 0.2s;
@@ -55,9 +60,15 @@ ul > li:hover > i >  .name {
     margin-top: 150px;
 }
 /*検索カード*/
+
+.cardsname {
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
 .searchcard {
     background-color: #CDE9E3;
-    height: 55px;
+    height: 65px;
     border-radius: 15px;
     margin-bottom: 15px;
 }
@@ -68,17 +79,22 @@ ul > li:hover > i >  .name {
 .searchCheck {
     width: 38px;
     height: 38px;
-    background-color: white;
+    background-color: #eeeef1;
     border-radius: 50px;
 }
 
 /*成分表*/
 .tablecard {
     background-color: #CDE9E3;
-    height: 200px;
+    height: 230px;
     border-radius: 15px;
     margin: 15px;
-
+}
+.alltablecard {
+    background-color: #94AE82;
+    height: 130px;
+    border-radius: 15px;
+    margin: 5px;
 }
 .tablename {
     white-space: nowrap;
@@ -93,6 +109,43 @@ ul > li:hover > i >  .name {
     white-space: nowrap;
     text-align: center;
 }
+
+/*成分選択*/
+.nutritionSelectcard {
+    background-color: #CDE9E3;
+    height: 65px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.nutritionSelectCheck {
+    width: 38px;
+    height: 38px;
+}
+.bg-greenty {
+    background-color: #02A893;
+}
+.nutritionSelectCheck {
+    width: 38px;
+    height: 38px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+
+/*成分合計*/
+.tableposi {
+    height: 20px;
+}
+.clacDataFront {
+    height: 20px;
+}
+.clacData {
+    height: 20px;
+}
+.alltablesin {
+    height: 10px;
+}
+
 #openCardbox {
     background-color: rgba(128, 128, 128, 0.418);
     height: 100vh;
@@ -110,7 +163,7 @@ ul > li:hover > i >  .name {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
+    z-index: 10001;
     
 }
 #openDelCheck {
@@ -146,7 +199,7 @@ ul > li:hover > i >  .name {
     top: 0px;
     width: 100%;
     height: 100vh;
-    z-index: 0;
+    z-index: 10000;
 }
 #test {
     z-index: 1000;
@@ -165,7 +218,7 @@ ul > li:hover > i >  .name {
 }
 .closeCardBtnRight {
     z-index: 1000;
-    height: 200px;
+    height: 230px;
     position: fixed;
     top: 120px;
     right: 0;
@@ -173,7 +226,7 @@ ul > li:hover > i >  .name {
 
 .closeCardBtnLeft {
     z-index: 1000;
-    height: 200px;
+    height: 230px;
     position: fixed;
     top: 120px;
     left: 0;

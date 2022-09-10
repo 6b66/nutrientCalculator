@@ -38,7 +38,7 @@ class dbConnecter {
 
         $resultData = [];
 
-        $stmt = self::$pdo->query("SELECT * FROM NutrientTable WHERE Name LIKE '%".$keyword."%' OR KanaName LIKE '%".$keyword."%'");
+        $stmt = self::$pdo->query("SELECT * FROM NutrientTable WHERE NAME LIKE '%".$keyword."%' OR KANANAME LIKE '%".$keyword."%'");
 
         array_push($resultData, $stmt->fetch(PDO::FETCH_OBJ));
 
