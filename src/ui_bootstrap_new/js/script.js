@@ -478,7 +478,7 @@ function main() {
                         </div>
                         <div class="col-2 d-flex align-items-center justify-content-center">
                             <div class="searchCheck">
-                                <img src="./img/plus (1).svg" alt="" style="margin-top: 3px; margin-left: 3px;">
+                                <img src="./img/search.svg" alt="" style="margin-top: 5px; margin-left: 5px; height: 27px">
                             </div>
                         </div>
                     </div>
@@ -824,7 +824,7 @@ function main() {
     //成分選択カード機能
     function nutritionTableAbility() {
         let div = nutritionSelectHolder.lastElementChild
-        console.log(div)
+        //console.log(div)
         div.addEventListener("click",() => {
             //console.log(div)
             if(div.dataset.name == 1111) {
@@ -872,7 +872,8 @@ function main() {
             if(!allTable.classList.contains("visually-hidden"))
                 allDataTable()
         })
-            console.log(div)
+            //console.log(div)
+            if(div.dataset.name != 1111){
                 let check = div.querySelector(".nutritionSelectCheck")
                 //console.log(check)
                 check.addEventListener("click", () => {
@@ -892,7 +893,6 @@ function main() {
                     newObj[div.dataset.name][0] = nutritionTableName.value
                     let array = newObj[div.dataset.name]
                     //console.log(array)
-
                     nutritionCheck.forEach(x => {
                         array.forEach(i => {
                             if(x.id == i) {
@@ -901,6 +901,8 @@ function main() {
                         })
                     })
                 })
+            }
+                
     }
 
     //プラス選択で簡易カード作成
