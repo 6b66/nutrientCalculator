@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- bootstrap -->    
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <!--ヘッダー検索-->
+        <div class="container fixed-top px-5 col-xs-5 col-sm-10 col-md-9 col-lg-7 col-xl-4 pb-4"
+            style="
+                width: 1;
+                height: 120px;
+                background-color: rgba(255, 255, 255, 0.788);
+            "
+        >
+            <div class="row col-12 h-50 position-relative m-0">
+                <div class="title col-9 h-100 mt-1 d-flex align-items-center justify-content-center">
+                    <p class="m-0" style="color: #02A893;font-size: 2.3rem; font-weight: 600;">NUTRIENTs</p>
+                </div>
+                <div id="searchBtn" class="position-absolute position-relative bg-gray border-0 rounded-3 mt-1 p-2" style="width: 50px; height: 50px; right: 0%;">
+                    <img src="./img/search.svg" alt="" style="width: 25px; margin: 4px 0 0 4px;" >
+                    <input id="search" type="text" class="position-absolute fas fa-2x d-flex align-content-start justify-content-center rounded-3 mt-1 p-2" placeholder="ひらがな入力"
+                    style="
+                        width: 50px;
+                        height: 50px;
+                        top: -5px;
+                        right: 0px;
+                        font-size: 15px;
+                        font-weight: 400;
+                        transition: 0.3s;
+                        opacity: 0;
+                        border: none;
+                        outline: solid 1px #0d6efd;
+                    ">  
+                </div>
+                
+
+            </div>
+            <!--メニュー-->
+            <div class="row a h-50 mt-3 bg-gray rounded-4"> 
+                <ul class="col-12 list-group list-unstyled list-group-horizontal align-items-center justify-content-around p-0" id="menuBox">
+                    <li class="col-2 text-center rounded-4 menuBtn h-100 p-1 d-flex align-items-center justify-content-center flex-column bg-green" data-id="searchPage">
+                        <img src="./img/search.svg" alt="" style="height: 20px;">
+                        <p class="name" style="width: 50px;">検索</p>
+                        
+                    </li>
+                    <li class="col-2 text-center rounded-4 menuBtn h-100 p-1 d-flex align-items-center justify-content-center flex-column" data-id="selectPage">
+                        <img src="./img/check-square.svg" alt="">
+                        <p class="name">選択一覧</p>
+
+                    </li>
+                    <li class="col-2 text-center rounded-4 menuBtn h-100 p-1 d-flex align-items-center justify-content-center flex-column" data-id="tablePage">
+                        <img src="./img/file-text.svg" alt="">
+                        <p class="name">成分表</p>
+                    </li>
+                    <li class="col-2 text-center rounded-4 menuBtn h-100 p-1 d-flex align-items-center justify-content-center flex-column" data-id="nutritionSelectPage">
+                        <img src="./img/plus-circle.svg" alt="">
+                        <p class="name">成分選択</p>
+                    </li>                        
+                    <li class="col-2 text-center rounded-4 h-100 p-1 d-flex align-items-center justify-content-center flex-column" id="allDelete">
+                        <div class="position-relative">
+                            <span class="position-absolute translate-middle badge border border-light rounded-4 bg-danger p-1 visually-hidden" style="top: 3px; left: 17px; width: 25px;" id="selectNumBox">
+                                <span id="selectNum" class="p-0" style="font-size: 15px; height: 100%;"></span>
+                            </span>
+                        </div>
+                        <img src="./img/trash (3).svg" alt="">
+                        <p class="name">一括削除</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--メイン-->
+        <div class="container-fluid d-flex p-0" style="height: auto;">
+            <!--検索ページ-->
+            <div id="searchPage" class="row Page m-0 pt-2 col-12 position-absolute top-0 d-flex align-content-start justify-content-center" value="searchPage"
+                style="visibility: visible; padding-bottom: 50%;">
+                <!--カードフォルダー-->
+                <div class="row col-12 d-flex flex-row holder" id="searchCardHolder">
+                    <!--カード
+                        <div class="col-12 col-md-6">
+                            <div class="col-12 c searchcard d-flex flex-row mx-1 justify-content-start align-items-start">
+                                <div class="col-1 h-100 d-flex align-items-center justify-content-center"
+                                    style="
+                                        font-size: 23px;
+                                        font-weight: 500;
+                                        color: #00946C;
+                                    "
+                                >
+                                    1
+                                </div>
+                                <div class="col-8 h-100 mx-3 d-flex align-items-center justify-content-center">
+                                    <p style="font-weight: 500; opacity: 0.9;" class="text-center m-0">あいうえおかきくけこさしすせそたちつてとなにぬねのはひ</p>
+                                </div>
+                                <div class="col-2 d-flex align-items-center justify-content-center">
+                                    <div class="s_c_check">
+                                        <img src="./img/plus (1).svg" alt="" style="margin-top: 3px; margin-left: 3px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    -->
+                    <div class="text-center">調べたい食品を検索してください</div>
+                </div>
+            </div>
+            <!--選択ページ-->
+            <div id="selectPage" class="row Page m-0 pt-2 col-12 position-absolute position-relative top-0 d-flex align-content-start justify-content-center" value="selectPage">
+                <!--カードフォルダー-->
+                <div class="row col-12 holder" id="selectCardHolder">
+                    <!--カード
+                        <div class="col-12 col-md-6">
+                            <div class="col-12 c searchcard d-flex flex-row mx-1">
+                                <div class="col-1 h-100 d-flex align-items-center justify-content-center"
+                                    style="
+                                        font-size: 23px;
+                                        font-weight: 500;
+                                        color: #00946C;
+                                    "
+                                >
+                                    1
+                                </div>
+                                <div class="col-8 h-100 mx-3 d-flex align-items-center justify-content-center">
+                                    <p style="font-weight: 500; opacity: 0.9;" class="text-center m-0">あいうえおかきくけこさしすせそたちつてとなにぬねのはひ</p>
+                                </div>
+                                <div class="col-2 d-flex align-items-center justify-content-center">
+                                    <div class="s_c_check">
+                                        <img src="./img/trash.svg" alt="" style="margin-top: 7px; margin-left: 7px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    -->
+                    <!--<div class="text-center">選択した食品が表示されます。</div>-->
+                </div>
+            </div>
+            <!--成分表ページ-->
+            <div id="tablePage" class="row Page m-0 pt-2 col-12 position-absolute position-relative top-0 d-flex align-content-start justify-content-center h-100" value="tablePage">
+                <!--カードフォルダー-->
+                <div class="row col-12 holder " id="tableCardHolder">
+                    <!--
+                    <div class="col-12 col-md-6">
+                        <div class="col-12 c tablecard d-flex flex-column mx-1 d-flex align-items-center justify-content-center">
+                            <div class="row d-flex flex-row col-12 m-0 align-items-center justify-content-center" style="height: 65px;">
+                                <div class="col-9 h-100 m-2 d-flex align-items-center justify-content-center p-0">
+                                    <p style="font-weight: 500; opacity: 0.9; font-size: 0.9rem;" class="h-100 text-center m-0 p-0">あいうえおああああああああああああああああああああああああああああああああああああああああかきくけこさしすせそたああああああちつてとなにぬねのはひ</p>
+                                </div>
+                                <div class="col-2 h-75 p-0 position-relative">
+                                    <input type="text" class="col-11 h-75 rounded-3" style="border: 0; border-bottom: 2px solid black;  text-align: right; padding-right: 15px;">
+                                    <p class="position-absolute" style="top: 10px; right: 10%;">g</p>
+                                </div>
+                                
+                            </div>
+                            <div class="row m-0 table-responsive mt-2 rounded-3" style="height: 160px; width: 95%;">
+                                <table class="table bg-light">
+                                    <thead  class="table-dark">
+                                        <tr>
+                                            <th scope="col" class="tablename">あいうえをかき</th>
+                                            <th scope="col" class="tablename">あいうえをかき</th>
+                                            <th scope="col" class="tablename">あいうえをかき</th>
+                                            <th scope="col" class="tablename">脂肪酸のトリアシルグリセロール当量</th>
+                                            <th scope="col" class="tablename">#</th>
+                                            <th scope="col" class="tablename">#</th>
+                                            <th scope="col" class="tablename">#</th>
+                                            <th scope="col" class="tablename">#</th>
+                                            <th scope="col" class="tablename">#</th>
+                                            <th scope="col" class="tablename">#</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">100g</th>
+                                            <td class="tableper"><span>100</span><span>kcal</span></td>
+                                            <td class="tableper">100g</td>
+                                            <td class="tableper">100g</td>
+                                            <td class="tableper">100g</td>
+                                            <td class="tableper">100g</td>
+                                            <td class="tableper">100g</td>
+                                            <td class="tableper">100g</td>
+                                            <td class="tableper">100g</td>
+                                            <td class="tableper">100g</td>
+                                        </tr>
+                                        <tr class="table-secondary">
+                                            <th scope="row">?g</th>
+                                            <td class="tableval">100g</td>
+                                            <td class="tableval">100g</td>
+                                            <td class="tableval">100g</td>
+                                            <td class="tableval">100g</td>
+                                            <td class="tableval">100g</td>
+                                            <td class="tableval">100g</td>
+                                            <td class="tableval">100g</td>
+                                            <td class="tableval">100g</td>
+                                            <td class="tableval">100g</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>                    
+                    </div>-->
+                </div>
+                
+            </div>
+            <!--成分選択ページ-->
+            <div id="nutritionSelectPage" class="row Page m-0 pt-2 col-12 position-absolute position-relative top-0 d-flex align-content-start justify-content-center" value="nutritionSelectPage">
+                <!--カードフォルダー-->
+                <div class="row col-12 holder" id="nutritionSelectHolder">
+                    <div class="col-12 col-md-6 cards d-flex align-items-center justify-content-center">
+                        <div class="col-10 addnutrition nutritionSelectcard d-flex flex-row mx-1"  style="background-color: #94AE82;">
+                            <div class="col-11 h-100 mx-3 d-flex align-items-center justify-content-center">
+                                <p style="font-size: 1.0rem; font-weight: 500; opacity: 0.9;" class=" cardsname getText nametext text-center m-0 ">新しい成分リストを作成する</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 cards" data-name="1111">
+                        <div class="col-12 nutritionSelectcard d-flex flex-row mx-1 bg-greenty">
+                            <div class="col-9 mx-3 h-100 d-flex align-items-center justify-content-center">
+                                <p style="font-size: 0.9rem; font-weight: 500; opacity: 0.9;" class=" cardsname getText nametext text-center m-0 ">デフォルト</p>
+                            </div>
+                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                <div class="nutritionSelectCheck">
+                                    <img src="./img/tool (1).svg" alt="" style="margin-top: 3px; margin-left: 3px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--成分表の合計-->
+        <div class="col-12 allTable position-fixed bottom-0 d-flex align-items-center justify-content-center visually-hidden">
+            <div class="col-11 c alltablecard flex-column d-flex align-items-center m-0">
+                <div class="row d-flex flex-row col-12 m-0 align-items-center justify-content-center" style="height: 20px;">
+                    <div class="col-11 h-100 m-2 d-flex align-items-center justify-content-center p-0">
+                        <p style="font-weight: 500; opacity: 0.9; font-size: 0.9rem; height: 20px;" class="text-center m-0 p-0">合計</p>
+                    </div>
+                    <div class="row m-0 table-responsive rounded-3 alltablesin" style="height: 142px; width: 95%;">
+                        <table class="table bg-light m-0 tableposi">
+                            <thead class="table-dark">
+                                <tr class="tr-name">
+                                    <!--
+                                    <th scope="col" class="tablename">成分名</th><th scope="col" class="tablename">エネルギー(kcal)</th><th scope="col" class="tablename">たんぱく質</th><th scope="col" class="tablename">脂質</th><th scope="col" class="tablename">食物繊維総量</th><th scope="col" class="tablename">炭水化物</th><th scope="col" class="tablename">カルシウム</th><th scope="col" class="tablename">カリウム</th><th scope="col" class="tablename">鉄</th><th scope="col" class="tablename">レチノール活性当量</th><th scope="col" class="tablename">ビタミンB1</th><th scope="col" class="tablename">ビタミンB2</th><th scope="col" class="tablename">ビタミンC</th><th scope="col" class="tablename">食塩相当量</th><th scope="col" class="tablename">葉酸</th>
+                                    -->
+                                </tr>
+                            </thead>
+                            <tbody class="tableposi">
+                                <tr class="table-secondary clacData tr-calc">
+                                    <th scope="row"><span class="now-value"></span><span>g</span></th>
+                                        <td class="tableval"><span class="tableValNum">343</span><span>kcal</span></td>
+                                        <td class="tableval"><span class="tableValNum">12.7</span><span>g</span></td><td class="tableval"><span class="tableValNum">6</span><span>g</span></td><td class="tableval"><span class="tableValNum">7.4</span><span>g</span></td><td class="tableval"><span class="tableValNum">64.9</span><span>g</span></td><td class="tableval"><span class="tableValNum">160</span><span>mg</span></td><td class="tableval"><span class="tableValNum">600</span><span>mg</span></td><td class="tableval"><span class="tableValNum">9.4</span><span>mg</span></td><td class="tableval"><span class="tableValNum">0</span><span>μg</span></td><td class="tableval"><span class="tableValNum">0</span><span>mg</span></td><td class="tableval"><span class="tableValNum">0.1</span><span>mg</span></td><td class="tableval"><span class="tableValNum">0</span><span>mg</span></td><td class="tableval"><span class="tableValNum">0</span><span>g</span></td><td class="tableval"><span class="tableValNum">130</span><span>μg</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--成分選択表-->
+        <div class="nutritionTablePage col-12 position-fixed d-flex align-items-center justify-content-center visually-hidden" style="z-index: 10001; top: -10px; height: 90%; background-color: rgb(255, 255, 255,0.6);">
+            <div class="col-11 nutritionTableBox d-flex flex-wrap" style="height: 90%;">
+                <div class="col-12 rounded-4 p-2 d-flex flex-row align-items-center justify-content-center mb-1" style="height: 8%; background-color: #CDE9E3;">
+                    <p class="d-flex align-items-center justify-content-center m-0">
+                        リスト名：
+                    </p>
+                    <input type="text" class="nutritionTableName rou" style="border: none; border-bottom: solid 1px black; background-color: #CDE9E3;">
+                </div>
+                <div class="col-12 nutritionTable rounded-4 p-2 d-flex flex-wrap " style="height: 82%; background-color: #CDE9E3;overflow: scroll;">
+                    <!--
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Default checkbox
+                        </label>
+                    </div>
+                    -->
+                </div>
+                <div class="col-5"></div>
+                <div class="col-7 d-flex flex-wrap">
+                    <div class="col-3 a d-flex align-items-center justify-content-center rounded-4 bg-primary m-2 makeBtn" style="height: 80%;">
+                        <div class="col-5 p-2 bd-highlight d-flex align-items-center justify-content-center ">
+                            追加
+                        </div>
+                    </div>
+                    <div class="col-3 a d-flex align-items-center justify-content-center rounded-4 bg-danger m-2 delBtn" style="height: 80%;">
+                        <div class="col-5 p-2 bd-highlight d-flex align-items-center justify-content-center ">
+                            削除
+                        </div>
+                    </div>
+                    <div class="col-3 a d-flex align-items-center justify-content-center rounded-4 bg-secondary m-2 returnBtn" style="height: 80%;">
+                        <div class="col-5 p-2 bd-highlight d-flex align-items-center justify-content-center ">
+                            戻る
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--カードを選択でオープン-->
+        <div id="openCardbox" class="visually-hidden d-flex align-items-center justify-content-center">
+            <div id="bgclose" class="closeInfoCard"></div>
+            <div id="opencard" class="col-11 col-sm-9 col-md-7 m-auto d-flex align-items-center justify-content-center">
+            </div>
+            <div id="test">
+                <div class="closeCardBtnRight closeInfoCard col-2"></div>
+                <div class="closeCardBtnLeft closeInfoCard col-2"></div>
+            </div>
+        </div>
+        <!--削除の確認-->
+        <div id="openDelCheck" class="dispnone">
+            <div id="opendel" class="col-12 m-auto">
+                <div id="delCheck" class="col-6 rounded-3 container">
+                    <div class="row h-50 d-flex align-items-center justify-content-center">
+                        <p class="text-center mb-0">ああああああああああああああ</p>
+                        <p class="text-center mb-0">を削除しますか？</p>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-around mt-3">
+                        <button id="delBtnY" type="button" class="btn btn-danger col-5">はい</button>
+                        <button id="delBtnN" type="button" class="btn btn-primary col-5">いいえ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bgclose"></div>
+        </div>
+        <!--フッター-->
+        <div></div>
+        
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>

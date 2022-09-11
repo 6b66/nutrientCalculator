@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ja" style="width: 100%;">
+  <head>
+      <meta charset="UTF-8">
+      <!-- bootstrap -->    
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link rel="stylesheet" href="./css/style.css">
+      <title>Document</title>
+  </head>
+  <body style="width: 100%;" class="d-flex flex-column align-items-center justify-content-center">
+    <!--ヘッダー　ナビ-->
+    <div class="bg-dark container-fluid d-flex align-items-center justify-content-center fixed-top" 
+    style="
+      height: 80px;
+      z-index: 4;
+    "
+  >
+      <div class="col-12 col-sm-8 col-lg-5 col-xl-4 d-flex align-items-center justify-content-around" 
+      style="
+        height: 100%;
+      "
+    >
+        <div id="menuIcon" class="bg-primary ms-1 col-2 d-flex align-items-center justify-content-center rounded-3"
+        style="
+          height: 50%;
+          background-color: #223776;
+        "
+      >
+          <img src="./img/menu.png">
+        </div> 
+        <input type="text" class="ms-3 col-8 rounded-3" placeholder="食材名で検索"
+          style="
+            height: 50%;
+            font-size: 17px;
+          "
+        >  
+        <button type="button" class="btn col-2 fs-xl-5 fw-bold btn-outline-success d-flex align-items-center justify-content-center"
+          style="
+            height: 50%;
+          "
+        >検索</button> 
+      </div>
+    </div>
+    <!--メニュー選択-->
+    <div class="mediatransition d-flex align-items-center justify-content-center menutoggle" id="menuPage"
+      style="
+        background-color: none;
+        position: fixed;
+        top: 80px;
+        width: auto;
+        z-index: 3;
+      "
+    >
+      <div class="col-md-6 col-lg-4 bg-dark container rounded-3 d-flex flex-column align-items-center justify-content-center " 
+        style="
+          width: 700px;
+          height: 50vh;
+        "
+      >
+        <div class="fs-4 my-4 col-12 text-center text-white border-secondary border-bottom menu" id="search" value="search">検索</div>
+        <div class="fs-4 my-4 col-12 text-center text-white border-secondary border-bottom menu" id="selectList" value="selectList">選択したアイテム一覧</div>
+        <div class="fs-4 my-4 col-12 text-center text-white border-secondary border-bottom menu" id="add" value="add">追加する</div>
+        <div class="fs-4 my-4 col-12 text-center text-white border-secondary border-bottom menu" id="nutritionTable" value="nutritionTable">選択中の成分表
+        </div>
+      </div>
+    </div>
+    <!--メインコンテンツ-->
+    <main class="container-fluid min-height d-flex flex-column justify-content-between">
+      <!--検索-->
+      <div id="searchPage" class="page row d-flex flex-row align-items-center justify-content-center"
+        style="
+          margin-top: 80px;
+          margin-bottom: 60px;
+        "
+      >
+        <div class="bg-secondary col-12 mb-1 fixed-top d-flex align-items-center justify-content-around" 
+          style="
+            height: 40px;
+            top: 80px;
+            z-index: 1;
+          "
+        >
+          <div class="text-light fw-normal">検索結果 : <span class="fs-"><span></span>/112121</span></div>
+        </div>
+        <div style="height: 40px"></div>
+        <!--カード-->
+        <div class="mediasearch search col-11 col-md-5 itemcard border border-success card rounded-3 d-flex flex-column align-items-center justify-content-around" >
+          <div class="col-11 d-flex flex-row">
+            <div class="col-1 fw-bold">1</div>
+            <p class="mediatext m-0" >畜肉類', 'うし', '乳用肥育牛肉', 'そともも', '脂身つき', '生畜肉類', 'うし', '乳用肥育牛</p>
+           </div>
+          <div class="col-11 pt-xl-2 pt-xxl-3 d-flex align-items-end justify-content-end border-top border-secondary mt-1 pt-1 mt-sm-1">
+            <label class="col-3 me-2 d-block">
+              <input placeholder="0" type="text" class=" mediatext col-9 border-0 border-bottom border-dark mb-1"
+                style="
+                  text-align:right;
+                  background-color: rgb(255, 255, 255,0);
+                "
+              >
+              g
+            </label>
+            <button class="col-2 btn btn-primary fs- p-0 mb-1 addbutton searchAddButton">追加</button>          
+          </div>
+        </div>
+        <div class="mediasearch search col-11 col-md-5 itemcard border border-success card rounded-3 d-flex flex-column align-items-center justify-content-around" >
+          <div class="col-11 d-flex flex-row">
+            <div class="col-1 fw-bold">1</div>
+            <p class="mediatext m-0" >畜肉類', 'うし', '乳用肥育牛肉', 'そともも', '脂身つき', '生畜肉類', 'うし', '乳用肥育牛</p>
+           </div>
+          <div class="col-11 pt-xl-2 pt-xxl-3 d-flex align-items-end justify-content-end border-top border-secondary mt-1 pt-1 mt-sm-1">
+            <label class="col-3 me-2 d-block">
+              <input placeholder="0" type="text" class=" mediatext col-9 border-0 border-bottom border-dark mb-1"
+                style="
+                  text-align:right;
+                  background-color: rgb(255, 255, 255,0);
+                "
+              >
+              g
+            </label>
+            <button class="col-2 btn btn-primary fs- p-0 mb-1 addbutton searchAddButton">追加</button>          
+          </div>
+        </div>
+        <div class="mediasearch search col-11 col-md-5 itemcard border border-success card rounded-3 d-flex flex-column align-items-center justify-content-around" >
+          <div class="col-11 d-flex flex-row">
+            <div class="col-1 fw-bold">1</div>
+            <p class="mediatext m-0" >畜肉類', 'うし', '乳用肥育牛肉', 'そともも', '脂身つき', '生畜肉類', 'うし', '乳用肥育牛</p>
+           </div>
+          <div class="col-11 pt-xl-2 pt-xxl-3 d-flex align-items-end justify-content-end border-top border-secondary mt-1 pt-1 mt-sm-1">
+            <label class="col-3 me-2 d-block">
+              <input placeholder="0" type="text" class=" mediatext col-9 border-0 border-bottom border-dark mb-1"
+                style="
+                  text-align:right;
+                  background-color: rgb(255, 255, 255,0);
+                "
+              >
+              g
+            </label>
+            <button class="col-2 btn btn-primary fs- p-0 mb-1 addbutton searchAddButton">追加</button>          
+          </div>
+        </div>
+        <div class="mediasearch search col-11 col-md-5 itemcard border border-success card rounded-3 d-flex flex-column align-items-center justify-content-around" >
+          <div class="col-11 d-flex flex-row">
+            <div class="col-1 fw-bold">1</div>
+            <p class="mediatext m-0" >畜肉類', 'うし', '乳用肥育牛肉', 'そともも', '脂身つき', '生畜肉類', 'うし', '乳用肥育牛</p>
+           </div>
+          <div class="col-11 pt-xl-2 pt-xxl-3 d-flex align-items-end justify-content-end border-top border-secondary mt-1 pt-1 mt-sm-1">
+            <label class="col-3 me-2 d-block">
+              <input placeholder="0" type="text" class=" mediatext col-9 border-0 border-bottom border-dark mb-1"
+                style="
+                  text-align:right;
+                  background-color: rgb(255, 255, 255,0);
+                "
+              >
+              g
+            </label>
+            <button class="col-2 btn btn-primary fs- p-0 mb-1 addbutton searchAddButton">追加</button>          
+          </div>
+        </div>
+      </div>
+      <!--追加-->
+      <div id="addPage" class="page row d-flex flex-row align-items-center justify-content-center"
+        style="
+          margin-top: 80px;
+        "
+      >
+        <div class="bg-secondary col-12 mb-1 fixed-top d-flex align-items-center justify-content-around visually-hidden" 
+          style="
+            height: 40px;
+            opacity: 0.6;
+            top: 80px;
+            z-index: 1;
+          "
+        >
+          <div class="text-light fw-normal">追加</div>
+        </div>
+        <div style="height: 40px;"></div>
+        <div>
+        </div>
+      </div>
+      <!--計算結果-->
+      <div id="resultPage" class=" page row d-flex flex-row align-items-center justify-content-center visually-hidden"
+        style="
+          margin-top: 80px;
+          padding-bottom: 110px;
+        "
+      >
+        <div class="bg-secondary col-12 mb-1 fixed-top d-flex align-items-center justify-content-around" 
+          style="
+            height: 40px;
+            opacity: 0.6;
+            top: 80px;
+            z-index: 1;
+          "
+        >
+          <div class="text-light fw-normal">計算結果</div>
+        </div>
+        <div style="height: 50px;"></div> 
+        <!--テーブル-->
+        <div class="col-11 col-lg-5 mx-lg-3 border border-success rounded-3 contaier mb-3">
+          <div class="row">
+            <div class="mediatext">1</div>
+            <div class="mediatext">名前はなんでしょね</div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 pe-md-0">
+              <table class="table">
+                <thead>
+                  <tr class="p-0">
+                    <th scope="col" class="p-0 mediatext2 text-center">/g</th>
+                    <th scope="col" class="p-0 mediatext2 text-center">カロリー</th>
+                    <th scope="col" class="p-0 mediatext2 text-center">タンパク質</th>                  
+                    <th scope="col" class="p-0 mediatext2 text-center">脂肪</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="p-0 mediatext text-center">100g</th>
+                    <td class="p-0 mediatext text-center">kal</td>
+                    <td class="p-0 mediatext text-center">protainc</td>
+                    <td class="p-0 mediatext text-center">fat</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row" class="p-0 mediatext text-center">??g</th>
+                    <td class="p-0 mediatext text-center">kal</td>
+                    <td class="p-0 mediatext text-center">protain</td>
+                    <td class="p-0 mediatext text-center">fat</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-12 col-md-6 ps-md-0">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="p-0 mediatext2 text-center"></th>
+                    <th scope="col" class="p-0 mediatext2 text-center">食物繊維</th>
+                    <th scope="col" class="p-0 mediatext2 text-center">カルシウム</th>                  
+                    <th scope="col" class="p-0 mediatext2 text-center">食塩相当量</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="p-0 mediatext2 text-center"></th>
+                    <td class="p-0 mediatext text-center">fiber</td>
+                    <td class="p-0 mediatext text-center">k</td>
+                    <td class="p-0 mediatext text-center">nacl</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row" class="p-0 mediatext text-center"></th>
+                    <td class="p-0 mediatext text-center">fiber</td>
+                    <td class="p-0 mediatext text-center">k</td>
+                    <td class="p-0 mediatext text-center">nacl</td>
+                  </tr>
+                </tbody>
+              </table>                    
+            </div>
+          </div>
+        </div>
+        <div class="col-11 col-lg-5 mx-lg-3 border border-success rounded-3 contaier mb-3">
+          <div class="row">
+            <div class="mediatext">1</div>
+            <div class="mediatext">名前はなんでしょね</div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 pe-md-0">
+              <table class="table">
+                <thead>
+                  <tr class="p-0">
+                    <th scope="col" class="p-0 mediatext2 text-center">/g</th>
+                    <th scope="col" class="p-0 mediatext2 text-center">カロリー</th>
+                    <th scope="col" class="p-0 mediatext2 text-center">タンパク質</th>                  
+                    <th scope="col" class="p-0 mediatext2 text-center">脂肪</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="p-0 mediatext text-center">100g</th>
+                    <td class="p-0 mediatext text-center">kal</td>
+                    <td class="p-0 mediatext text-center">protainc</td>
+                    <td class="p-0 mediatext text-center">fat</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row" class="p-0 mediatext text-center">??g</th>
+                    <td class="p-0 mediatext text-center">kal</td>
+                    <td class="p-0 mediatext text-center">protain</td>
+                    <td class="p-0 mediatext text-center">fat</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-12 col-md-6 ps-md-0">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="p-0 mediatext2 text-center"></th>
+                    <th scope="col" class="p-0 mediatext2 text-center">食物繊維</th>
+                    <th scope="col" class="p-0 mediatext2 text-center">カルシウム</th>                  
+                    <th scope="col" class="p-0 mediatext2 text-center">食塩相当量</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="p-0 mediatext2 text-center"></th>
+                    <td class="p-0 mediatext text-center">fiber</td>
+                    <td class="p-0 mediatext text-center">k</td>
+                    <td class="p-0 mediatext text-center">nacl</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row" class="p-0 mediatext text-center"></th>
+                    <td class="p-0 mediatext text-center">fiber</td>
+                    <td class="p-0 mediatext text-center">k</td>
+                    <td class="p-0 mediatext text-center">nacl</td>
+                  </tr>
+                </tbody>
+              </table>                    
+            </div>
+          </div>
+        </div>
+        <div class="col-11 col-lg-5 mx-lg-3 border border-success rounded-3 contaier mb-3">
+          <div class="row">
+            <div class="mediatext">1</div>
+            <div class="mediatext">名前はなんでしょね</div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 pe-md-0">
+              <table class="table">
+                <thead>
+                  <tr class="p-0">
+                    <th scope="col" class="p-0 mediatext2 text-center">/g</th>
+                    <th scope="col" class="p-0 mediatext2 text-center">カロリー</th>
+                    <th scope="col" class="p-0 mediatext2 text-center">タンパク質</th>                  
+                    <th scope="col" class="p-0 mediatext2 text-center">脂肪</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="p-0 mediatext text-center">100g</th>
+                    <td class="p-0 mediatext text-center">kal</td>
+                    <td class="p-0 mediatext text-center">protainc</td>
+                    <td class="p-0 mediatext text-center">fat</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row" class="p-0 mediatext text-center">??g</th>
+                    <td class="p-0 mediatext text-center">kal</td>
+                    <td class="p-0 mediatext text-center">protain</td>
+                    <td class="p-0 mediatext text-center">fat</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-12 col-md-6 ps-md-0">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="p-0 mediatext2 text-center"></th>
+                    <th scope="col" class="p-0 mediatext2 text-center">食物繊維</th>
+                    <th scope="col" class="p-0 mediatext2 text-center">カルシウム</th>                  
+                    <th scope="col" class="p-0 mediatext2 text-center">食塩相当量</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="p-0 mediatext2 text-center"></th>
+                    <td class="p-0 mediatext text-center">fiber</td>
+                    <td class="p-0 mediatext text-center">k</td>
+                    <td class="p-0 mediatext text-center">nacl</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row" class="p-0 mediatext text-center"></th>
+                    <td class="p-0 mediatext text-center">fiber</td>
+                    <td class="p-0 mediatext text-center">k</td>
+                    <td class="p-0 mediatext text-center">nacl</td>
+                  </tr>
+                </tbody>
+              </table>                    
+            </div>
+          </div>
+        </div>
+        <div class="col-11 col-lg-5 mx-lg-3 border border-success rounded-3 contaier mb-3">
+          <div class="row">
+            <div class="mediatext">1</div>
+            <div class="mediatext">名前はなんでしょね</div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 pe-md-0">
+              <table class="table">
+                <thead>
+                  <tr class="p-0">
+                    <th scope="col" class="p-0 mediatext2 text-center">/g</th>
+                    <th scope="col" class="p-0 mediatext2 text-center">カロリー</th>
+                    <th scope="col" class="p-0 mediatext2 text-center">タンパク質</th>                  
+                    <th scope="col" class="p-0 mediatext2 text-center">脂肪</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="p-0 mediatext text-center">100g</th>
+                    <td class="p-0 mediatext text-center">kal</td>
+                    <td class="p-0 mediatext text-center">protainc</td>
+                    <td class="p-0 mediatext text-center">fat</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row" class="p-0 mediatext text-center">??g</th>
+                    <td class="p-0 mediatext text-center">kal</td>
+                    <td class="p-0 mediatext text-center">protain</td>
+                    <td class="p-0 mediatext text-center">fat</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-12 col-md-6 ps-md-0">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="p-0 mediatext2 text-center"></th>
+                    <th scope="col" class="p-0 mediatext2 text-center">食物繊維</th>
+                    <th scope="col" class="p-0 mediatext2 text-center">カルシウム</th>                  
+                    <th scope="col" class="p-0 mediatext2 text-center">食塩相当量</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="p-0 mediatext2 text-center"></th>
+                    <td class="p-0 mediatext text-center">fiber</td>
+                    <td class="p-0 mediatext text-center">k</td>
+                    <td class="p-0 mediatext text-center">nacl</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row" class="p-0 mediatext text-center"></th>
+                    <td class="p-0 mediatext text-center">fiber</td>
+                    <td class="p-0 mediatext text-center">k</td>
+                    <td class="p-0 mediatext text-center">nacl</td>
+                  </tr>
+                </tbody>
+              </table>                    
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--成分表-->
+      <div id="nutritionTablePage" class=" page row d-flex flex-row align-items-center justify-content-center visually-hidden"
+        style="
+          margin-top: 80px;
+          padding-bottom: 110px;
+        "
+      >
+        <div class="bg-secondary col-12 mb-1 fixed-top d-flex align-items-center justify-content-around" 
+          style="
+            height: 40px;
+            opacity: 0.6;
+            top: 80px;
+            z-index: 1;
+          "
+        >
+          <div class="text-light fw-normal">計算結果</div>
+        </div>
+        <div style="height: 50px;"></div> 
+        <!--テーブル-->
+        <div class="col-11 col-xl-5 mx-xl-3 border border-success rounded-3 contaier mb-3">
+          <div class="row">
+            <div>1</div>
+            <div class="mb-2 fw-bold">名前はなんでしょね</div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 pe-md-0">
+              <table class="table">
+                <thead>
+                  <tr class="p-0">
+                    <th scope="col" class="p-0 text-center">成分名</th>
+                    <th scope="col" class="p-0 text-center">カロリー</th>
+                    <th scope="col" class="p-0 text-center">タンパク質</th>                  
+                    <th scope="col" class="p-0 text-center">脂肪</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-success">
+                    <th scope="row" class="p-0 text-center">100g</th>
+                    <td class="p-0 text-center">kal</td>
+                    <td class="p-0 text-center">protainc</td>
+                    <td class="p-0 text-center">fat</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-12 col-md-6 ps-md-0">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="p-0"></th>
+                    <th scope="col" class="p-0 text-center">食物繊維</th>
+                    <th scope="col" class="p-0 text-center">カルシウム</th>                  
+                    <th scope="col" class="p-0 text-center">食塩相当量</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-success">
+                    <th scope="row" class="p-0"></th>
+                    <td class="p-0 text-center">fiber</td>
+                    <td class="p-0 text-center">k</td>
+                    <td class="p-0 text-center">nacl</td>
+                  </tr>
+                </tbody>
+              </table>                    
+            </div>
+          </div>
+        </div>
+        <div class="col-11 col-xl-5 mx-xl-3 border border-success rounded-3 contaier mb-3">
+          <div class="row">
+            <div>1</div>
+            <div class="mb-2 fw-bold">名前はなんでしょね</div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 pe-md-0">
+              <table class="table">
+                <thead>
+                  <tr class="p-0">
+                    <th scope="col" class="p-0 text-center">成分名</th>
+                    <th scope="col" class="p-0 text-center">カロリー</th>
+                    <th scope="col" class="p-0 text-center">タンパク質</th>                  
+                    <th scope="col" class="p-0 text-center">脂肪</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-success">
+                    <th scope="row" class="p-0 text-center">100g</th>
+                    <td class="p-0 text-center">kal</td>
+                    <td class="p-0 text-center">protainc</td>
+                    <td class="p-0 text-center">fat</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-12 col-md-6 ps-md-0">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="p-0"></th>
+                    <th scope="col" class="p-0 text-center">食物繊維</th>
+                    <th scope="col" class="p-0 text-center">カルシウム</th>                  
+                    <th scope="col" class="p-0 text-center">食塩相当量</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-success">
+                    <th scope="row" class="p-0"></th>
+                    <td class="p-0 text-center">fiber</td>
+                    <td class="p-0 text-center">k</td>
+                    <td class="p-0 text-center">nacl</td>
+                  </tr>
+                </tbody>
+              </table>                    
+            </div>
+          </div>
+        </div>
+        <div class="col-11 col-xl-5 mx-xl-3 border border-success rounded-3 contaier mb-3">
+          <div class="row">
+            <div>1</div>
+            <div class="mb-2 fw-bold">名前はなんでしょね</div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 pe-md-0">
+              <table class="table">
+                <thead>
+                  <tr class="p-0">
+                    <th scope="col" class="p-0 text-center">成分名</th>
+                    <th scope="col" class="p-0 text-center">カロリー</th>
+                    <th scope="col" class="p-0 text-center">タンパク質</th>                  
+                    <th scope="col" class="p-0 text-center">脂肪</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-success">
+                    <th scope="row" class="p-0 text-center">100g</th>
+                    <td class="p-0 text-center">kal</td>
+                    <td class="p-0 text-center">protainc</td>
+                    <td class="p-0 text-center">fat</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-12 col-md-6 ps-md-0">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="p-0"></th>
+                    <th scope="col" class="p-0 text-center">食物繊維</th>
+                    <th scope="col" class="p-0 text-center">カルシウム</th>                  
+                    <th scope="col" class="p-0 text-center">食塩相当量</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-success">
+                    <th scope="row" class="p-0"></th>
+                    <td class="p-0 text-center">fiber</td>
+                    <td class="p-0 text-center">k</td>
+                    <td class="p-0 text-center">nacl</td>
+                  </tr>
+                </tbody>
+              </table>                    
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--選択一覧-->
+      <div id="selectListPage" class=" page row d-flex flex-row align-items-center justify-content-center visually-hidden"
+        style="
+          margin-top: 80px;
+        "
+      >
+        <div class="bg-secondary col-12 mb-1 fixed-top d-flex align-items-center justify-content-around" 
+          style="
+            height: 40px;
+            opacity: 0.6;
+            top: 80px;
+            z-index: 1;
+          "
+        >
+          <div class="text-light fw-normal">選択したアイテム一覧 : <span class="fs-"><span></span>/112121</span></div>
+        </div>
+        <div style="height: 40px"></div>
+        <!--カード-->
+        <div class="mediaitem1 search col-11 col-md-5 itemcard border border-success card rounded-3 d-flex flex-column align-items-center justify-content-around" >
+          <div class="col-11 d-flex flex-row">
+            <div class="col-1 fw-bold">1</div>
+            <p class="mediatext m-0" >畜肉類', 'うし', '乳用肥育牛肉', 'そともも', '脂身つき', '生畜肉類', 'うし', '乳用肥育牛</p>
+          </div>
+          <div class="col-11 pt-xl-2 pt-xxl-3 d-flex align-items-end justify-content-end border-top border-secondary mt-1 pt-1 mt-sm-1">
+            <label class="col-3 me-2 d-block">
+              <input placeholder="0" type="text" class=" mediatext col-9 border-0 border-bottom border-dark mb-1"
+                style="
+                  text-align:right;
+                  background-color: rgb(255, 255, 255,0);
+                "
+              >
+              g
+            </label>
+            <button class="col-2 btn btn-danger fs- p-0 mb-1 addbutton searchAddButton">削除</button>          
+          </div>
+        </div>
+        <div class="mediasearch search col-11 col-md-5 itemcard border border-success card rounded-3 d-flex flex-column align-items-center justify-content-around" >
+          <div class="col-11 d-flex flex-row">
+            <div class="col-1 fw-bold">1</div>
+            <p class="mediatext m-0" >畜肉類', 'うし', '乳用肥育牛肉', 'そともも', '脂身つき', '生畜肉類', 'うし', '乳用肥育牛</p>
+          </div>
+          <div class="col-11 pt-xl-2 pt-xxl-3 d-flex align-items-end justify-content-end border-top border-secondary mt-1 pt-1 mt-sm-1">
+            <label class="col-3 me-2 d-block">
+              <input placeholder="0" type="text" class=" mediatext col-9 border-0 border-bottom border-dark mb-1"
+                style="
+                  text-align:right;
+                  background-color: rgb(255, 255, 255,0);
+                "
+              >
+              g
+            </label>
+            <button class="col-2 btn btn-danger fs- p-0 mb-1 addbutton searchAddButton">削除</button>          
+          </div>
+        </div>
+        <div class="mediasearch search col-11 col-md-5 itemcard border border-success card rounded-3 d-flex flex-column align-items-center justify-content-around" >
+          <div class="col-11 d-flex flex-row">
+            <div class="col-1 fw-bold">1</div>
+            <p class="mediatext m-0" >畜肉類', 'うし', '乳用肥育牛肉', 'そともも', '脂身つき', '生畜肉類', 'うし', '乳用肥育牛</p>
+          </div>
+          <div class="col-11 pt-xl-2 pt-xxl-3 d-flex align-items-end justify-content-end border-top border-secondary mt-1 pt-1 mt-sm-1">
+            <label class="col-3 me-2 d-block">
+              <input placeholder="0" type="text" class=" mediatext col-9 border-0 border-bottom border-dark mb-1"
+                style="
+                  text-align:right;
+                  background-color: rgb(255, 255, 255,0);
+                "
+              >
+              g
+            </label>
+            <button class="col-2 btn btn-danger fs- p-0 mb-1 addbutton searchAddButton">削除</button>          
+          </div>
+        </div>
+        <div class="mediasearch search col-11 col-md-5 itemcard border border-success card rounded-3 d-flex flex-column align-items-center justify-content-around" >
+          <div class="col-11 d-flex flex-row">
+            <div class="col-1 fw-bold">1</div>
+            <p class="mediatext m-0" >畜肉類', 'うし', '乳用肥育牛肉', 'そともも', '脂身つき', '生畜肉類', 'うし', '乳用肥育牛</p>
+          </div>
+          <div class="col-11 pt-xl-2 pt-xxl-3 d-flex align-items-end justify-content-end border-top border-secondary mt-1 pt-1 mt-sm-1">
+            <label class="col-3 me-2 d-block">
+              <input placeholder="0" type="text" class=" mediatext col-9 border-0 border-bottom border-dark mb-1"
+                style="
+                  text-align:right;
+                  background-color: rgb(255, 255, 255,0);
+                "
+              >
+              g
+            </label>
+            <button class="col-2 btn btn-danger fs- p-0 mb-1 addbutton searchAddButton">削除</button>          
+          </div>
+        </div>
+      </div>
+      <!--フッター-->
+      <footer class="bg-dark"
+      style="
+        width: 100vw;
+        left: 0%;
+        height: 60px;
+        z-index: 1;
+      "
+    >
+    </footer>
+    </main>
+    <!--リザルトボタン-->
+    <div id="resultBox" class="container col-6 d-flex justify-content-center visually-hidden" 
+      style="
+        position: fixed;
+        bottom: 50px;
+        height: 70px;
+        transition: 0.5s;
+      "
+    >
+      <div class="col-12 col-md-6 d-flex flex-column align-items-center"
+        style="
+          height: 100%;
+          background-color: rgb(128, 128, 128, 0.5);
+          border-radius: 40px 40px 0 0;
+        "
+      >
+        <button id="result" type="button" class="position-relative btn btn-success mt-3 d-flex flex-column align-items-center justify-content-center"
+          style="
+            height: 35px;
+            font-size: 17px;
+          "
+        >計算する<span id="resultNum" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"></span></button>
+      </div>
+    </div>    
+    <div class="" id="bggray"></div>
+    <!--カードインフォ-->
+    <div class="card d-flex position-absolute border-dark border-2 visually-hidden" style="top: 20%; width: 18rem;">
+      <div class="card-body">
+        <h4 class="card-title border-bottom border-info border-2" >Some quick example text to build on the carddasdasdadasdasda title and make up the bulk of the card's content.</h4>
+        <div class="">
+          <table class="table">
+            <thead>
+              <tr class="p-0">
+                <th scope="col" class="p-0 text-center">成分名</th>
+                <th scope="col" class="p-0 text-center">カロリー</th>
+                <th scope="col" class="p-0 text-center">タンパク質</th>                  
+                <th scope="col" class="p-0 text-center">脂肪</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-info">
+                <th scope="row" class="p-0 text-center">100g</th>
+                <td class="p-0 text-center cardInfo" data-name="kal">kcal</td>
+                <td class="p-0 text-center cardInfo" data-name="protainc">g</td>
+                <td class="p-0 text-center cardInfo" data-name="fat">g</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+          <div class="">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" class="p-0"></th>
+                <th scope="col" class="p-0 text-center">食物繊維</th>
+                <th scope="col" class="p-0 text-center">カルシウム</th>                  
+                <th scope="col" class="p-0 text-center">食塩相当量</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-info">
+                <th scope="row" class="p-0"></th>
+                <td class="p-0 text-center cardInfo" data-name="fiber">g</td>
+                <td class="p-0 text-center cardInfo" data-name="k">g</td>
+                <td class="p-0 text-center cardInfo" data-name="nacl">g</td>
+              </tr>
+            </tbody>
+          </table>              
+        </div>
+      </div>
+    </div>
+    <!--フッター-->
+    <!--
+    <footer class="container-fluid bg-dark"
+      style="
+        bottom: -60px;
+        height: 60px;
+        z-index: 1;
+      "
+    >
+    </footer>
+    -->
+    <div style="width: 200px; height: 200px; background-color: red" class="position-relative">
+      <input id="test" type="text" style="width: 20px; height: 20px; right: 0%; transition: 0.3s;" placeholder="p" class="position-absolute">
+    </div>
+    <script src="./js/script.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

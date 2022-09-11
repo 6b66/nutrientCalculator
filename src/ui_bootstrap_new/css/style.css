@@ -1,0 +1,233 @@
+.a {
+    background-color: #CDE9E3;
+}
+.b {
+    background-color: red;
+}
+.c {
+    background-color: black;
+}
+
+
+@media screen and (min-width:480px) { 
+    /*　画面サイズが480pxからはここを読み込む　*/
+    ul > li:hover {
+        background-color: #34bd34;
+        transition: 0.2s;
+    }
+}
+#search {
+    width: 0%;
+    z-index: 0;
+}
+.h-35 {
+    height: 35%;
+}
+.bg-gray {
+    background-color: #EAEAF3;
+}
+.rounded-4 {
+    border-radius: 20px;
+}
+ul > li{
+    transition: 0.3s;
+}
+
+.bg-green {
+    background-color: #02A893;
+    transition: 0.2s;
+}
+.mt-25 {
+    margin-top: 0.7rem;
+}
+.name {
+    width: 70px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0%;
+
+}
+ul > li:hover > i >  .name {
+    visibility: visible;
+}
+/*ページ*/
+.Page {
+    visibility: hidden;
+
+}
+.holder {
+    margin-top: 150px;
+}
+/*検索カード*/
+
+.cardsname {
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+.searchcard {
+    background-color: #CDE9E3;
+    height: 65px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.searchcard div input {
+    border: none;
+    background-color: black;
+}
+.searchCheck {
+    width: 38px;
+    height: 38px;
+    background-color: #eeeef1;
+    border-radius: 50px;
+}
+
+/*成分表*/
+.tablecard {
+    background-color: #CDE9E3;
+    height: 230px;
+    border-radius: 15px;
+    margin: 15px;
+}
+.alltablecard {
+    background-color: #94AE82;
+    height: 130px;
+    border-radius: 15px;
+    margin: 5px;
+}
+.tablename {
+    white-space: nowrap;
+    font-size: 13px;
+    text-align: center;
+}
+.tableper {
+    white-space: nowrap;
+    text-align: center;
+}
+.tableval {
+    white-space: nowrap;
+    text-align: center;
+}
+
+/*成分選択*/
+.nutritionSelectcard {
+    background-color: #CDE9E3;
+    height: 65px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.nutritionSelectCheck {
+    width: 38px;
+    height: 38px;
+}
+.bg-greenty {
+    background-color: #02A893;
+}
+.nutritionSelectCheck {
+    width: 38px;
+    height: 38px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+
+/*成分合計*/
+.tableposi {
+    height: 20px;
+}
+.clacDataFront {
+    height: 20px;
+}
+.clacData {
+    height: 20px;
+}
+.alltablesin {
+    height: 10px;
+}
+
+#openCardbox {
+    background-color: rgba(128, 128, 128, 0.418);
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    position: relative;
+    position: fixed;
+    top: 0;
+    padding-top: 100px;
+}
+#opencard {
+    
+    position: fixed;
+    top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10001;
+    
+}
+#openDelCheck {
+    background-color: rgba(128, 128, 128, 0.418);
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+    position: relative;
+    position: fixed;
+    top: 0;
+    padding-top: 100px;
+}
+#opendel {
+    position: fixed;
+    top: 250px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    
+}
+#delCheck {
+    height: 150px;
+    background-color: white;
+}
+.dispnone {
+    display: none;
+}
+#bgclose {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    z-index: 10000;
+}
+#test {
+    z-index: 1000;
+    width: 100%;
+    height: 100px;
+    background-color: #34bd34;
+    position: fixed;
+    top: 250px;
+}
+#test {
+    z-index: 1000;
+    width: 100%;
+    height: 0;
+    position: fixed;
+    top: 120px;
+}
+.closeCardBtnRight {
+    z-index: 1000;
+    height: 230px;
+    position: fixed;
+    top: 120px;
+    right: 0;
+}
+
+.closeCardBtnLeft {
+    z-index: 1000;
+    height: 230px;
+    position: fixed;
+    top: 120px;
+    left: 0;
+}

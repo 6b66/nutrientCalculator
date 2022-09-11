@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -5,7 +6,8 @@
   <title></title>
 </head>
 <body>
-  <input id="getBtn" type="button" value="取得">
+
+  <a href="/ui_bootstrap_new/index.html">a</a>
 </body>
 <script>
   const xhr = new XMLHttpRequest();

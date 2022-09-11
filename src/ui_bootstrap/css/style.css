@@ -1,0 +1,68 @@
+.navchanged {
+    position: absolute;
+    left: 80vw;
+}
+.height-20per{
+    height: 20%;
+}
+.hei40 {
+    height: 40px;
+}
+/*input*/
+input[type="text"] {
+    border: 1px solid #999;
+  }
+  input[type="text"]:focus {
+    border: 2px solid green;
+    outline: 0;
+  }
+/*メニューページ*/
+.menutoggle{
+    visibility:hidden;
+    opacity: 0;
+
+}
+/*bg*/
+.bggray {
+    background-color: rgb(128, 128, 128, 0.6);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: calc(100vh);
+    z-index: 2;
+}
+/*メイン*/
+main {
+    width: 100;
+    height: auto;
+}
+.min-height{
+    min-height: 100vh;
+}
+/*検索アイテムカード*/
+.itemcard{
+    height: 95px;
+    margin:10px 5px;
+}
+.addbutton {
+    height: 30px;
+}
+/*アイテムカードインプット*/
+.itemcard div label input::placeholder {
+    text-align: right;
+}
+/*カードインフォ*/
+@media screen and (min-width:768px) {
+    .mediaitem1 {
+        height: 150px;
+    }
+    .mediatext{
+        font-size: 20px;
+    }
+    .mediatext2{
+        font-size: 15px;
+    }
+    .mediatransition {
+        transition: 0.2s;
+    }
+}
