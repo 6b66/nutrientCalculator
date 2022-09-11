@@ -1,11 +1,12 @@
-const xhr = new XMLHttpRequest();
+const xhrFirst = new XMLHttpRequest();
+const xhrSearch = new XMLHttpRequest();
 let alldata = ""
-xhr.onload = function() {
-    if(xhr.readyState === 4) {
-        if(xhr.status === 200) {
+xhrFirst.onload = function() {
+    if(xhrFirst.readyState === 4) {
+        if(xhrFirst.status === 200) {
             //document.body.innerHTML = xhr.responseText
             //console.log(xhr.responseText)
-            alldata = JSON.parse(xhr.responseText)
+            alldata = JSON.parse(xhrFirst.responseText)
             //console.log(alldata)
             main()
             
@@ -14,11 +15,10 @@ xhr.onload = function() {
 };
 
 let a = []
-
 window.onload = () => {
-    xhr.open('POST', '../Access/dbAccess.php?command=GetAllData',true);
-    xhr.setRequestHeader('content-type','application/json');
-    xhr.send();
+    xhrFirst.open('POST', '../Access/dbAccess.php?command=GetAllData&firstCount=0',true);
+    xhrFirst.setRequestHeader('content-type','application/json');
+    xhrFirst.send();
 }
 
 const nutritionObj = {
@@ -131,7 +131,6 @@ const nutritionObj = {
     ZN: "亜鉛",
     ZNunit: "mg"
 }
-
 //cookie保存
 const setCookie = (name, json)=>{
     let cookie = '';
@@ -150,13 +149,13 @@ const setCookie = (name, json)=>{
     //Cookieを保存する
     document.cookie = cookies;
 };
-
 //cookie削除
 function deleteCookie(name) {
     const d = new Date();
     d.setTime(d.getTime() - (1000 * 60 * 60 * 24));
     document.cookie = name + '=; expires=' + d.toUTCString() + "; path=/";
 }
+
 
 let openCardbox = document.querySelector("#openCardbox")
 let opencard = document.querySelector("#opencard")
@@ -276,6 +275,7 @@ function main() {
 
     //検索結果の配列を作成
     let newDataList = []
+    /*
     function searchArray(x) {
         newDataList = []
         if(x != "") {
@@ -310,35 +310,46 @@ function main() {
         }
         
         //console.log(newDataList)
-    }
+    }*/
+
     //検索
     let beforeText = ""
     let text = ""
     search.addEventListener("change", () => {
-        //console.log(search.value)
-        //console.log(text)
-        //console.log(search.value)
         if(search.value != ""){
             text = search.value
-            //console.log(beforeText)
-            //console.log(text)
+            console.log(text)
             if(beforeText != text){
-                searchArray(search.value)
-                //console.log(newDataList)
-                beforeText = text
-                //console.log(selectItemNum)
-                //console.log(newDataList)
-                if(newDataList.length > 0){
-                    searchCardHolder.innerHTML = searchMake_card(newDataList)
-                    let searchCards = searchCardHolder.querySelectorAll(".cards")
-                    searchCards.forEach(card => {
-                        searchCardAbility(card) 
-                        cardInfo(card)
-                    })
-                }
+                xhrSearch.open('POST', `../Access/dbAccess.php?command=GetDataSearch&keyword=${text}`,true);
+                xhrSearch.setRequestHeader('content-type','application/json');
+                xhrSearch.send();
+                xhrSearch.onload = function() {
+                    if(xhrSearch.readyState === 4) {
+                        if(xhrSearch.status === 200) {
+                            //document.body.innerHTML = xhr.responseText
+                            //console.log(xhr.responseText)
+                            alldata = JSON.parse(xhrSearch.responseText)
+                            newDataList = alldata
+                            beforeText = text
+                            //console.log(selectItemNum)
+                            console.log(newDataList)
+                            if(newDataList.length > 0){
+                                searchCardHolder.innerHTML = searchMake_card(newDataList)
+                                let searchCards = searchCardHolder.querySelectorAll(".cards")
+                                searchCards.forEach(card => {
+                                    searchCardAbility(card) 
+                                    cardInfo(card)
+                                })
+                            }
+                        }
+                    }else {
+                        console.log("失敗")
+                    }
+                };
             }
         }else {
             //console.log("null")
+
             searchCardHolder.innerHTML = searchMake_card(alldata)
             let searchCards = searchCardHolder.querySelectorAll(".cards")
             searchCards.forEach(card => {
