@@ -9,14 +9,14 @@ if ($_GET["command"]) {
     $res = [];
     if ($_GET["command"] == "GetAllData") {
         $firstCount = isset($_GET["firstCount"]) ? $_GET["firstCount"] : 0;
-        $lastCount = isset($_GET["lastCount"]) ? max($_GET["lastCount"] - $firstCount, 0) : 100;
-        $res = $db->GetAllData($firstCount, $lastCount);
+        $range = isset($_GET["range"]) ? max($_GET["range"] - $firstCount, 0) : 50;
+        $res = $db->GetAllData($firstCount, $range);
     } else if ($_GET["command"] == "GetDataSearch") {
         if (isset($_GET["keyword"])) {
             // 検索件数、初期値0            
             $firstCount = isset($_GET["firstCount"]) ? $_GET["firstCount"] : 0;
-            $lastCount = isset($_GET["lastCount"]) ? max($_GET["lastCount"] - $firstCount, 0) : 100;
-            $res = $db->GetDataSearchByName($_GET["keyword"], $firstCount, $lastCount);
+            $range = isset($_GET["range"]) ? max($_GET["range"] - $firstCount, 0) : 50;
+            $res = $db->GetDataSearchByName($_GET["keyword"], $firstCount, $range);
         }
     }
 
