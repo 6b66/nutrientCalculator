@@ -8,12 +8,15 @@ if ($_GET["command"]) {
 
     $res = [];
     if ($_GET["command"] == "GetAllData") {
-
-        $res = $db->GetAllData();
-
+        $firstCount = isset($_GET["firstCount"]) ? $_GET["firstCount"] : 0;
+        $range = isset($_GET["range"]) ? max($_GET["range"] - $firstCount, 0) : 50;
+        $res = $db->GetAllData($firstCount, $range);
     } else if ($_GET["command"] == "GetDataSearch") {
         if (isset($_GET["keyword"])) {
-            $res = $db->GetDataSearchByName($_GET["keyword"]);
+            // 検索件数、初期値0            
+            $firstCount = isset($_GET["firstCount"]) ? $_GET["firstCount"] : 0;
+            $range = isset($_GET["range"]) ? max($_GET["range"] - $firstCount, 0) : 50;
+            $res = $db->GetDataSearchByName($_GET["keyword"], $firstCount, $range);
         }
     }
 

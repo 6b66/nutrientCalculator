@@ -16,12 +16,12 @@ class dbConnecter {
         self::$isConnected = true;
     }
 
-    public function GetAllData() {
+    public function GetAllData($firstCount, $range) {
         if (!self::$isConnected) return;
 
         $resultData = [];
 
-        $stmt = self::$pdo->query("SELECT * FROM NutrientTable");
+        $stmt = self::$pdo->query("SELECT * FROM NutrientTable LIMIT ".$firstCount.",".$range);
 
         array_push($resultData, $stmt->fetch(PDO::FETCH_OBJ));
 
@@ -33,12 +33,12 @@ class dbConnecter {
         return $resultData;
     }
 
-    public function GetDataSearchByName($keyword) {
+    public function GetDataSearchByName($keyword, $firstCount, $range) {
         if (!self::$isConnected) return;
 
         $resultData = [];
 
-        $stmt = self::$pdo->query("SELECT * FROM NutrientTable WHERE NAME LIKE '%".$keyword."%' OR KANANAME LIKE '%".$keyword."%'");
+        $stmt = self::$pdo->query("SELECT * FROM NutrientTable WHERE NAME LIKE '%".$keyword."%' OR KANANAME LIKE '%".$keyword."%' LIMIT ".$firstCount.",".$range);
 
         array_push($resultData, $stmt->fetch(PDO::FETCH_OBJ));
 
