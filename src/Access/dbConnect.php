@@ -48,8 +48,6 @@ class dbConnecter {
         $stmt->bindParam(':range', $range, PDO::PARAM_INT);
         $stmt->execute();
 
-        echo $stmt->debugDumpParams();
-
         array_push($resultData, $stmt->fetch(PDO::FETCH_OBJ));
 
         $dataCount = $stmt->rowCount();
