@@ -29,16 +29,21 @@ class Creator {
         ele.addEventListener("click",() => {
             let searchdivs = searchCardHolder.children
             let selectdivs = selectCardHolder.children
+            let tabledivs = tableCardHolder.children
             if(!idList.includes(div.dataset.id)) {
                 ele.classList.add("bg-greenty")
                 let clone_div = div.cloneNode(true);
                 selectCardHolder.appendChild(clone_div)
                 this.Set_Card_Ability(clone_div)
+                
                 idList.push(div.dataset.id)
                 alldata.forEach(data => {
-                    if(data.NUM == div.dataset.id)
+                    if(data.NUM == div.dataset.id){
                         selectDataList.push(data)
+                        tableCardHolder.appendChild(this.Make_Table(data))
+                    }
                 })
+
             }else {
                 if(searchdivs.length > 1){
                     for(let searchdiv in searchdivs) {
@@ -64,6 +69,7 @@ class Creator {
                             let nowdiv = selectdivs[selectdiv]
                             if(nowdiv.dataset.id == div.dataset.id) {
                                 selectdivs[selectdiv].remove()
+                                tabledivs[selectdiv].remove()
                                 break;
                             }
                         }
@@ -71,6 +77,7 @@ class Creator {
                     }
                 }else {
                     selectdivs[0].remove()
+                    tabledivs[0].remove()
                 }
                 let index = idList.indexOf(div.dataset.id)
                 idList.splice(index,1)
@@ -78,6 +85,57 @@ class Creator {
             }
             Item_Check_Pop()
         })
+    }
+
+    Make_Table(Data) {
+        let div = document.createElement("div")
+        div.classList.add("col-12","col-md-6")
+        div.dataset.id = Data.NUM
+        let ele_1 = 
+            `<div class="col-12 v tablecard  d-flex flex-column d-flex align-items-center m-0 mb-2">
+                <div class="row d-flex flex-row col-12 m-0 align-items-center justify-content-center" style="height: 65px;">
+                    <div class="col-9 h-100 m-2 d-flex align-items-center justify-content-center p-0">
+                        <p style="font-weight: 500; opacity: 0.9; font-size: 0.9rem;" class="h-100 text-center m-0 p-0">${this.NameSort(Data.NAME)}</p>
+                    </div>
+                    <div class="col-2 h-75 p-0 position-relative">
+                        <input type="text" class="col-11 h-75 rounded-3 input-value" style="border: 0; border-bottom: 2px solid black;  text-align: right; padding-right: 15px;">
+                        <p class="position-absolute" style="top: 10px; right: 10%;">g</p>
+                    </div>
+                    <div class="row m-0 table-responsive rounded-3" style="height: 142px; width: 95%;">
+                        <table class="table bg-light m-0 tableposi">
+                            <thead  class="table-dark">
+                                <tr class="tr-name">
+                                    <th scope="col" class="tablename">成分名</th>`;
+        let ele_3 =
+                                `</tr>
+                            </thead>
+                            <tbody>
+                                <tr class="td-h tr-100">
+                                    <th scope="row" class="clacDataFront">100g</th>`;
+        let ele_5 =
+                                `</tr>
+                                <tr class="table-secondary clacData tr-calc">
+                                    <th scope="row"><span class="now-value">0</span><span>g</span></th>`
+        let ele_7 = 
+                                `</tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>`;
+        let ele_2 = ""
+        let ele_4 = ""
+        let ele_6 = ""
+        userDataArray.forEach(i => {
+            ele_2 += `<th scope="col" class="tablename">${nutritionObj[i]}</th>`
+            let unit = i + "unit"
+            //console.log(unit)
+            ele_4  += `<td class="tableper"><span class="tableperin">${Data[i]}</span><span>${nutritionObj[unit]}</span></td>`
+            ele_6 += `<td class="tableval"><span class="tableValNum">0</span><span>${nutritionObj[unit]}</span></td>`
+        })
+        let ele = ele_1 + ele_2 + ele_3 + ele_4 + ele_5 + ele_6 + ele_7
+        div.innerHTML = ele
+        return div
     }
 
     Write_Card(Page) {
@@ -94,6 +152,17 @@ class Creator {
         searchPlusBtn_hidden.classList.add("visually-hidden")
         searchPlusBtn.textContent = "さらに見る"
         searchPlusBtn.classList.remove("visually-hidden")
+    }
+
+    Write_Table(Page) {
+        let holder = Page.querySelector(".holder")
+        this.List.forEach(Data => {
+            if(Data != false) {
+                let div = this.Make_Table(Data)
+                holder.append(div)
+            }
+            
+        })
     }
 
     NameSort(newName) {
@@ -133,6 +202,118 @@ class Creator {
     }
 }
 
+let userDataArray = ["ENERC_KCAL","PROT","FAT","FIB","CHOCDF","CA","K","FE","VITA_RAE","THIA","RIBF","VITC","NACL_EQ","FOL"]
+const nutritionObj = {
+    ALC: "アルコール",
+    ALCunit: "g",
+    ASH: "灰分",
+    ASHunit: "g",
+    BIOT: "ビオチン",
+    BIOTunit: "μg",
+    CA: "カルシウム",
+    CAunit: "mg",
+    CARTA: "α-カロテン",
+    CARTAunit: "μg",
+    CARTB: "β-カロテン",
+    CARTBunit: "μg",
+    CARTBEQ: "β-カロテン当量",
+    CARTBEQunit: "μg",
+    CHOAVL: "利用可能炭水化物（質量計）",
+    CHOAVLunit: "g",
+    CHOAVLDF: "差引き法による利用可能炭水化物",
+    CHOAVLDFunit: "g",
+    CHOAVLM: "利用可能炭水化物（単糖当量）",
+    CHOAVLMunit: "g",
+    CHOCDF: "炭水化物",
+    CHOCDFunit: "g",
+    CHOLE: "コレステロール",
+    CHOLEunit: "mg",
+    CR: "クロム",
+    CRunit: "μg",
+    CRYPXB: "β-クリプトキサンチン",
+    CRYPXBunit: "μg",
+    CU: "銅",
+    CUunit: "mg",
+    ENERC: "エネルギー(kj)",
+    ENERCunit: "kj",
+    ENERC_KCAL: "エネルギー(kcal)",
+    ENERC_KCALunit: "kcal",
+    FAT: "脂質",
+    FATunit: "g",
+    FATNLEA: "脂肪酸のトリアシルグリセロール当量",
+    FATNLEAunit: "g",
+    FE: "鉄",
+    FEunit: "mg",
+    FIB: "食物繊維総量",
+    FIBunit: "g",
+    FOL: "葉酸",
+    FOLunit: "μg",
+    ID: "ヨウ素",
+    IDunit: "μg",
+    K: "カリウム",
+    Kunit: "mg",
+    MG: "マグネシウム",
+    MGunit: "mg",
+    MN: "マンガン",
+    MNunit: "mg",
+    MO: "モリブデン",
+    MOunit: "μg",
+    NA: "ナトリウム",
+    NAunit: "mg",
+    NACL_EQ: "食塩相当量",
+    NACL_EQunit: "g",
+    NE: "ナイアシン当量",
+    NEunit: "mg",
+    NIA: "ナイアシン",
+    NIAunit: "mg",
+    OA: "有機酸",
+    OAunit: "g",
+    P: "リン",
+    Punit: "mg",
+    PANTAC: "パントテン酸",
+    PANTACunit: "mg",
+    POLYL: "糖アルコール",
+    POLYLunit: "g",
+    PROT: "たんぱく質",
+    PROTunit: "g",
+    PROTCAA: "アミノ酸組成によるたんぱく質",
+    PROTCAAunit: "g",
+    REFUSE: "廃棄率",
+    REFUSEunit: "%",
+    RETOL: "レチノール",
+    RETOLunit: "μg",
+    RIBF: "ビタミンB2",
+    RIBFunit: "mg",
+    SE: "セレン",
+    SEunit: "μg",
+    THIA: "ビタミンB1",
+    THIAunit: "mg",
+    TOCPHA: "α-トコフェロール",
+    TOCPHAunit: "mg",
+    TOCPHB: "β-トコフェロール",
+    TOCPHBunit: "mg",
+    TOCPHD: "δ-トコフェロール",
+    TOCPHDunit: "mg",
+    TOCPHG: "γ-トコフェロール",
+    TOCPHGunit: "mg",
+    VITA_RAE: "レチノール活性当量",
+    VITA_RAEunit: "μg",
+    VITB6A: "ビタミンB6",
+    VITB6Aunit: "mg",
+    VITB12: "ビタミンB12",
+    VITB12unit: "μg",
+    VITC: "ビタミンC",
+    VITCunit: "mg",
+    VITD: "ビタミンD",
+    VITDunit: "μg",
+    VITK: "ビタミンK",
+    VITKunit: "μg",
+    WATER: "水分",
+    WATERunit: "g",
+    ZN: "亜鉛",
+    ZNunit: "mg"
+}
+
 let idList = []
 let selectDataList = []
 
@@ -150,6 +331,8 @@ let nutritionSelectHolder = document.querySelector("#nutritionSelectHolder")
 
 let searchPlusBtn = searchPage.querySelector("#searchPlusBtn")
 
+
+
 const xhrFirst = new XMLHttpRequest();
 
 let alldata = ""
@@ -163,7 +346,6 @@ xhrFirst.onload = function() {
             alldata = JSON.parse(xhrFirst.responseText)
             let Maker = new Creator(alldata, GetRange)
             Maker.Write_Card(searchPage)
-            
         }
     }
 };
