@@ -21,7 +21,10 @@ class dbConnecter {
 
         $resultData = [];
 
-        $stmt = self::$pdo->query("SELECT * FROM NutrientTable LIMIT ".$firstCount.",".$range);
+        $stmt = self::$pdo->prepare("SELECT * FROM NutrientTable LIMIT :first, :range");
+        $stmt->bindParam(':first', $firstCount, PDO::PARAM_INT);
+        $stmt->bindParam(':range', $range, PDO::PARAM_INT);
+        $stmt->execute();
 
         array_push($resultData, $stmt->fetch(PDO::FETCH_OBJ));
 
@@ -36,9 +39,14 @@ class dbConnecter {
     public function GetDataSearchByName($keyword, $firstCount, $range) {
         if (!self::$isConnected) return;
 
+        $keyword = "%".$keyword."%";
         $resultData = [];
 
-        $stmt = self::$pdo->query("SELECT * FROM NutrientTable WHERE NAME LIKE '%".$keyword."%' OR KANANAME LIKE '%".$keyword."%' LIMIT ".$firstCount.",".$range);
+        $stmt = self::$pdo->prepare("SELECT * FROM NutrientTable WHERE NAME LIKE :keyword OR KANANAME LIKE :keyword LIMIT :first, :range");
+        $stmt->bindParam(':keyword', $keyword, PDO::PARAM_STR);
+        $stmt->bindParam(':first', $firstCount, PDO::PARAM_INT);
+        $stmt->bindParam(':range', $range, PDO::PARAM_INT);
+        $stmt->execute();
 
         array_push($resultData, $stmt->fetch(PDO::FETCH_OBJ));
 
