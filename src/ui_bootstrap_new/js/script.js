@@ -91,11 +91,9 @@ class Creator {
             }
             
         })
-        if(this.List.length > this.GetRange) {
-            searchPlusBtn.classList.remove("visually-hidden")
-        }else {
-            searchPlusBtn.classList.add("visually-hidden")
-        }
+        searchPlusBtn_hidden.classList.add("visually-hidden")
+        searchPlusBtn.textContent = "さらに見る"
+        searchPlusBtn.classList.remove("visually-hidden")
     }
 
     NameSort(newName) {
@@ -153,7 +151,6 @@ let nutritionSelectHolder = document.querySelector("#nutritionSelectHolder")
 let searchPlusBtn = searchPage.querySelector("#searchPlusBtn")
 
 const xhrFirst = new XMLHttpRequest();
-
 
 let alldata = ""
 let dataNum = 0
@@ -240,10 +237,9 @@ search.addEventListener("change", () => {
 
 //食品の追加ボタン
 const xhrPlus = new XMLHttpRequest();
+let searchPlusBtn_hidden = document.querySelector("#searchPlusBtn-hidden")
 searchPlusBtn.addEventListener("click", () => {
     dataNum += GetRange
-    console.log(dataNum)
-    console.log(beforeText)
     xhrPlus.open('POST', `../Access/dbAccess.php?command=GetDataSearch&keyword=${beforeText}&firstCount=${dataNum}`,true);
             xhrPlus.setRequestHeader('content-type','application/json');
             xhrPlus.send();
@@ -253,10 +249,12 @@ searchPlusBtn.addEventListener("click", () => {
                         newDataList = []
                         newDataList = JSON.parse(xhrPlus.responseText)
                         alldata = alldata.concat(newDataList)
-                        console.log(alldata)
-                        if(newDataList.length > 0){
+                        if(newDataList.length > 1){
                             let Maker = new Creator(newDataList, GetRange)
                             Maker.Write_Card(searchPage)
+                        }else {
+                            searchPlusBtn.textContent = "これ以上ありません"
+                            searchPlusBtn_hidden.classList.remove("visually-hidden")
                         }
                     }
                 }else {
