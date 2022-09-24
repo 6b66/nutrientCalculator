@@ -40,7 +40,9 @@ class Creator {
                 alldata.forEach(data => {
                     if(data.NUM == div.dataset.id){
                         selectDataList.push(data)
-                        tableCardHolder.appendChild(this.Make_Table(data))
+                        let table = this.Make_Table(data)
+                        tableCardHolder.appendChild(table)
+                        this.Set_Table_Ability(table)
                     }
                 })
 
@@ -138,6 +140,22 @@ class Creator {
         return div
     }
 
+    Set_Table_Ability(div) {
+        console.log("in")
+        let input_value = div.querySelector(".input-value")
+        let tableperin = div.querySelectorAll(".tableperin")
+        let tableValNum = div.querySelectorAll(".tableValNum")
+        let now_value = div.querySelector(".now-value")
+        input_value.addEventListener("input", () => {
+            now_value.textContent = Number(this.hankaku2Zenkaku(input_value.value))
+            let i = 0
+            tableperin.forEach(x => {
+                tableValNum[i].textContent = this.clacResult(Number(x.textContent), Number(this.hankaku2Zenkaku(input_value.value)))
+                i++
+            })
+        })
+    }
+
     Write_Card(Page) {
         let holder = Page.querySelector(".holder")
         this.List.forEach(Data => {
@@ -145,13 +163,18 @@ class Creator {
                 let div = this.Make_Card(Data)
                 holder.append(div)
                 this.Set_Card_Ability(div)
-
             }
             
         })
-        searchPlusBtn_hidden.classList.add("visually-hidden")
-        searchPlusBtn.textContent = "さらに見る"
-        searchPlusBtn.classList.remove("visually-hidden")
+        if(this.List.length <= this.GetRange) {
+            searchPlusBtn.textContent = "これ以上ありません"
+            searchPlusBtn_hidden.classList.remove("visually-hidden")
+        }else {
+            searchPlusBtn_hidden.classList.add("visually-hidden")
+            searchPlusBtn.textContent = "さらに見る"
+            searchPlusBtn.classList.remove("visually-hidden")
+        }
+        
     }
 
     Write_Table(Page) {
@@ -160,6 +183,7 @@ class Creator {
             if(Data != false) {
                 let div = this.Make_Table(Data)
                 holder.append(div)
+                this.Set_Table_Ability(div)
             }
             
         })
@@ -199,6 +223,17 @@ class Creator {
         }
         newName = kakko1 + kakko2 + kakko3 + "<br>" + newName
         return newName
+    }
+
+    hankaku2Zenkaku(str) {
+        return str.replace(/[０-９]/g, function(s) {
+            return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+        });
+    }
+
+    clacResult(value, inval) {
+        let ans = Number(value * inval / 100);
+        return ans.toFixed(2)
     }
 }
 
