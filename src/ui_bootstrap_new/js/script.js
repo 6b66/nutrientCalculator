@@ -49,9 +49,7 @@ class Creator {
                 if(searchdivs.length > 1){
                     for(let searchdiv in searchdivs) {
                         if(searchdiv < searchdivs.length) {
-                            //console.log(searchdivs[searchdiv])
                             let nowdiv = searchdivs[searchdiv]
-                            //console.log(nowdiv)
                             let ele = nowdiv.querySelector(".searchcard")
                             if(nowdiv.dataset.id == div.dataset.id) {
                                 ele.classList.remove("bg-greenty")
@@ -130,7 +128,6 @@ class Creator {
         userDataArray.forEach(i => {
             ele_2 += `<th scope="col" class="tablename">${nutritionObj[i]}</th>`
             let unit = i + "unit"
-            //console.log(unit)
             ele_4  += `<td class="tableper"><span class="tableperin">${Data[i]}</span><span>${nutritionObj[unit]}</span></td>`
             ele_6 += `<td class="tableval"><span class="tableValNum">0</span><span>${nutritionObj[unit]}</span></td>`
         })
@@ -159,8 +156,6 @@ class Creator {
         searchCheck.addEventListener("click", (event) => {
             alldata.forEach(data => {
                 if(data.NUM == div.dataset.id) {
-                    console.log("in")
-                    console.log(data)
                     let table = this.Make_Table(data)
                     opencard.appendChild(table)
                     this.Set_Table_Ability(table)
@@ -393,8 +388,6 @@ const GetRange = 50
 xhrFirst.onload = function() {
     if(xhrFirst.readyState === 4) {
         if(xhrFirst.status === 200) {
-            //document.body.innerHTML = xhr.responseText
-            //console.log(xhr.responseText)
             alldata = JSON.parse(xhrFirst.responseText)
             let Maker = new Creator(alldata, GetRange)
             Maker.Write_Card(searchPage)
