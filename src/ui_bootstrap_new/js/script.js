@@ -156,7 +156,7 @@ class Creator {
 
     Set_CheckOnlyTable_Ability(div) {
         let searchCheck = div.querySelector(".searchCheck")
-        searchCheck.addEventListener("click", () => {
+        searchCheck.addEventListener("click", (event) => {
             alldata.forEach(data => {
                 if(data.NUM == div.dataset.id) {
                     console.log("in")
@@ -166,8 +166,8 @@ class Creator {
                     this.Set_Table_Ability(table)
                 }
             })
+            event.stopPropagation();
             openCardbox.classList.remove("visually-hidden")
-
         })
     }
 
@@ -177,6 +177,7 @@ class Creator {
             if(Data != false) {
                 let div = this.Make_Card(Data)
                 holder.append(div)
+                this.Set_Card_Ability(div)
                 this.Set_CheckOnlyTable_Ability(div)
             }
             
