@@ -35,7 +35,6 @@ class Creator {
                 let clone_div = div.cloneNode(true);
                 selectCardHolder.appendChild(clone_div)
                 this.Set_Card_Ability(clone_div)
-                
                 idList.push(div.dataset.id)
                 alldata.forEach(data => {
                     if(data.NUM == div.dataset.id){
@@ -141,7 +140,6 @@ class Creator {
     }
 
     Set_Table_Ability(div) {
-        console.log("in")
         let input_value = div.querySelector(".input-value")
         let tableperin = div.querySelectorAll(".tableperin")
         let tableValNum = div.querySelectorAll(".tableValNum")
@@ -156,6 +154,23 @@ class Creator {
         })
     }
 
+    Set_CheckOnlyTable_Ability(div) {
+        let searchCheck = div.querySelector(".searchCheck")
+        searchCheck.addEventListener("click", (event) => {
+            alldata.forEach(data => {
+                if(data.NUM == div.dataset.id) {
+                    console.log("in")
+                    console.log(data)
+                    let table = this.Make_Table(data)
+                    opencard.appendChild(table)
+                    this.Set_Table_Ability(table)
+                }
+            })
+            event.stopPropagation();
+            openCardbox.classList.remove("visually-hidden")
+        })
+    }
+
     Write_Card(Page) {
         let holder = Page.querySelector(".holder")
         this.List.forEach(Data => {
@@ -163,6 +178,7 @@ class Creator {
                 let div = this.Make_Card(Data)
                 holder.append(div)
                 this.Set_Card_Ability(div)
+                this.Set_CheckOnlyTable_Ability(div)
             }
             
         })
@@ -365,7 +381,8 @@ let nutritionSelectPage = document.querySelector("#nutritionSelectPage")
 let nutritionSelectHolder = document.querySelector("#nutritionSelectHolder")
 
 let searchPlusBtn = searchPage.querySelector("#searchPlusBtn")
-
+let opencard = document.querySelector("#opencard")
+let openCardbox = document.querySelector("#openCardbox")
 
 
 const xhrFirst = new XMLHttpRequest();
@@ -491,6 +508,15 @@ function Item_Check_Pop() {
         selectNumBox.classList.add("visually-hidden")
     }
 }
+
+//食品名カードから開いた成分表を閉じる
+let closeInfoCard = document.querySelectorAll(".closeInfoCard")
+closeInfoCard.forEach(div => {
+    div.addEventListener("click",() => {
+        opencard.innerHTML = ""
+        openCardbox.classList.add("visually-hidden")
+    })
+})
 
 //メニューボタンとページ遷移
 let searchMenuBtn = document.querySelector("#searchMenuBtn")
