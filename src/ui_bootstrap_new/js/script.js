@@ -36,6 +36,7 @@ class Creator {
                 selectCardHolder.appendChild(clone_div)
                 this.Set_Card_Ability(clone_div)
                 idList.push(div.dataset.id)
+                setCookie("idList",idList)
                 alldata.forEach(data => {
                     if(data.NUM == div.dataset.id){
                         selectDataList.push(data)
@@ -81,6 +82,7 @@ class Creator {
                 let index = idList.indexOf(div.dataset.id)
                 idList.splice(index,1)
                 selectDataList.splice(index,1)
+                setCookie("idList",idList)
             }
             Item_Check_Pop()
         })
@@ -537,6 +539,24 @@ menuBtn.forEach(x => {
         ScrollTop()
     })
 })
+
+const setCookie = (name, json)=>{
+    let cookie = '';
+    let expire = '';
+    let period = '';
+    //Cookieの保存名と値を指定
+    cookies = name + '=' + JSON.stringify(json) + ';';
+    //Cookieを保存するパスを指定
+    cookies += 'path=/ ;';
+    //Cookieを保存する期間を指定
+    period = 30; //保存日数
+    expire = new Date();
+    expire.setTime(expire.getTime() + 1000 * 3600 * 24 * period);
+    expire.toUTCString();
+    cookies += 'expires=' + expire + ';';
+    //Cookieを保存する
+    document.cookie = cookies;
+};
 
 //ページクリックでスクロールトップへ
 function ScrollTop() {
