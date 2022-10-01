@@ -179,7 +179,7 @@ class Creator {
             }
             
         })
-        if(this.List.length <= this.GetRange) {
+        if(this.List.length < this.GetRange) {
             searchPlusBtn.textContent = "これ以上ありません"
             searchPlusBtn_hidden.classList.remove("visually-hidden")
         }else {
