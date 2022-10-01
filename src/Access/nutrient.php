@@ -8,8 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
     // fieldsの設定
     $fields = null;
-    if(isset($_GET["dataList"])) {
-        $fields = explode(",", $_GET["dataList"]);
+    if(isset($_GET["getDataList"])) {
+        $fields = explode(",", $_GET["getDataList"]);
     }
 
     // 条件の設定
