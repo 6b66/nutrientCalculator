@@ -1,60 +1,50 @@
 <?php
-/* $mysqli = new mysqli('db', 'root', 'testpass', 'mysql');
-if($mysqli->connect_error) {
-    echo '接続失敗'.PHP_EOL;
-    exit();
-} else {
-    echo '接続成功'.PHP_EOL;
-} */
 class dbConnecter {
     private static $pdo = null;
     private static $isConnected = false;
+    private static $tableName = false;
 
-    public function Connect() {
-        if (self::$isConnected) return;
-        self::$pdo = new pdo("mysql:host=db;dbname=NutrientDB;charset=utf8;", "root", "testpass");
+    public function dbConnecter($tableName) {
+        if (!self::IsKnownTableName($tableName)) return;
+        self::$pdo = new pdo("mysql:host=db;dbname=appsDB;charset=utf8;", "root", "testpass");
         self::$isConnected = true;
+        self::$tableName = $tableName;
     }
 
-    public function GetAllData($firstCount, $range) {
+    public function IsKnownTableName($tableName) {
+        // テーブルを増やす場合は下のリストをメンテする
+        $knownTableList = ["NutrientTable"];
+        return in_array($tableName, $knownTableList);
+    }
+
+    public function Get(array $fields = null, WhereCondition $condition = null, int $startCount = 0, int $range = 50) {
         if (!self::$isConnected) return;
+        
+        $whereCondition = isset($condition) ? "WHERE ". $condition->GetWhere() : "";
 
-        $resultData = [];
+        $fieldString = "*";
+        if (isset($fields) && count($fields) > 0) {
+            $fieldString = "";
+            $endValue = end($fields);
+            foreach ($fields as $fieldName) {
+                if ($fieldName !== $endValue) {
+                    $fieldString .= "'".$fieldName."', ";
+                } else {
+                    $fieldString .= "'".$fieldName."'";
+                }
+            }
+        }
 
-        $stmt = self::$pdo->prepare("SELECT * FROM NutrientTable LIMIT :first, :range");
-        $stmt->bindParam(':first', $firstCount, PDO::PARAM_INT);
+        $stmt = self::$pdo->prepare("SELECT ".$fieldString." FROM ".self::$tableName." ".$whereCondition." LIMIT :first, :range");
+        $stmt->bindParam(':first', $startCount, PDO::PARAM_INT);
         $stmt->bindParam(':range', $range, PDO::PARAM_INT);
         $stmt->execute();
 
-        array_push($resultData, $stmt->fetch(PDO::FETCH_OBJ));
-
+        $resultData = [];
         $dataCount = $stmt->rowCount();
         for ($i = 0;$i < $dataCount;$i++) {
             array_push($resultData, $stmt->fetch(PDO::FETCH_OBJ));
         }
-
-        return $resultData;
-    }
-
-    public function GetDataSearchByName($keyword, $firstCount, $range) {
-        if (!self::$isConnected) return;
-
-        $keyword = "%".$keyword."%";
-        $resultData = [];
-
-        $stmt = self::$pdo->prepare("SELECT * FROM NutrientTable WHERE NAME LIKE :keyword OR KANANAME LIKE :keyword LIMIT :first, :range");
-        $stmt->bindParam(':keyword', $keyword, PDO::PARAM_STR);
-        $stmt->bindParam(':first', $firstCount, PDO::PARAM_INT);
-        $stmt->bindParam(':range', $range, PDO::PARAM_INT);
-        $stmt->execute();
-
-        array_push($resultData, $stmt->fetch(PDO::FETCH_OBJ));
-
-        $dataCount = $stmt->rowCount();
-        for ($i = 0;$i < $dataCount;$i++) {
-            array_push($resultData, $stmt->fetch(PDO::FETCH_OBJ));
-        }
-
         return $resultData;
     }
 }
