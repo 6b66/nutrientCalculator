@@ -398,7 +398,7 @@ xhrFirst.onload = function() {
 };
 
 window.onload = () => {
-    xhrFirst.open('POST', '../Access/dbAccess.php?command=GetAllData&firstCount=0&range=50',true);
+    xhrFirst.open('GET', '../Access/nutrient.php?startCount=0&range=50',true);
     xhrFirst.setRequestHeader('content-type','application/json');
     xhrFirst.send();
 }
@@ -431,7 +431,7 @@ search.addEventListener("change", () => {
     if(search.value != ""){
         text = search.value
         if(beforeText != text){
-            xhrSearch.open('POST', `../Access/dbAccess.php?command=GetDataSearch&keyword=${text}`,true);
+            xhrSearch.open('GET', `../Access/nutrient.php?keyword=${text}`,true);
             xhrSearch.setRequestHeader('content-type','application/json');
             xhrSearch.send();
             xhrSearch.onload = function() {
@@ -469,7 +469,7 @@ const xhrPlus = new XMLHttpRequest();
 let searchPlusBtn_hidden = document.querySelector("#searchPlusBtn-hidden")
 searchPlusBtn.addEventListener("click", () => {
     dataNum += GetRange
-    xhrPlus.open('POST', `../Access/dbAccess.php?command=GetDataSearch&keyword=${beforeText}&firstCount=${dataNum}`,true);
+    xhrPlus.open('GET', `../Access/nutrient.php?keyword=${beforeText}&startCount=${dataNum}`,true);
             xhrPlus.setRequestHeader('content-type','application/json');
             xhrPlus.send();
             xhrPlus.onload = function() {

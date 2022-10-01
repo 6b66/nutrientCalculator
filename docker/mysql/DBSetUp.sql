@@ -5,9 +5,9 @@ SET SESSION character_set_results = utf8mb4;
 SET SESSION character_set_client = utf8mb4;
 SET SESSION character_set_server = utf8mb4;
 
-CREATE DATABASE NutrientDB;
+CREATE DATABASE appsDB;
 
-CREATE TABLE NutrientDB.NutrientTable (
+CREATE TABLE appsDB.NutrientTable (
     NUM         INT NOT NULL PRIMARY KEY,
     NAME        TEXT NOT NULL,
     KANANAME    TEXT NOT NULL,
@@ -67,7 +67,7 @@ CREATE TABLE NutrientDB.NutrientTable (
     NACL_EQ     FLOAT DEFAULT 0 NOT NULL
 );
 
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -184,7 +184,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -301,7 +301,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -418,7 +418,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -535,7 +535,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -652,7 +652,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -769,7 +769,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -886,7 +886,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -1003,7 +1003,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -1120,7 +1120,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -1237,7 +1237,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -1354,7 +1354,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -1471,7 +1471,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -1588,7 +1588,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -1705,7 +1705,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -1822,7 +1822,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -1939,7 +1939,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -2056,7 +2056,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -2173,7 +2173,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -2290,7 +2290,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -2407,7 +2407,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -2524,7 +2524,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -2641,7 +2641,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -2758,7 +2758,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -2875,7 +2875,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -2992,7 +2992,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -3109,7 +3109,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     9.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -3226,7 +3226,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -3343,7 +3343,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -3460,7 +3460,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -3577,7 +3577,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -3694,7 +3694,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -3811,7 +3811,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -3928,7 +3928,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -4045,7 +4045,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -4162,7 +4162,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -4279,7 +4279,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -4396,7 +4396,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -4513,7 +4513,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -4630,7 +4630,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -4747,7 +4747,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -4864,7 +4864,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -4981,7 +4981,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -5098,7 +5098,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -5215,7 +5215,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -5332,7 +5332,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -5449,7 +5449,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -5566,7 +5566,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -5683,7 +5683,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -5800,7 +5800,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -5917,7 +5917,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -6034,7 +6034,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -6151,7 +6151,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -6268,7 +6268,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -6385,7 +6385,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -6502,7 +6502,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -6619,7 +6619,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -6736,7 +6736,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -6853,7 +6853,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -6970,7 +6970,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -7087,7 +7087,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -7204,7 +7204,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -7321,7 +7321,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -7438,7 +7438,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -7555,7 +7555,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -7672,7 +7672,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -7789,7 +7789,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -7906,7 +7906,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -8023,7 +8023,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -8140,7 +8140,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -8257,7 +8257,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -8374,7 +8374,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -8491,7 +8491,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -8608,7 +8608,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -8725,7 +8725,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -8842,7 +8842,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -8959,7 +8959,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -9076,7 +9076,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -9193,7 +9193,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -9310,7 +9310,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -9427,7 +9427,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -9544,7 +9544,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -9661,7 +9661,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -9778,7 +9778,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -9895,7 +9895,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -10012,7 +10012,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -10129,7 +10129,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -10246,7 +10246,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -10363,7 +10363,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -10480,7 +10480,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -10597,7 +10597,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -10714,7 +10714,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -10831,7 +10831,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -10948,7 +10948,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -11065,7 +11065,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -11182,7 +11182,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -11299,7 +11299,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -11416,7 +11416,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -11533,7 +11533,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -11650,7 +11650,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -11767,7 +11767,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -11884,7 +11884,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -12001,7 +12001,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -12118,7 +12118,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -12235,7 +12235,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -12352,7 +12352,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -12469,7 +12469,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -12586,7 +12586,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -12703,7 +12703,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -12820,7 +12820,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -12937,7 +12937,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -13054,7 +13054,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -13171,7 +13171,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -13288,7 +13288,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -13405,7 +13405,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -13522,7 +13522,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -13639,7 +13639,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -13756,7 +13756,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -13873,7 +13873,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -13990,7 +13990,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -14107,7 +14107,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -14224,7 +14224,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -14341,7 +14341,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -14458,7 +14458,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -14575,7 +14575,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -14692,7 +14692,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -14809,7 +14809,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -14926,7 +14926,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -15043,7 +15043,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -15160,7 +15160,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -15277,7 +15277,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -15394,7 +15394,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -15511,7 +15511,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -15628,7 +15628,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -15745,7 +15745,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -15862,7 +15862,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -15979,7 +15979,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -16096,7 +16096,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -16213,7 +16213,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -16330,7 +16330,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -16447,7 +16447,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -16564,7 +16564,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -16681,7 +16681,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -16798,7 +16798,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -16915,7 +16915,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -17032,7 +17032,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -17149,7 +17149,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -17266,7 +17266,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -17383,7 +17383,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -17500,7 +17500,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -17617,7 +17617,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -17734,7 +17734,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -17851,7 +17851,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -17968,7 +17968,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -18085,7 +18085,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -18202,7 +18202,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -18319,7 +18319,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -18436,7 +18436,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -18553,7 +18553,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -18670,7 +18670,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -18787,7 +18787,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -18904,7 +18904,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -19021,7 +19021,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -19138,7 +19138,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -19255,7 +19255,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -19372,7 +19372,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -19489,7 +19489,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -19606,7 +19606,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -19723,7 +19723,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -19840,7 +19840,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -19957,7 +19957,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -20074,7 +20074,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -20191,7 +20191,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -20308,7 +20308,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -20425,7 +20425,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -20542,7 +20542,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -20659,7 +20659,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -20776,7 +20776,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -20893,7 +20893,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -21010,7 +21010,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -21127,7 +21127,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -21244,7 +21244,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -21361,7 +21361,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -21478,7 +21478,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -21595,7 +21595,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -21712,7 +21712,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -21829,7 +21829,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -21946,7 +21946,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -22063,7 +22063,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -22180,7 +22180,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -22297,7 +22297,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -22414,7 +22414,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -22531,7 +22531,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -22648,7 +22648,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -22765,7 +22765,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -22882,7 +22882,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -22999,7 +22999,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -23116,7 +23116,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -23233,7 +23233,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -23350,7 +23350,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -23467,7 +23467,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -23584,7 +23584,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -23701,7 +23701,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -23818,7 +23818,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -23935,7 +23935,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -24052,7 +24052,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -24169,7 +24169,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -24286,7 +24286,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -24403,7 +24403,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -24520,7 +24520,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -24637,7 +24637,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -24754,7 +24754,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -24871,7 +24871,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -24988,7 +24988,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -25105,7 +25105,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -25222,7 +25222,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -25339,7 +25339,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -25456,7 +25456,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -25573,7 +25573,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -25690,7 +25690,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -25807,7 +25807,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -25924,7 +25924,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -26041,7 +26041,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -26158,7 +26158,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -26275,7 +26275,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -26392,7 +26392,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -26509,7 +26509,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -26626,7 +26626,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -26743,7 +26743,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -26860,7 +26860,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -26977,7 +26977,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -27094,7 +27094,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -27211,7 +27211,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -27328,7 +27328,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -27445,7 +27445,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -27562,7 +27562,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -27679,7 +27679,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -27796,7 +27796,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -27913,7 +27913,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -28030,7 +28030,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -28147,7 +28147,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -28264,7 +28264,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -28381,7 +28381,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -28498,7 +28498,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -28615,7 +28615,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -28732,7 +28732,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -28849,7 +28849,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -28966,7 +28966,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -29083,7 +29083,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -29200,7 +29200,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -29317,7 +29317,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -29434,7 +29434,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -29551,7 +29551,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -29668,7 +29668,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -29785,7 +29785,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -29902,7 +29902,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -30019,7 +30019,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -30136,7 +30136,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -30253,7 +30253,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -30370,7 +30370,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -30487,7 +30487,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -30604,7 +30604,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -30721,7 +30721,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -30838,7 +30838,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -30955,7 +30955,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -31072,7 +31072,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -31189,7 +31189,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -31306,7 +31306,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -31423,7 +31423,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -31540,7 +31540,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -31657,7 +31657,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -31774,7 +31774,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -31891,7 +31891,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -32008,7 +32008,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -32125,7 +32125,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -32242,7 +32242,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -32359,7 +32359,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -32476,7 +32476,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -32593,7 +32593,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -32710,7 +32710,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -32827,7 +32827,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -32944,7 +32944,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -33061,7 +33061,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -33178,7 +33178,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -33295,7 +33295,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -33412,7 +33412,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -33529,7 +33529,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -33646,7 +33646,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -33763,7 +33763,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -33880,7 +33880,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -33997,7 +33997,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -34114,7 +34114,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -34231,7 +34231,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -34348,7 +34348,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -34465,7 +34465,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -34582,7 +34582,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -34699,7 +34699,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -34816,7 +34816,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -34933,7 +34933,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -35050,7 +35050,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -35167,7 +35167,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -35284,7 +35284,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -35401,7 +35401,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -35518,7 +35518,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -35635,7 +35635,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -35752,7 +35752,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -35869,7 +35869,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -35986,7 +35986,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -36103,7 +36103,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -36220,7 +36220,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -36337,7 +36337,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -36454,7 +36454,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -36571,7 +36571,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -36688,7 +36688,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -36805,7 +36805,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -36922,7 +36922,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -37039,7 +37039,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -37156,7 +37156,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -37273,7 +37273,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -37390,7 +37390,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -37507,7 +37507,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -37624,7 +37624,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -37741,7 +37741,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -37858,7 +37858,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -37975,7 +37975,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -38092,7 +38092,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -38209,7 +38209,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -38326,7 +38326,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -38443,7 +38443,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -38560,7 +38560,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -38677,7 +38677,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -38794,7 +38794,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -38911,7 +38911,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -39028,7 +39028,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -39145,7 +39145,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -39262,7 +39262,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -39379,7 +39379,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -39496,7 +39496,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -39613,7 +39613,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -39730,7 +39730,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -39847,7 +39847,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -39964,7 +39964,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -40081,7 +40081,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -40198,7 +40198,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -40315,7 +40315,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -40432,7 +40432,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -40549,7 +40549,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -40666,7 +40666,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -40783,7 +40783,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -40900,7 +40900,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -41017,7 +41017,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -41134,7 +41134,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -41251,7 +41251,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -41368,7 +41368,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -41485,7 +41485,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -41602,7 +41602,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -41719,7 +41719,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -41836,7 +41836,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -41953,7 +41953,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -42070,7 +42070,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -42187,7 +42187,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -42304,7 +42304,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -42421,7 +42421,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -42538,7 +42538,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -42655,7 +42655,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -42772,7 +42772,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -42889,7 +42889,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -43006,7 +43006,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -43123,7 +43123,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -43240,7 +43240,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -43357,7 +43357,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -43474,7 +43474,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -43591,7 +43591,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -43708,7 +43708,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -43825,7 +43825,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -43942,7 +43942,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -44059,7 +44059,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -44176,7 +44176,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -44293,7 +44293,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -44410,7 +44410,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     11.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -44527,7 +44527,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -44644,7 +44644,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -44761,7 +44761,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -44878,7 +44878,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     14.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -44995,7 +44995,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -45112,7 +45112,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -45229,7 +45229,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -45346,7 +45346,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -45463,7 +45463,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -45580,7 +45580,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -45697,7 +45697,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -45814,7 +45814,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -45931,7 +45931,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -46048,7 +46048,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -46165,7 +46165,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -46282,7 +46282,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -46399,7 +46399,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -46516,7 +46516,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -46633,7 +46633,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -46750,7 +46750,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -46867,7 +46867,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -46984,7 +46984,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -47101,7 +47101,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -47218,7 +47218,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -47335,7 +47335,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -47452,7 +47452,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -47569,7 +47569,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -47686,7 +47686,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -47803,7 +47803,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -47920,7 +47920,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -48037,7 +48037,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -48154,7 +48154,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -48271,7 +48271,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -48388,7 +48388,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -48505,7 +48505,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -48622,7 +48622,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -48739,7 +48739,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -48856,7 +48856,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -48973,7 +48973,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -49090,7 +49090,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -49207,7 +49207,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -49324,7 +49324,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -49441,7 +49441,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -49558,7 +49558,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -49675,7 +49675,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -49792,7 +49792,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -49909,7 +49909,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -50026,7 +50026,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -50143,7 +50143,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -50260,7 +50260,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -50377,7 +50377,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -50494,7 +50494,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -50611,7 +50611,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -50728,7 +50728,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -50845,7 +50845,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -50962,7 +50962,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -51079,7 +51079,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -51196,7 +51196,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -51313,7 +51313,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -51430,7 +51430,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -51547,7 +51547,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -51664,7 +51664,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -51781,7 +51781,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -51898,7 +51898,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -52015,7 +52015,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -52132,7 +52132,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -52249,7 +52249,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -52366,7 +52366,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -52483,7 +52483,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -52600,7 +52600,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -52717,7 +52717,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -52834,7 +52834,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -52951,7 +52951,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -53068,7 +53068,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -53185,7 +53185,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -53302,7 +53302,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -53419,7 +53419,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -53536,7 +53536,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -53653,7 +53653,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -53770,7 +53770,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -53887,7 +53887,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -54004,7 +54004,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -54121,7 +54121,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -54238,7 +54238,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -54355,7 +54355,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -54472,7 +54472,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -54589,7 +54589,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -54706,7 +54706,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -54823,7 +54823,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -54940,7 +54940,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -55057,7 +55057,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -55174,7 +55174,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -55291,7 +55291,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -55408,7 +55408,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -55525,7 +55525,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -55642,7 +55642,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -55759,7 +55759,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -55876,7 +55876,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -55993,7 +55993,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -56110,7 +56110,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -56227,7 +56227,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -56344,7 +56344,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -56461,7 +56461,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -56578,7 +56578,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -56695,7 +56695,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -56812,7 +56812,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -56929,7 +56929,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -57046,7 +57046,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -57163,7 +57163,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -57280,7 +57280,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -57397,7 +57397,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -57514,7 +57514,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -57631,7 +57631,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -57748,7 +57748,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -57865,7 +57865,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -57982,7 +57982,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -58099,7 +58099,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -58216,7 +58216,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -58333,7 +58333,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -58450,7 +58450,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -58567,7 +58567,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -58684,7 +58684,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -58801,7 +58801,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -58918,7 +58918,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -59035,7 +59035,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -59152,7 +59152,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -59269,7 +59269,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -59386,7 +59386,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -59503,7 +59503,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -59620,7 +59620,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -59737,7 +59737,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -59854,7 +59854,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -59971,7 +59971,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -60088,7 +60088,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -60205,7 +60205,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -60322,7 +60322,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -60439,7 +60439,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -60556,7 +60556,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -60673,7 +60673,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -60790,7 +60790,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -60907,7 +60907,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -61024,7 +61024,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -61141,7 +61141,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -61258,7 +61258,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -61375,7 +61375,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -61492,7 +61492,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -61609,7 +61609,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -61726,7 +61726,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -61843,7 +61843,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -61960,7 +61960,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -62077,7 +62077,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -62194,7 +62194,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -62311,7 +62311,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -62428,7 +62428,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -62545,7 +62545,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -62662,7 +62662,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -62779,7 +62779,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -62896,7 +62896,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -63013,7 +63013,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -63130,7 +63130,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -63247,7 +63247,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -63364,7 +63364,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -63481,7 +63481,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -63598,7 +63598,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -63715,7 +63715,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -63832,7 +63832,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -63949,7 +63949,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -64066,7 +64066,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -64183,7 +64183,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -64300,7 +64300,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -64417,7 +64417,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -64534,7 +64534,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -64651,7 +64651,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -64768,7 +64768,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -64885,7 +64885,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -65002,7 +65002,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -65119,7 +65119,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     13.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -65236,7 +65236,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -65353,7 +65353,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -65470,7 +65470,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -65587,7 +65587,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -65704,7 +65704,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -65821,7 +65821,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -65938,7 +65938,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -66055,7 +66055,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -66172,7 +66172,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -66289,7 +66289,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -66406,7 +66406,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -66523,7 +66523,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -66640,7 +66640,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -66757,7 +66757,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -66874,7 +66874,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -66991,7 +66991,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -67108,7 +67108,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -67225,7 +67225,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -67342,7 +67342,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -67459,7 +67459,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -67576,7 +67576,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -67693,7 +67693,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -67810,7 +67810,7 @@ INSERT INTO NutrientDB.NutrientTable (
     5.8,
     4.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -67927,7 +67927,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -68044,7 +68044,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -68161,7 +68161,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -68278,7 +68278,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -68395,7 +68395,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -68512,7 +68512,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -68629,7 +68629,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -68746,7 +68746,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -68863,7 +68863,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -68980,7 +68980,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -69097,7 +69097,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -69214,7 +69214,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -69331,7 +69331,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -69448,7 +69448,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -69565,7 +69565,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -69682,7 +69682,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -69799,7 +69799,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -69916,7 +69916,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -70033,7 +70033,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -70150,7 +70150,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -70267,7 +70267,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -70384,7 +70384,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -70501,7 +70501,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -70618,7 +70618,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -70735,7 +70735,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -70852,7 +70852,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -70969,7 +70969,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -71086,7 +71086,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -71203,7 +71203,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -71320,7 +71320,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -71437,7 +71437,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -71554,7 +71554,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -71671,7 +71671,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -71788,7 +71788,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -71905,7 +71905,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -72022,7 +72022,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -72139,7 +72139,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -72256,7 +72256,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -72373,7 +72373,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -72490,7 +72490,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -72607,7 +72607,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -72724,7 +72724,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -72841,7 +72841,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -72958,7 +72958,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -73075,7 +73075,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -73192,7 +73192,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -73309,7 +73309,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -73426,7 +73426,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -73543,7 +73543,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -73660,7 +73660,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -73777,7 +73777,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -73894,7 +73894,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -74011,7 +74011,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -74128,7 +74128,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -74245,7 +74245,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -74362,7 +74362,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -74479,7 +74479,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -74596,7 +74596,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -74713,7 +74713,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -74830,7 +74830,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -74947,7 +74947,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -75064,7 +75064,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -75181,7 +75181,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -75298,7 +75298,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -75415,7 +75415,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -75532,7 +75532,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -75649,7 +75649,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -75766,7 +75766,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -75883,7 +75883,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -76000,7 +76000,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -76117,7 +76117,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -76234,7 +76234,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -76351,7 +76351,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -76468,7 +76468,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -76585,7 +76585,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -76702,7 +76702,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -76819,7 +76819,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -76936,7 +76936,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -77053,7 +77053,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -77170,7 +77170,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -77287,7 +77287,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -77404,7 +77404,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -77521,7 +77521,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -77638,7 +77638,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -77755,7 +77755,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -77872,7 +77872,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -77989,7 +77989,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -78106,7 +78106,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -78223,7 +78223,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -78340,7 +78340,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -78457,7 +78457,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -78574,7 +78574,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -78691,7 +78691,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -78808,7 +78808,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -78925,7 +78925,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -79042,7 +79042,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -79159,7 +79159,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -79276,7 +79276,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -79393,7 +79393,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -79510,7 +79510,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -79627,7 +79627,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -79744,7 +79744,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -79861,7 +79861,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -79978,7 +79978,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -80095,7 +80095,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -80212,7 +80212,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -80329,7 +80329,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -80446,7 +80446,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -80563,7 +80563,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -80680,7 +80680,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -80797,7 +80797,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -80914,7 +80914,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -81031,7 +81031,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -81148,7 +81148,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -81265,7 +81265,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -81382,7 +81382,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -81499,7 +81499,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -81616,7 +81616,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -81733,7 +81733,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -81850,7 +81850,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -81967,7 +81967,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -82084,7 +82084,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -82201,7 +82201,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -82318,7 +82318,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -82435,7 +82435,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -82552,7 +82552,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -82669,7 +82669,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -82786,7 +82786,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -82903,7 +82903,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -83020,7 +83020,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -83137,7 +83137,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -83254,7 +83254,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -83371,7 +83371,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -83488,7 +83488,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -83605,7 +83605,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -83722,7 +83722,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -83839,7 +83839,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -83956,7 +83956,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -84073,7 +84073,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -84190,7 +84190,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -84307,7 +84307,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -84424,7 +84424,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -84541,7 +84541,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -84658,7 +84658,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -84775,7 +84775,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -84892,7 +84892,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -85009,7 +85009,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -85126,7 +85126,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -85243,7 +85243,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -85360,7 +85360,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -85477,7 +85477,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -85594,7 +85594,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -85711,7 +85711,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -85828,7 +85828,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -85945,7 +85945,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -86062,7 +86062,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -86179,7 +86179,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -86296,7 +86296,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -86413,7 +86413,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -86530,7 +86530,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -86647,7 +86647,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -86764,7 +86764,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -86881,7 +86881,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -86998,7 +86998,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -87115,7 +87115,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -87232,7 +87232,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -87349,7 +87349,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -87466,7 +87466,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -87583,7 +87583,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -87700,7 +87700,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -87817,7 +87817,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -87934,7 +87934,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -88051,7 +88051,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -88168,7 +88168,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -88285,7 +88285,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -88402,7 +88402,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -88519,7 +88519,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -88636,7 +88636,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -88753,7 +88753,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -88870,7 +88870,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -88987,7 +88987,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -89104,7 +89104,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -89221,7 +89221,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -89338,7 +89338,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -89455,7 +89455,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -89572,7 +89572,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -89689,7 +89689,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -89806,7 +89806,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -89923,7 +89923,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -90040,7 +90040,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -90157,7 +90157,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -90274,7 +90274,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -90391,7 +90391,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -90508,7 +90508,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -90625,7 +90625,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -90742,7 +90742,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -90859,7 +90859,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -90976,7 +90976,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -91093,7 +91093,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -91210,7 +91210,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -91327,7 +91327,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -91444,7 +91444,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -91561,7 +91561,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -91678,7 +91678,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -91795,7 +91795,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -91912,7 +91912,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -92029,7 +92029,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -92146,7 +92146,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -92263,7 +92263,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -92380,7 +92380,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -92497,7 +92497,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -92614,7 +92614,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -92731,7 +92731,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -92848,7 +92848,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -92965,7 +92965,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -93082,7 +93082,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -93199,7 +93199,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -93316,7 +93316,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -93433,7 +93433,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -93550,7 +93550,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -93667,7 +93667,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -93784,7 +93784,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -93901,7 +93901,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -94018,7 +94018,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -94135,7 +94135,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -94252,7 +94252,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -94369,7 +94369,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -94486,7 +94486,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -94603,7 +94603,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -94720,7 +94720,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -94837,7 +94837,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -94954,7 +94954,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -95071,7 +95071,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -95188,7 +95188,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -95305,7 +95305,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -95422,7 +95422,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -95539,7 +95539,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -95656,7 +95656,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -95773,7 +95773,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -95890,7 +95890,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -96007,7 +96007,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -96124,7 +96124,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -96241,7 +96241,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -96358,7 +96358,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -96475,7 +96475,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -96592,7 +96592,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -96709,7 +96709,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -96826,7 +96826,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -96943,7 +96943,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -97060,7 +97060,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -97177,7 +97177,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -97294,7 +97294,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -97411,7 +97411,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -97528,7 +97528,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -97645,7 +97645,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -97762,7 +97762,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -97879,7 +97879,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -97996,7 +97996,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -98113,7 +98113,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -98230,7 +98230,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -98347,7 +98347,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -98464,7 +98464,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -98581,7 +98581,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -98698,7 +98698,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -98815,7 +98815,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -98932,7 +98932,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -99049,7 +99049,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -99166,7 +99166,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -99283,7 +99283,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -99400,7 +99400,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -99517,7 +99517,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -99634,7 +99634,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -99751,7 +99751,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -99868,7 +99868,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -99985,7 +99985,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -100102,7 +100102,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -100219,7 +100219,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -100336,7 +100336,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -100453,7 +100453,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -100570,7 +100570,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -100687,7 +100687,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -100804,7 +100804,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -100921,7 +100921,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -101038,7 +101038,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -101155,7 +101155,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -101272,7 +101272,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -101389,7 +101389,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -101506,7 +101506,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -101623,7 +101623,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -101740,7 +101740,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -101857,7 +101857,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -101974,7 +101974,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -102091,7 +102091,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -102208,7 +102208,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -102325,7 +102325,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -102442,7 +102442,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -102559,7 +102559,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -102676,7 +102676,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -102793,7 +102793,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -102910,7 +102910,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -103027,7 +103027,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -103144,7 +103144,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -103261,7 +103261,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     19.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -103378,7 +103378,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -103495,7 +103495,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     18.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -103612,7 +103612,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -103729,7 +103729,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -103846,7 +103846,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -103963,7 +103963,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -104080,7 +104080,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -104197,7 +104197,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -104314,7 +104314,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -104431,7 +104431,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -104548,7 +104548,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -104665,7 +104665,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -104782,7 +104782,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -104899,7 +104899,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -105016,7 +105016,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -105133,7 +105133,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -105250,7 +105250,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -105367,7 +105367,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -105484,7 +105484,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -105601,7 +105601,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -105718,7 +105718,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -105835,7 +105835,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -105952,7 +105952,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -106069,7 +106069,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -106186,7 +106186,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -106303,7 +106303,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -106420,7 +106420,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -106537,7 +106537,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -106654,7 +106654,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -106771,7 +106771,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -106888,7 +106888,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -107005,7 +107005,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -107122,7 +107122,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -107239,7 +107239,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -107356,7 +107356,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -107473,7 +107473,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -107590,7 +107590,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -107707,7 +107707,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -107824,7 +107824,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -107941,7 +107941,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -108058,7 +108058,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -108175,7 +108175,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -108292,7 +108292,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -108409,7 +108409,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -108526,7 +108526,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -108643,7 +108643,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -108760,7 +108760,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -108877,7 +108877,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -108994,7 +108994,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -109111,7 +109111,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -109228,7 +109228,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -109345,7 +109345,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -109462,7 +109462,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -109579,7 +109579,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -109696,7 +109696,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -109813,7 +109813,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -109930,7 +109930,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -110047,7 +110047,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -110164,7 +110164,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -110281,7 +110281,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -110398,7 +110398,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -110515,7 +110515,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -110632,7 +110632,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -110749,7 +110749,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -110866,7 +110866,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -110983,7 +110983,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -111100,7 +111100,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -111217,7 +111217,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -111334,7 +111334,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -111451,7 +111451,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -111568,7 +111568,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -111685,7 +111685,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -111802,7 +111802,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -111919,7 +111919,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -112036,7 +112036,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -112153,7 +112153,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -112270,7 +112270,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -112387,7 +112387,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -112504,7 +112504,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -112621,7 +112621,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -112738,7 +112738,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -112855,7 +112855,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -112972,7 +112972,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -113089,7 +113089,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -113206,7 +113206,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -113323,7 +113323,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -113440,7 +113440,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -113557,7 +113557,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -113674,7 +113674,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -113791,7 +113791,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -113908,7 +113908,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -114025,7 +114025,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -114142,7 +114142,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -114259,7 +114259,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -114376,7 +114376,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -114493,7 +114493,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -114610,7 +114610,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -114727,7 +114727,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -114844,7 +114844,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -114961,7 +114961,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -115078,7 +115078,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -115195,7 +115195,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -115312,7 +115312,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -115429,7 +115429,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -115546,7 +115546,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -115663,7 +115663,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -115780,7 +115780,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -115897,7 +115897,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -116014,7 +116014,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -116131,7 +116131,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -116248,7 +116248,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -116365,7 +116365,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -116482,7 +116482,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -116599,7 +116599,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -116716,7 +116716,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -116833,7 +116833,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -116950,7 +116950,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -117067,7 +117067,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -117184,7 +117184,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -117301,7 +117301,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -117418,7 +117418,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -117535,7 +117535,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -117652,7 +117652,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -117769,7 +117769,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -117886,7 +117886,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -118003,7 +118003,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -118120,7 +118120,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -118237,7 +118237,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -118354,7 +118354,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -118471,7 +118471,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -118588,7 +118588,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -118705,7 +118705,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -118822,7 +118822,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -118939,7 +118939,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -119056,7 +119056,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -119173,7 +119173,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -119290,7 +119290,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -119407,7 +119407,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -119524,7 +119524,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -119641,7 +119641,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -119758,7 +119758,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -119875,7 +119875,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -119992,7 +119992,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -120109,7 +120109,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -120226,7 +120226,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -120343,7 +120343,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -120460,7 +120460,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -120577,7 +120577,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -120694,7 +120694,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -120811,7 +120811,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -120928,7 +120928,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -121045,7 +121045,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -121162,7 +121162,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -121279,7 +121279,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -121396,7 +121396,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -121513,7 +121513,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -121630,7 +121630,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -121747,7 +121747,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -121864,7 +121864,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -121981,7 +121981,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -122098,7 +122098,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -122215,7 +122215,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -122332,7 +122332,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -122449,7 +122449,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -122566,7 +122566,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -122683,7 +122683,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -122800,7 +122800,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -122917,7 +122917,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -123034,7 +123034,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -123151,7 +123151,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -123268,7 +123268,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -123385,7 +123385,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -123502,7 +123502,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -123619,7 +123619,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -123736,7 +123736,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -123853,7 +123853,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -123970,7 +123970,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -124087,7 +124087,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -124204,7 +124204,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -124321,7 +124321,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -124438,7 +124438,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -124555,7 +124555,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -124672,7 +124672,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -124789,7 +124789,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -124906,7 +124906,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -125023,7 +125023,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -125140,7 +125140,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -125257,7 +125257,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -125374,7 +125374,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -125491,7 +125491,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -125608,7 +125608,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -125725,7 +125725,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -125842,7 +125842,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -125959,7 +125959,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -126076,7 +126076,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -126193,7 +126193,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -126310,7 +126310,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -126427,7 +126427,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -126544,7 +126544,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -126661,7 +126661,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -126778,7 +126778,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -126895,7 +126895,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -127012,7 +127012,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -127129,7 +127129,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -127246,7 +127246,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -127363,7 +127363,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -127480,7 +127480,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -127597,7 +127597,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -127714,7 +127714,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -127831,7 +127831,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -127948,7 +127948,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -128065,7 +128065,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -128182,7 +128182,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -128299,7 +128299,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -128416,7 +128416,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -128533,7 +128533,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -128650,7 +128650,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     9.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -128767,7 +128767,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     8.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -128884,7 +128884,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -129001,7 +129001,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -129118,7 +129118,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -129235,7 +129235,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -129352,7 +129352,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -129469,7 +129469,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -129586,7 +129586,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -129703,7 +129703,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -129820,7 +129820,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -129937,7 +129937,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -130054,7 +130054,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -130171,7 +130171,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -130288,7 +130288,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -130405,7 +130405,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -130522,7 +130522,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -130639,7 +130639,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -130756,7 +130756,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -130873,7 +130873,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -130990,7 +130990,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     10.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -131107,7 +131107,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -131224,7 +131224,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     18.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -131341,7 +131341,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -131458,7 +131458,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -131575,7 +131575,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -131692,7 +131692,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -131809,7 +131809,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -131926,7 +131926,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -132043,7 +132043,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -132160,7 +132160,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -132277,7 +132277,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -132394,7 +132394,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -132511,7 +132511,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -132628,7 +132628,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -132745,7 +132745,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -132862,7 +132862,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -132979,7 +132979,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -133096,7 +133096,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     11.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -133213,7 +133213,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -133330,7 +133330,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -133447,7 +133447,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -133564,7 +133564,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -133681,7 +133681,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -133798,7 +133798,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -133915,7 +133915,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -134032,7 +134032,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     16.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -134149,7 +134149,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -134266,7 +134266,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     9.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -134383,7 +134383,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -134500,7 +134500,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     23.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -134617,7 +134617,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -134734,7 +134734,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -134851,7 +134851,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -134968,7 +134968,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -135085,7 +135085,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -135202,7 +135202,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -135319,7 +135319,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -135436,7 +135436,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -135553,7 +135553,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -135670,7 +135670,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -135787,7 +135787,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -135904,7 +135904,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -136021,7 +136021,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -136138,7 +136138,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -136255,7 +136255,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -136372,7 +136372,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -136489,7 +136489,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -136606,7 +136606,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -136723,7 +136723,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -136840,7 +136840,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -136957,7 +136957,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -137074,7 +137074,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -137191,7 +137191,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -137308,7 +137308,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -137425,7 +137425,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -137542,7 +137542,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -137659,7 +137659,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -137776,7 +137776,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -137893,7 +137893,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -138010,7 +138010,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -138127,7 +138127,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -138244,7 +138244,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -138361,7 +138361,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -138478,7 +138478,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -138595,7 +138595,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -138712,7 +138712,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -138829,7 +138829,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -138946,7 +138946,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -139063,7 +139063,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -139180,7 +139180,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -139297,7 +139297,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     13.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -139414,7 +139414,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -139531,7 +139531,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -139648,7 +139648,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -139765,7 +139765,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -139882,7 +139882,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -139999,7 +139999,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -140116,7 +140116,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -140233,7 +140233,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -140350,7 +140350,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -140467,7 +140467,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -140584,7 +140584,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -140701,7 +140701,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -140818,7 +140818,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -140935,7 +140935,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -141052,7 +141052,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -141169,7 +141169,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -141286,7 +141286,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -141403,7 +141403,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -141520,7 +141520,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -141637,7 +141637,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -141754,7 +141754,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -141871,7 +141871,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -141988,7 +141988,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -142105,7 +142105,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -142222,7 +142222,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -142339,7 +142339,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -142456,7 +142456,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -142573,7 +142573,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -142690,7 +142690,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -142807,7 +142807,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -142924,7 +142924,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -143041,7 +143041,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -143158,7 +143158,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -143275,7 +143275,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -143392,7 +143392,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -143509,7 +143509,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -143626,7 +143626,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -143743,7 +143743,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -143860,7 +143860,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     13.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -143977,7 +143977,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -144094,7 +144094,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -144211,7 +144211,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -144328,7 +144328,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -144445,7 +144445,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -144562,7 +144562,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -144679,7 +144679,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -144796,7 +144796,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -144913,7 +144913,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -145030,7 +145030,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -145147,7 +145147,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -145264,7 +145264,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -145381,7 +145381,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -145498,7 +145498,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -145615,7 +145615,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -145732,7 +145732,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -145849,7 +145849,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -145966,7 +145966,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -146083,7 +146083,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -146200,7 +146200,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -146317,7 +146317,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -146434,7 +146434,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -146551,7 +146551,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -146668,7 +146668,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -146785,7 +146785,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -146902,7 +146902,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -147019,7 +147019,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -147136,7 +147136,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -147253,7 +147253,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -147370,7 +147370,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -147487,7 +147487,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -147604,7 +147604,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -147721,7 +147721,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     12.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -147838,7 +147838,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -147955,7 +147955,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -148072,7 +148072,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -148189,7 +148189,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -148306,7 +148306,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -148423,7 +148423,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -148540,7 +148540,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -148657,7 +148657,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -148774,7 +148774,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -148891,7 +148891,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -149008,7 +149008,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -149125,7 +149125,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -149242,7 +149242,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -149359,7 +149359,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -149476,7 +149476,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -149593,7 +149593,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -149710,7 +149710,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -149827,7 +149827,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -149944,7 +149944,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -150061,7 +150061,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -150178,7 +150178,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -150295,7 +150295,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -150412,7 +150412,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -150529,7 +150529,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -150646,7 +150646,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -150763,7 +150763,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -150880,7 +150880,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -150997,7 +150997,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -151114,7 +151114,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -151231,7 +151231,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -151348,7 +151348,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -151465,7 +151465,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -151582,7 +151582,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -151699,7 +151699,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -151816,7 +151816,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -151933,7 +151933,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -152050,7 +152050,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -152167,7 +152167,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -152284,7 +152284,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -152401,7 +152401,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -152518,7 +152518,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -152635,7 +152635,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -152752,7 +152752,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -152869,7 +152869,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -152986,7 +152986,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -153103,7 +153103,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -153220,7 +153220,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -153337,7 +153337,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -153454,7 +153454,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -153571,7 +153571,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -153688,7 +153688,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     14.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -153805,7 +153805,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -153922,7 +153922,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -154039,7 +154039,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -154156,7 +154156,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -154273,7 +154273,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -154390,7 +154390,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -154507,7 +154507,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -154624,7 +154624,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -154741,7 +154741,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -154858,7 +154858,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -154975,7 +154975,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -155092,7 +155092,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -155209,7 +155209,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -155326,7 +155326,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -155443,7 +155443,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -155560,7 +155560,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -155677,7 +155677,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -155794,7 +155794,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -155911,7 +155911,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -156028,7 +156028,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -156145,7 +156145,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -156262,7 +156262,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -156379,7 +156379,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -156496,7 +156496,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -156613,7 +156613,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -156730,7 +156730,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -156847,7 +156847,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -156964,7 +156964,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -157081,7 +157081,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -157198,7 +157198,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -157315,7 +157315,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -157432,7 +157432,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -157549,7 +157549,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -157666,7 +157666,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -157783,7 +157783,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -157900,7 +157900,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -158017,7 +158017,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -158134,7 +158134,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -158251,7 +158251,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -158368,7 +158368,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -158485,7 +158485,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -158602,7 +158602,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -158719,7 +158719,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -158836,7 +158836,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -158953,7 +158953,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -159070,7 +159070,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -159187,7 +159187,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -159304,7 +159304,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -159421,7 +159421,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -159538,7 +159538,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -159655,7 +159655,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -159772,7 +159772,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -159889,7 +159889,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -160006,7 +160006,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -160123,7 +160123,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -160240,7 +160240,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -160357,7 +160357,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -160474,7 +160474,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -160591,7 +160591,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -160708,7 +160708,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -160825,7 +160825,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -160942,7 +160942,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -161059,7 +161059,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -161176,7 +161176,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -161293,7 +161293,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -161410,7 +161410,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -161527,7 +161527,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -161644,7 +161644,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -161761,7 +161761,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -161878,7 +161878,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -161995,7 +161995,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -162112,7 +162112,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -162229,7 +162229,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -162346,7 +162346,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -162463,7 +162463,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -162580,7 +162580,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -162697,7 +162697,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -162814,7 +162814,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -162931,7 +162931,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -163048,7 +163048,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     18.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -163165,7 +163165,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -163282,7 +163282,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -163399,7 +163399,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -163516,7 +163516,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -163633,7 +163633,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -163750,7 +163750,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -163867,7 +163867,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -163984,7 +163984,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -164101,7 +164101,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -164218,7 +164218,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -164335,7 +164335,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -164452,7 +164452,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -164569,7 +164569,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -164686,7 +164686,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -164803,7 +164803,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -164920,7 +164920,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -165037,7 +165037,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -165154,7 +165154,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -165271,7 +165271,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -165388,7 +165388,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -165505,7 +165505,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -165622,7 +165622,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -165739,7 +165739,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     9.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -165856,7 +165856,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -165973,7 +165973,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -166090,7 +166090,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -166207,7 +166207,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -166324,7 +166324,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -166441,7 +166441,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -166558,7 +166558,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -166675,7 +166675,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -166792,7 +166792,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -166909,7 +166909,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -167026,7 +167026,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -167143,7 +167143,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -167260,7 +167260,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -167377,7 +167377,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -167494,7 +167494,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -167611,7 +167611,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -167728,7 +167728,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -167845,7 +167845,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -167962,7 +167962,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -168079,7 +168079,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -168196,7 +168196,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -168313,7 +168313,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -168430,7 +168430,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -168547,7 +168547,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -168664,7 +168664,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -168781,7 +168781,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -168898,7 +168898,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -169015,7 +169015,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -169132,7 +169132,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -169249,7 +169249,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -169366,7 +169366,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -169483,7 +169483,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -169600,7 +169600,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -169717,7 +169717,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -169834,7 +169834,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -169951,7 +169951,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -170068,7 +170068,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -170185,7 +170185,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -170302,7 +170302,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -170419,7 +170419,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -170536,7 +170536,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -170653,7 +170653,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -170770,7 +170770,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -170887,7 +170887,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -171004,7 +171004,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -171121,7 +171121,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -171238,7 +171238,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -171355,7 +171355,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -171472,7 +171472,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -171589,7 +171589,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -171706,7 +171706,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -171823,7 +171823,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -171940,7 +171940,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -172057,7 +172057,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -172174,7 +172174,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -172291,7 +172291,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -172408,7 +172408,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -172525,7 +172525,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -172642,7 +172642,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -172759,7 +172759,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -172876,7 +172876,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -172993,7 +172993,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -173110,7 +173110,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -173227,7 +173227,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -173344,7 +173344,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -173461,7 +173461,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -173578,7 +173578,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -173695,7 +173695,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -173812,7 +173812,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -173929,7 +173929,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -174046,7 +174046,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -174163,7 +174163,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -174280,7 +174280,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -174397,7 +174397,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -174514,7 +174514,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -174631,7 +174631,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -174748,7 +174748,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -174865,7 +174865,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -174982,7 +174982,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -175099,7 +175099,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -175216,7 +175216,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -175333,7 +175333,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -175450,7 +175450,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -175567,7 +175567,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -175684,7 +175684,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -175801,7 +175801,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -175918,7 +175918,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -176035,7 +176035,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -176152,7 +176152,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -176269,7 +176269,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -176386,7 +176386,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -176503,7 +176503,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -176620,7 +176620,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -176737,7 +176737,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -176854,7 +176854,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -176971,7 +176971,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -177088,7 +177088,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -177205,7 +177205,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -177322,7 +177322,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -177439,7 +177439,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -177556,7 +177556,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -177673,7 +177673,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -177790,7 +177790,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -177907,7 +177907,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -178024,7 +178024,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -178141,7 +178141,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -178258,7 +178258,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -178375,7 +178375,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -178492,7 +178492,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -178609,7 +178609,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -178726,7 +178726,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -178843,7 +178843,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -178960,7 +178960,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -179077,7 +179077,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -179194,7 +179194,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -179311,7 +179311,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -179428,7 +179428,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -179545,7 +179545,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -179662,7 +179662,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -179779,7 +179779,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -179896,7 +179896,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -180013,7 +180013,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     8.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -180130,7 +180130,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -180247,7 +180247,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -180364,7 +180364,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -180481,7 +180481,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -180598,7 +180598,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -180715,7 +180715,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -180832,7 +180832,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -180949,7 +180949,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -181066,7 +181066,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -181183,7 +181183,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -181300,7 +181300,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -181417,7 +181417,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -181534,7 +181534,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -181651,7 +181651,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -181768,7 +181768,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -181885,7 +181885,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -182002,7 +182002,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     19.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -182119,7 +182119,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -182236,7 +182236,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -182353,7 +182353,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -182470,7 +182470,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -182587,7 +182587,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -182704,7 +182704,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -182821,7 +182821,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -182938,7 +182938,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -183055,7 +183055,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -183172,7 +183172,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -183289,7 +183289,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -183406,7 +183406,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -183523,7 +183523,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -183640,7 +183640,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -183757,7 +183757,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -183874,7 +183874,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -183991,7 +183991,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -184108,7 +184108,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -184225,7 +184225,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -184342,7 +184342,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -184459,7 +184459,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -184576,7 +184576,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -184693,7 +184693,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -184810,7 +184810,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -184927,7 +184927,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -185044,7 +185044,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -185161,7 +185161,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -185278,7 +185278,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     19.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -185395,7 +185395,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -185512,7 +185512,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     8.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -185629,7 +185629,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -185746,7 +185746,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -185863,7 +185863,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -185980,7 +185980,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -186097,7 +186097,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -186214,7 +186214,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -186331,7 +186331,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -186448,7 +186448,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -186565,7 +186565,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -186682,7 +186682,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -186799,7 +186799,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -186916,7 +186916,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -187033,7 +187033,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -187150,7 +187150,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -187267,7 +187267,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -187384,7 +187384,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -187501,7 +187501,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -187618,7 +187618,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -187735,7 +187735,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -187852,7 +187852,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -187969,7 +187969,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -188086,7 +188086,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -188203,7 +188203,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -188320,7 +188320,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -188437,7 +188437,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -188554,7 +188554,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -188671,7 +188671,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -188788,7 +188788,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -188905,7 +188905,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -189022,7 +189022,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -189139,7 +189139,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -189256,7 +189256,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -189373,7 +189373,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -189490,7 +189490,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -189607,7 +189607,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -189724,7 +189724,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -189841,7 +189841,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -189958,7 +189958,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -190075,7 +190075,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -190192,7 +190192,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -190309,7 +190309,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -190426,7 +190426,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -190543,7 +190543,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -190660,7 +190660,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -190777,7 +190777,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -190894,7 +190894,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -191011,7 +191011,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -191128,7 +191128,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -191245,7 +191245,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -191362,7 +191362,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -191479,7 +191479,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -191596,7 +191596,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -191713,7 +191713,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -191830,7 +191830,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -191947,7 +191947,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -192064,7 +192064,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -192181,7 +192181,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -192298,7 +192298,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -192415,7 +192415,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -192532,7 +192532,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -192649,7 +192649,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -192766,7 +192766,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -192883,7 +192883,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -193000,7 +193000,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -193117,7 +193117,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -193234,7 +193234,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -193351,7 +193351,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -193468,7 +193468,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -193585,7 +193585,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -193702,7 +193702,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -193819,7 +193819,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -193936,7 +193936,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -194053,7 +194053,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -194170,7 +194170,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -194287,7 +194287,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -194404,7 +194404,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -194521,7 +194521,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -194638,7 +194638,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -194755,7 +194755,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -194872,7 +194872,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -194989,7 +194989,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -195106,7 +195106,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -195223,7 +195223,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -195340,7 +195340,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -195457,7 +195457,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -195574,7 +195574,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -195691,7 +195691,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -195808,7 +195808,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -195925,7 +195925,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -196042,7 +196042,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -196159,7 +196159,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -196276,7 +196276,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -196393,7 +196393,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -196510,7 +196510,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -196627,7 +196627,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -196744,7 +196744,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -196861,7 +196861,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -196978,7 +196978,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -197095,7 +197095,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -197212,7 +197212,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -197329,7 +197329,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -197446,7 +197446,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -197563,7 +197563,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -197680,7 +197680,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -197797,7 +197797,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -197914,7 +197914,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -198031,7 +198031,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -198148,7 +198148,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -198265,7 +198265,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -198382,7 +198382,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -198499,7 +198499,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -198616,7 +198616,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -198733,7 +198733,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -198850,7 +198850,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -198967,7 +198967,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -199084,7 +199084,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -199201,7 +199201,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -199318,7 +199318,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -199435,7 +199435,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -199552,7 +199552,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -199669,7 +199669,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -199786,7 +199786,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -199903,7 +199903,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -200020,7 +200020,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -200137,7 +200137,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -200254,7 +200254,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -200371,7 +200371,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -200488,7 +200488,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -200605,7 +200605,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -200722,7 +200722,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -200839,7 +200839,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -200956,7 +200956,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -201073,7 +201073,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -201190,7 +201190,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -201307,7 +201307,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -201424,7 +201424,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -201541,7 +201541,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -201658,7 +201658,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -201775,7 +201775,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -201892,7 +201892,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -202009,7 +202009,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -202126,7 +202126,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -202243,7 +202243,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -202360,7 +202360,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -202477,7 +202477,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -202594,7 +202594,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -202711,7 +202711,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -202828,7 +202828,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -202945,7 +202945,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -203062,7 +203062,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -203179,7 +203179,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -203296,7 +203296,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -203413,7 +203413,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -203530,7 +203530,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -203647,7 +203647,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -203764,7 +203764,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -203881,7 +203881,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -203998,7 +203998,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -204115,7 +204115,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -204232,7 +204232,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -204349,7 +204349,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -204466,7 +204466,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -204583,7 +204583,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -204700,7 +204700,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -204817,7 +204817,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -204934,7 +204934,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -205051,7 +205051,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -205168,7 +205168,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -205285,7 +205285,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -205402,7 +205402,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -205519,7 +205519,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -205636,7 +205636,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -205753,7 +205753,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -205870,7 +205870,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -205987,7 +205987,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -206104,7 +206104,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -206221,7 +206221,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -206338,7 +206338,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -206455,7 +206455,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -206572,7 +206572,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -206689,7 +206689,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -206806,7 +206806,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -206923,7 +206923,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -207040,7 +207040,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -207157,7 +207157,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -207274,7 +207274,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -207391,7 +207391,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -207508,7 +207508,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -207625,7 +207625,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -207742,7 +207742,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -207859,7 +207859,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -207976,7 +207976,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -208093,7 +208093,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -208210,7 +208210,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -208327,7 +208327,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -208444,7 +208444,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -208561,7 +208561,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -208678,7 +208678,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -208795,7 +208795,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -208912,7 +208912,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -209029,7 +209029,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -209146,7 +209146,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -209263,7 +209263,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -209380,7 +209380,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -209497,7 +209497,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -209614,7 +209614,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -209731,7 +209731,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -209848,7 +209848,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -209965,7 +209965,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -210082,7 +210082,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -210199,7 +210199,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -210316,7 +210316,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -210433,7 +210433,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -210550,7 +210550,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -210667,7 +210667,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -210784,7 +210784,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -210901,7 +210901,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -211018,7 +211018,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -211135,7 +211135,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -211252,7 +211252,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -211369,7 +211369,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -211486,7 +211486,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -211603,7 +211603,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -211720,7 +211720,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -211837,7 +211837,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -211954,7 +211954,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -212071,7 +212071,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -212188,7 +212188,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -212305,7 +212305,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -212422,7 +212422,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -212539,7 +212539,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -212656,7 +212656,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -212773,7 +212773,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -212890,7 +212890,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -213007,7 +213007,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -213124,7 +213124,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -213241,7 +213241,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -213358,7 +213358,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -213475,7 +213475,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -213592,7 +213592,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -213709,7 +213709,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -213826,7 +213826,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -213943,7 +213943,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -214060,7 +214060,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -214177,7 +214177,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -214294,7 +214294,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -214411,7 +214411,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -214528,7 +214528,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -214645,7 +214645,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -214762,7 +214762,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -214879,7 +214879,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -214996,7 +214996,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -215113,7 +215113,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -215230,7 +215230,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -215347,7 +215347,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -215464,7 +215464,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -215581,7 +215581,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -215698,7 +215698,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -215815,7 +215815,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -215932,7 +215932,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -216049,7 +216049,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -216166,7 +216166,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -216283,7 +216283,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -216400,7 +216400,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -216517,7 +216517,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -216634,7 +216634,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -216751,7 +216751,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -216868,7 +216868,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -216985,7 +216985,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -217102,7 +217102,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -217219,7 +217219,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -217336,7 +217336,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -217453,7 +217453,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -217570,7 +217570,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -217687,7 +217687,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -217804,7 +217804,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -217921,7 +217921,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -218038,7 +218038,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -218155,7 +218155,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -218272,7 +218272,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -218389,7 +218389,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -218506,7 +218506,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -218623,7 +218623,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -218740,7 +218740,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -218857,7 +218857,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -218974,7 +218974,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -219091,7 +219091,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -219208,7 +219208,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -219325,7 +219325,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -219442,7 +219442,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -219559,7 +219559,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -219676,7 +219676,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -219793,7 +219793,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -219910,7 +219910,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -220027,7 +220027,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -220144,7 +220144,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -220261,7 +220261,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -220378,7 +220378,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -220495,7 +220495,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -220612,7 +220612,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -220729,7 +220729,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -220846,7 +220846,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -220963,7 +220963,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -221080,7 +221080,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -221197,7 +221197,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -221314,7 +221314,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -221431,7 +221431,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -221548,7 +221548,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -221665,7 +221665,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -221782,7 +221782,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -221899,7 +221899,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -222016,7 +222016,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -222133,7 +222133,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -222250,7 +222250,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -222367,7 +222367,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -222484,7 +222484,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -222601,7 +222601,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -222718,7 +222718,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -222835,7 +222835,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -222952,7 +222952,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -223069,7 +223069,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -223186,7 +223186,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -223303,7 +223303,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -223420,7 +223420,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -223537,7 +223537,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -223654,7 +223654,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -223771,7 +223771,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -223888,7 +223888,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -224005,7 +224005,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -224122,7 +224122,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -224239,7 +224239,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -224356,7 +224356,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -224473,7 +224473,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -224590,7 +224590,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -224707,7 +224707,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -224824,7 +224824,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -224941,7 +224941,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -225058,7 +225058,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -225175,7 +225175,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -225292,7 +225292,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -225409,7 +225409,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -225526,7 +225526,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -225643,7 +225643,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -225760,7 +225760,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -225877,7 +225877,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -225994,7 +225994,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -226111,7 +226111,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -226228,7 +226228,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -226345,7 +226345,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -226462,7 +226462,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -226579,7 +226579,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -226696,7 +226696,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -226813,7 +226813,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -226930,7 +226930,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -227047,7 +227047,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -227164,7 +227164,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -227281,7 +227281,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -227398,7 +227398,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -227515,7 +227515,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -227632,7 +227632,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -227749,7 +227749,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -227866,7 +227866,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -227983,7 +227983,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -228100,7 +228100,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -228217,7 +228217,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -228334,7 +228334,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -228451,7 +228451,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -228568,7 +228568,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -228685,7 +228685,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -228802,7 +228802,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -228919,7 +228919,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -229036,7 +229036,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -229153,7 +229153,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -229270,7 +229270,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -229387,7 +229387,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -229504,7 +229504,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -229621,7 +229621,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -229738,7 +229738,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -229855,7 +229855,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -229972,7 +229972,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -230089,7 +230089,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -230206,7 +230206,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -230323,7 +230323,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -230440,7 +230440,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -230557,7 +230557,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -230674,7 +230674,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -230791,7 +230791,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -230908,7 +230908,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -231025,7 +231025,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -231142,7 +231142,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -231259,7 +231259,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -231376,7 +231376,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -231493,7 +231493,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -231610,7 +231610,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -231727,7 +231727,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -231844,7 +231844,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -231961,7 +231961,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -232078,7 +232078,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -232195,7 +232195,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -232312,7 +232312,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -232429,7 +232429,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -232546,7 +232546,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -232663,7 +232663,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -232780,7 +232780,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -232897,7 +232897,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -233014,7 +233014,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -233131,7 +233131,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -233248,7 +233248,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -233365,7 +233365,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -233482,7 +233482,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -233599,7 +233599,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -233716,7 +233716,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -233833,7 +233833,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -233950,7 +233950,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -234067,7 +234067,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -234184,7 +234184,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -234301,7 +234301,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -234418,7 +234418,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -234535,7 +234535,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -234652,7 +234652,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -234769,7 +234769,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -234886,7 +234886,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -235003,7 +235003,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -235120,7 +235120,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -235237,7 +235237,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -235354,7 +235354,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -235471,7 +235471,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -235588,7 +235588,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -235705,7 +235705,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -235822,7 +235822,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -235939,7 +235939,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -236056,7 +236056,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -236173,7 +236173,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -236290,7 +236290,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -236407,7 +236407,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -236524,7 +236524,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -236641,7 +236641,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -236758,7 +236758,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -236875,7 +236875,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -236992,7 +236992,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -237109,7 +237109,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -237226,7 +237226,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -237343,7 +237343,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -237460,7 +237460,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -237577,7 +237577,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -237694,7 +237694,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -237811,7 +237811,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -237928,7 +237928,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -238045,7 +238045,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -238162,7 +238162,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -238279,7 +238279,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -238396,7 +238396,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -238513,7 +238513,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -238630,7 +238630,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -238747,7 +238747,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -238864,7 +238864,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -238981,7 +238981,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -239098,7 +239098,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -239215,7 +239215,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -239332,7 +239332,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -239449,7 +239449,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -239566,7 +239566,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -239683,7 +239683,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -239800,7 +239800,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -239917,7 +239917,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -240034,7 +240034,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -240151,7 +240151,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -240268,7 +240268,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -240385,7 +240385,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -240502,7 +240502,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -240619,7 +240619,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -240736,7 +240736,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -240853,7 +240853,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -240970,7 +240970,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.1,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -241087,7 +241087,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -241204,7 +241204,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -241321,7 +241321,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -241438,7 +241438,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -241555,7 +241555,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -241672,7 +241672,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -241789,7 +241789,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -241906,7 +241906,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -242023,7 +242023,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -242140,7 +242140,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -242257,7 +242257,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -242374,7 +242374,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -242491,7 +242491,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -242608,7 +242608,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -242725,7 +242725,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -242842,7 +242842,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -242959,7 +242959,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -243076,7 +243076,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -243193,7 +243193,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -243310,7 +243310,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -243427,7 +243427,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -243544,7 +243544,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -243661,7 +243661,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -243778,7 +243778,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -243895,7 +243895,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -244012,7 +244012,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -244129,7 +244129,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -244246,7 +244246,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -244363,7 +244363,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -244480,7 +244480,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -244597,7 +244597,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -244714,7 +244714,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -244831,7 +244831,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -244948,7 +244948,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -245065,7 +245065,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -245182,7 +245182,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -245299,7 +245299,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -245416,7 +245416,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -245533,7 +245533,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -245650,7 +245650,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -245767,7 +245767,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.1,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -245884,7 +245884,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -246001,7 +246001,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -246118,7 +246118,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -246235,7 +246235,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -246352,7 +246352,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -246469,7 +246469,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -246586,7 +246586,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -246703,7 +246703,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -246820,7 +246820,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -246937,7 +246937,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -247054,7 +247054,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -247171,7 +247171,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -247288,7 +247288,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -247405,7 +247405,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -247522,7 +247522,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -247639,7 +247639,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -247756,7 +247756,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -247873,7 +247873,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -247990,7 +247990,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -248107,7 +248107,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.2,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -248224,7 +248224,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.2,
     1.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -248341,7 +248341,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.2,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -248458,7 +248458,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -248575,7 +248575,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -248692,7 +248692,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -248809,7 +248809,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -248926,7 +248926,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -249043,7 +249043,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -249160,7 +249160,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -249277,7 +249277,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -249394,7 +249394,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -249511,7 +249511,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -249628,7 +249628,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -249745,7 +249745,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -249862,7 +249862,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -249979,7 +249979,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -250096,7 +250096,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -250213,7 +250213,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -250330,7 +250330,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -250447,7 +250447,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -250564,7 +250564,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -250681,7 +250681,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -250798,7 +250798,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -250915,7 +250915,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -251032,7 +251032,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -251149,7 +251149,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -251266,7 +251266,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -251383,7 +251383,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -251500,7 +251500,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -251617,7 +251617,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -251734,7 +251734,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -251851,7 +251851,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.1,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -251968,7 +251968,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -252085,7 +252085,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -252202,7 +252202,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -252319,7 +252319,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -252436,7 +252436,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -252553,7 +252553,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -252670,7 +252670,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -252787,7 +252787,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -252904,7 +252904,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -253021,7 +253021,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -253138,7 +253138,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -253255,7 +253255,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -253372,7 +253372,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -253489,7 +253489,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -253606,7 +253606,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -253723,7 +253723,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -253840,7 +253840,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -253957,7 +253957,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -254074,7 +254074,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -254191,7 +254191,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -254308,7 +254308,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -254425,7 +254425,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -254542,7 +254542,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -254659,7 +254659,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -254776,7 +254776,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -254893,7 +254893,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -255010,7 +255010,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -255127,7 +255127,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -255244,7 +255244,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -255361,7 +255361,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.9,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -255478,7 +255478,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -255595,7 +255595,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -255712,7 +255712,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -255829,7 +255829,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -255946,7 +255946,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -256063,7 +256063,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -256180,7 +256180,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -256297,7 +256297,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -256414,7 +256414,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -256531,7 +256531,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -256648,7 +256648,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -256765,7 +256765,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -256882,7 +256882,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -256999,7 +256999,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -257116,7 +257116,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -257233,7 +257233,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -257350,7 +257350,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -257467,7 +257467,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -257584,7 +257584,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -257701,7 +257701,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -257818,7 +257818,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -257935,7 +257935,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -258052,7 +258052,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -258169,7 +258169,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -258286,7 +258286,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -258403,7 +258403,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -258520,7 +258520,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -258637,7 +258637,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -258754,7 +258754,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -258871,7 +258871,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -258988,7 +258988,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -259105,7 +259105,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -259222,7 +259222,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -259339,7 +259339,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -259456,7 +259456,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -259573,7 +259573,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -259690,7 +259690,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -259807,7 +259807,7 @@ INSERT INTO NutrientDB.NutrientTable (
     12.3,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -259924,7 +259924,7 @@ INSERT INTO NutrientDB.NutrientTable (
     12.3,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -260041,7 +260041,7 @@ INSERT INTO NutrientDB.NutrientTable (
     12.3,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -260158,7 +260158,7 @@ INSERT INTO NutrientDB.NutrientTable (
     12.5,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -260275,7 +260275,7 @@ INSERT INTO NutrientDB.NutrientTable (
     12.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -260392,7 +260392,7 @@ INSERT INTO NutrientDB.NutrientTable (
     3.7,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -260509,7 +260509,7 @@ INSERT INTO NutrientDB.NutrientTable (
     4.2,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -260626,7 +260626,7 @@ INSERT INTO NutrientDB.NutrientTable (
     5.9,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -260743,7 +260743,7 @@ INSERT INTO NutrientDB.NutrientTable (
     4.2,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -260860,7 +260860,7 @@ INSERT INTO NutrientDB.NutrientTable (
     9.1,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -260977,7 +260977,7 @@ INSERT INTO NutrientDB.NutrientTable (
     9.3,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -261094,7 +261094,7 @@ INSERT INTO NutrientDB.NutrientTable (
     8.5,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -261211,7 +261211,7 @@ INSERT INTO NutrientDB.NutrientTable (
     14.1,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -261328,7 +261328,7 @@ INSERT INTO NutrientDB.NutrientTable (
     29.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -261445,7 +261445,7 @@ INSERT INTO NutrientDB.NutrientTable (
     20.5,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -261562,7 +261562,7 @@ INSERT INTO NutrientDB.NutrientTable (
     29.3,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -261679,7 +261679,7 @@ INSERT INTO NutrientDB.NutrientTable (
     33.4,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -261796,7 +261796,7 @@ INSERT INTO NutrientDB.NutrientTable (
     33.4,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -261913,7 +261913,7 @@ INSERT INTO NutrientDB.NutrientTable (
     33.8,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -262030,7 +262030,7 @@ INSERT INTO NutrientDB.NutrientTable (
     40.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -262147,7 +262147,7 @@ INSERT INTO NutrientDB.NutrientTable (
     33.8,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -262264,7 +262264,7 @@ INSERT INTO NutrientDB.NutrientTable (
     45.3,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -262381,7 +262381,7 @@ INSERT INTO NutrientDB.NutrientTable (
     10.2,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -262498,7 +262498,7 @@ INSERT INTO NutrientDB.NutrientTable (
     12.3,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -262615,7 +262615,7 @@ INSERT INTO NutrientDB.NutrientTable (
     4.9,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -262732,7 +262732,7 @@ INSERT INTO NutrientDB.NutrientTable (
     9.5,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -262849,7 +262849,7 @@ INSERT INTO NutrientDB.NutrientTable (
     17.3,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -262966,7 +262966,7 @@ INSERT INTO NutrientDB.NutrientTable (
     10.6,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -263083,7 +263083,7 @@ INSERT INTO NutrientDB.NutrientTable (
     30.5,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -263200,7 +263200,7 @@ INSERT INTO NutrientDB.NutrientTable (
     11.1,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -263317,7 +263317,7 @@ INSERT INTO NutrientDB.NutrientTable (
     21.4,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -263434,7 +263434,7 @@ INSERT INTO NutrientDB.NutrientTable (
     12.1,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -263551,7 +263551,7 @@ INSERT INTO NutrientDB.NutrientTable (
     14.4,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -263668,7 +263668,7 @@ INSERT INTO NutrientDB.NutrientTable (
     5.6,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -263785,7 +263785,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -263902,7 +263902,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -264019,7 +264019,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -264136,7 +264136,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -264253,7 +264253,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -264370,7 +264370,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -264487,7 +264487,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -264604,7 +264604,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -264721,7 +264721,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -264838,7 +264838,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -264955,7 +264955,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -265072,7 +265072,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -265189,7 +265189,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -265306,7 +265306,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -265423,7 +265423,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -265540,7 +265540,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -265657,7 +265657,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -265774,7 +265774,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -265891,7 +265891,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -266008,7 +266008,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     51.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -266125,7 +266125,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -266242,7 +266242,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -266359,7 +266359,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -266476,7 +266476,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -266593,7 +266593,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -266710,7 +266710,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -266827,7 +266827,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -266944,7 +266944,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     8.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -267061,7 +267061,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -267178,7 +267178,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -267295,7 +267295,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -267412,7 +267412,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     17.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -267529,7 +267529,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -267646,7 +267646,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -267763,7 +267763,7 @@ INSERT INTO NutrientDB.NutrientTable (
     2.1,
     14.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -267880,7 +267880,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     8.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -267997,7 +267997,7 @@ INSERT INTO NutrientDB.NutrientTable (
     2.0,
     16.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -268114,7 +268114,7 @@ INSERT INTO NutrientDB.NutrientTable (
     2.9,
     12.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -268231,7 +268231,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     13.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -268348,7 +268348,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     12.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -268465,7 +268465,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     14.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -268582,7 +268582,7 @@ INSERT INTO NutrientDB.NutrientTable (
     1.0,
     7.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -268699,7 +268699,7 @@ INSERT INTO NutrientDB.NutrientTable (
     2.8,
     4.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -268816,7 +268816,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     99.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -268933,7 +268933,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     97.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -269050,7 +269050,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     49.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -269167,7 +269167,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     45.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -269284,7 +269284,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     99.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -269401,7 +269401,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     99.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -269518,7 +269518,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -269635,7 +269635,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -269752,7 +269752,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -269869,7 +269869,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -269986,7 +269986,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -270103,7 +270103,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -270220,7 +270220,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -270337,7 +270337,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -270454,7 +270454,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -270571,7 +270571,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -270688,7 +270688,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -270805,7 +270805,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -270922,7 +270922,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -271039,7 +271039,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -271156,7 +271156,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -271273,7 +271273,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -271390,7 +271390,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -271507,7 +271507,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -271624,7 +271624,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     43.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -271741,7 +271741,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     56.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -271858,7 +271858,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     47.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -271975,7 +271975,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     40.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -272092,7 +272092,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -272209,7 +272209,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -272326,7 +272326,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -272443,7 +272443,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     9.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -272560,7 +272560,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     17.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -272677,7 +272677,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     16.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -272794,7 +272794,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -272911,7 +272911,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -273028,7 +273028,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     11.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -273145,7 +273145,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -273262,7 +273262,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     21.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -273379,7 +273379,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     21.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -273496,7 +273496,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     24.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -273613,7 +273613,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     22.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -273730,7 +273730,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.5,
     1.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -273847,7 +273847,7 @@ INSERT INTO NutrientDB.NutrientTable (
     1.1,
     4.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -273964,7 +273964,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -274081,7 +274081,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.9,
     6.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -274198,7 +274198,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -274315,7 +274315,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     9.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -274432,7 +274432,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     8.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -274549,7 +274549,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.8,
     5.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -274666,7 +274666,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -274783,7 +274783,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -274900,7 +274900,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -275017,7 +275017,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -275134,7 +275134,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.8,
     5.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -275251,7 +275251,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -275368,7 +275368,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -275485,7 +275485,7 @@ INSERT INTO NutrientDB.NutrientTable (
     2.7,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -275602,7 +275602,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -275719,7 +275719,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     30.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -275836,7 +275836,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.6,
     5.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -275953,7 +275953,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     8.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -276070,7 +276070,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -276187,7 +276187,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     25.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -276304,7 +276304,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -276421,7 +276421,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -276538,7 +276538,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -276655,7 +276655,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -276772,7 +276772,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -276889,7 +276889,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -277006,7 +277006,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -277123,7 +277123,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -277240,7 +277240,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -277357,7 +277357,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.7,
     3.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -277474,7 +277474,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -277591,7 +277591,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.3,
     4.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -277708,7 +277708,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -277825,7 +277825,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -277942,7 +277942,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -278059,7 +278059,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     12.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -278176,7 +278176,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     13.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -278293,7 +278293,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     11.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -278410,7 +278410,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     9.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -278527,7 +278527,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     10.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -278644,7 +278644,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     10.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -278761,7 +278761,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     10.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -278878,7 +278878,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     20.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -278995,7 +278995,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     9.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -279112,7 +279112,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -279229,7 +279229,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -279346,7 +279346,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -279463,7 +279463,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -279580,7 +279580,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     10.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -279697,7 +279697,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     10.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -279814,7 +279814,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     33.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -279931,7 +279931,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     9.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -280048,7 +280048,7 @@ INSERT INTO NutrientDB.NutrientTable (
     8.2,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -280165,7 +280165,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     45.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -280282,7 +280282,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     9.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -280399,7 +280399,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.3,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -280516,7 +280516,7 @@ INSERT INTO NutrientDB.NutrientTable (
     10.6,
     2.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -280633,7 +280633,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -280750,7 +280750,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -280867,7 +280867,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -280984,7 +280984,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -281101,7 +281101,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     3.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -281218,7 +281218,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -281335,7 +281335,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -281452,7 +281452,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -281569,7 +281569,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -281686,7 +281686,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -281803,7 +281803,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -281920,7 +281920,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -282037,7 +282037,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -282154,7 +282154,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -282271,7 +282271,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -282388,7 +282388,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -282505,7 +282505,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -282622,7 +282622,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -282739,7 +282739,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -282856,7 +282856,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -282973,7 +282973,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -283090,7 +283090,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     8.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -283207,7 +283207,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     4.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -283324,7 +283324,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -283441,7 +283441,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     2.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -283558,7 +283558,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -283675,7 +283675,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -283792,7 +283792,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     6.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -283909,7 +283909,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -284026,7 +284026,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -284143,7 +284143,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     17.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -284260,7 +284260,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.1,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -284377,7 +284377,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.1,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -284494,7 +284494,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.1,
     1.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -284611,7 +284611,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -284728,7 +284728,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -284845,7 +284845,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -284962,7 +284962,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -285079,7 +285079,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -285196,7 +285196,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -285313,7 +285313,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -285430,7 +285430,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -285547,7 +285547,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -285664,7 +285664,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -285781,7 +285781,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -285898,7 +285898,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -286015,7 +286015,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     5.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -286132,7 +286132,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -286249,7 +286249,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -286366,7 +286366,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -286483,7 +286483,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -286600,7 +286600,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -286717,7 +286717,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -286834,7 +286834,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -286951,7 +286951,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -287068,7 +287068,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -287185,7 +287185,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -287302,7 +287302,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -287419,7 +287419,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     7.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -287536,7 +287536,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -287653,7 +287653,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -287770,7 +287770,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.6
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -287887,7 +287887,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -288004,7 +288004,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -288121,7 +288121,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -288238,7 +288238,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -288355,7 +288355,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -288472,7 +288472,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -288589,7 +288589,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -288706,7 +288706,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.7
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -288823,7 +288823,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.9
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -288940,7 +288940,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -289057,7 +289057,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -289174,7 +289174,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.4
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -289291,7 +289291,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.2
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -289408,7 +289408,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.3
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -289525,7 +289525,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.1
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -289642,7 +289642,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.5
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -289759,7 +289759,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     0.8
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
@@ -289876,7 +289876,7 @@ INSERT INTO NutrientDB.NutrientTable (
     0.0,
     1.0
 );
-INSERT INTO NutrientDB.NutrientTable (
+INSERT INTO appsDB.NutrientTable (
     NUM,
     NAME,
     KANANAME,
