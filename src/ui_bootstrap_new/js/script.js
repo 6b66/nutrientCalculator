@@ -89,6 +89,40 @@ class Creator {
     }
 
     Make_Table(Data) {
+        let beforeText = ""
+        let text = ""
+        let name = Data.NAME
+        console.log(name)
+        /*
+        let newName =""
+        newName = name.replace(/［/g,"")
+        newName = newName.replace(/］/g,"")
+        newName = name.replace(/\[/g,"")
+        newName = newName.replace(/\]/g,"")
+        newName = newName.replace(/（/g,"")
+        newName = newName.replace(/）/g,"")
+        newName = newName.replace(/＜/g,"")
+        newName = newName.replace(/＞/g,"")
+        newName = newName.replace(/\'/g,"")*/
+        console.log(name)
+        xhrMakeTable.open('GET', `../Access/nutrient.php?${makeUseDataRequests(userDataArray)}&keyword=${name}`,true);
+        xhrMakeTable.setRequestHeader('content-type','application/json');
+        xhrMakeTable.send();
+        xhrMakeTable.onload = function() {
+            if(xhrMakeTable.readyState === 4) {
+                if(xhrMakeTable.status === 200) {
+                    let getData = JSON.parse(xhrMakeTable.responseText)
+                    console.log(getData)
+                    beforeText = text
+                    if(alldata.length > 0){
+                        searchCardHolder.innerHTML = ""
+                        let Maker = new Creator(alldata, GetRange)
+                        Maker.Write_Card(searchPage)
+                        ScrollTop()
+                    }
+                }
+            }
+        }
         let div = document.createElement("div")
         div.classList.add("col-12","col-md-6")
         div.dataset.id = Data.NUM
@@ -135,6 +169,7 @@ class Creator {
         })
         let ele = ele_1 + ele_2 + ele_3 + ele_4 + ele_5 + ele_6 + ele_7
         div.innerHTML = ele
+        console.log(div)
         return div
     }
 
@@ -381,7 +416,7 @@ let searchPlusBtn = searchPage.querySelector("#searchPlusBtn")
 let opencard = document.querySelector("#opencard")
 let openCardbox = document.querySelector("#openCardbox")
 
-
+let xhrMakeTable = new XMLHttpRequest();
 const xhrFirst = new XMLHttpRequest();
 
 let alldata = ""
@@ -398,7 +433,7 @@ xhrFirst.onload = function() {
 };
 
 window.onload = () => {
-    xhrFirst.open('GET', '../Access/nutrient.php?startCount=0&range=50',true);
+    xhrFirst.open('GET', `../Access/nutrient.php?getDataList=NAME,KANANAME,NUM&startCount=0&range=50`,true);
     xhrFirst.setRequestHeader('content-type','application/json');
     xhrFirst.send();
 }
@@ -557,6 +592,14 @@ const setCookie = (name, json)=>{
     //Cookieを保存する
     document.cookie = cookies;
 };
+
+function makeUseDataRequests(usedata) {
+    let text = "getDataList=NAME,KANANAME,NUM"
+    usedata.forEach(data => {
+        text = text  + "," + data
+    })
+    return text
+}
 
 //ページクリックでスクロールトップへ
 function ScrollTop() {
