@@ -40,11 +40,16 @@ class ConditionElement {
     private static $fieldName;
     private static $operator;
     private static $value;
+    private static $valueType = "string";
 
     function __construct(string $fieldName, string $operator, array $value) {
         self::$fieldName = $fieldName;
         self::$operator = $operator;
         self::$value = $value;
+    }
+
+    public function SetType(string $type) {
+        self::$valueType = $type;
     }
 
     // SQLに使用可能な条件式を取得する
@@ -78,9 +83,9 @@ class ConditionElement {
         $endValue = end(self::$value);
         foreach (self::$value as $element) {
             if ($element !== $endValue) {
-                $result .= "'".$element."', ";
+                $result .= self::$valueType == "string" ? "'".$element."', " : $element.", ";
             } else {
-                $result .= "'".$element."')";
+                $result .= self::$valueType == "string" ? "'".$element."')" : $element.")";
             }
         }
         return $result;
