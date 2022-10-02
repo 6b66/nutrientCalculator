@@ -573,7 +573,6 @@ function makeUseDataRequests(usedata) {
     return text
 }
 
-
 //ページクリックでスクロールトップへ
 function ScrollTop() {
     window.scroll(0,0)
