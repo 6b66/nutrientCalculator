@@ -12,7 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
     // 条件の設定
     $condition = null;
-    if (isset($_GET["keyword"])) {
+    if (isset($_GET["num"])) {
+        $element = new ConditionElement("NUM", "in", array($_GET["num"]));
+        $element->SetType("int");
+        $condition = new WhereCondition(array($element));
+    } else if (isset($_GET["keyword"])) {
         $condition = new WhereCondition(
             array(
                 new ConditionElement("NAME", "contain", array($_GET["keyword"])),
