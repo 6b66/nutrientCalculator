@@ -7,6 +7,17 @@ SET SESSION character_set_server = utf8mb4;
 
 CREATE DATABASE appsDB;
 
+CREATE TABLE appsDB.UserTable (
+    ID          INT NOT NULL PRIMARY KEY,
+    PASSWORD    TEXT NOT NULL,
+    NAME        TEXT NOT NULL
+);
+
+CREATE TABLE appsDB.SessionTable (
+    KEY         TEXT NOT NULL PRIMARY KEY,
+    TIMESTAMP   TIMESTAMP NOT NULL
+);
+
 CREATE TABLE appsDB.NutrientTable (
     NUM         INT NOT NULL PRIMARY KEY,
     NAME        TEXT NOT NULL,

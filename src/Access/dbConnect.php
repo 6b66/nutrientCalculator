@@ -13,7 +13,7 @@ class dbConnecter {
 
     public function IsKnownTableName($tableName) {
         // テーブルを増やす場合は下のリストをメンテする
-        $knownTableList = ["NutrientTable"];
+        $knownTableList = ["NutrientTable", "UserTable", "SessionTable"];
         return in_array($tableName, $knownTableList);
     }
 
@@ -24,15 +24,7 @@ class dbConnecter {
 
         $fieldString = "*";
         if (isset($fields) && count($fields) > 0) {
-            $fieldString = "";
-            $endValue = end($fields);
-            foreach ($fields as $fieldName) {
-                if ($fieldName !== $endValue) {
-                    $fieldString .= $fieldName.", ";
-                } else {
-                    $fieldString .= $fieldName;
-                }
-            }
+            $fieldString = ArrayToParenthesisCommaString($fields);
         }
 
         // 下の行はデバッグように残しておく
@@ -49,6 +41,12 @@ class dbConnecter {
             array_push($resultData, $stmt->fetch(PDO::FETCH_OBJ));
         }
         return $resultData;
+    }
+
+    public function Create(array $values) {
+        $valueString = ArrayToParenthesisCommaString($values);
+        $stmt = self::$pdo->prepare("INSERT INTO ".self::$tableName." values ".$valueString);
+        $stmt->execute();
     }
 }
 ?>

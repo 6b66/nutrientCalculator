@@ -3,9 +3,9 @@ require_once("./dbConnect.php");
 require_once("./WhereCondition.php");
 require_once("./util.php");
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $db = new dbConnecter("NutrientTable");
+    $userDB = new dbConnecter("UserTable");
 
     // fieldsの設定
     $fields = CommaStringToArray($_GET["getDataList"]);
