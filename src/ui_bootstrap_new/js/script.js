@@ -10,7 +10,7 @@ class Creator {
         let ele = 
             `<div class="col-12 searchcard d-flex flex-row mx-1 searchCheckcard" role="button">
                 <div class="col-9 h-100 mx-3 d-flex align-items-center justify-content-center">
-                    <p style="font-size: 0.9rem; font-weight: 500; opacity: 0.9;" class="h-100 cardsname getText nametext text-center m-0">${this.NameSort(Data.NAME)}</p>
+                    <p style="font-size: 0.9rem; font-weight: 500; opacity: 0.9;" class="h-100 cardsname getText nametext text-center m-0">${Creator.NameSort(Data.NAME)}</p>
                 </div>
                 <div class="col-2 d-flex align-items-center justify-content-center">
                     <div class="searchCheck">
@@ -35,14 +35,13 @@ class Creator {
                 let clone_div = div.cloneNode(true);
                 selectCardHolder.appendChild(clone_div)
                 this.Set_Card_Ability(clone_div)
+                this.Set_CheckOnlyTable_Ability(clone_div)
                 idList.push(div.dataset.id)
                 setCookie("idList",idList)
                 alldata.forEach(data => {
                     if(data.NUM == div.dataset.id){
                         selectDataList.push(data)
-                        let table = this.Make_Table(data)
-                        tableCardHolder.appendChild(table)
-                        this.Set_Table_Ability(table)
+                        this.Make_Table(data,tableCardHolder)
                     }
                 })
 
@@ -88,101 +87,78 @@ class Creator {
         })
     }
 
-    Make_Table(Data) {
-        let beforeText = ""
-        let text = ""
-        let name = Data.NAME
-        console.log(name)
-        /*
-        let newName =""
-        newName = name.replace(/［/g,"")
-        newName = newName.replace(/］/g,"")
-        newName = name.replace(/\[/g,"")
-        newName = newName.replace(/\]/g,"")
-        newName = newName.replace(/（/g,"")
-        newName = newName.replace(/）/g,"")
-        newName = newName.replace(/＜/g,"")
-        newName = newName.replace(/＞/g,"")
-        newName = newName.replace(/\'/g,"")*/
-        console.log(name)
-        xhrMakeTable.open('GET', `../Access/nutrient.php?${makeUseDataRequests(userDataArray)}&keyword=${name}`,true);
+    Make_Table(Data,place) {
+        xhrMakeTable.open('GET', `../Access/nutrient.php?num=${Data.NUM}&${makeUseDataRequests(userDataArray)}`,true);
         xhrMakeTable.setRequestHeader('content-type','application/json');
         xhrMakeTable.send();
         xhrMakeTable.onload = function() {
             if(xhrMakeTable.readyState === 4) {
                 if(xhrMakeTable.status === 200) {
                     let getData = JSON.parse(xhrMakeTable.responseText)
-                    console.log(getData)
-                    beforeText = text
-                    if(alldata.length > 0){
-                        searchCardHolder.innerHTML = ""
-                        let Maker = new Creator(alldata, GetRange)
-                        Maker.Write_Card(searchPage)
-                        ScrollTop()
-                    }
+                    Data = getData[0]
+                    let div = document.createElement("div")
+                    div.classList.add("col-12","col-md-6")
+                    div.dataset.id = Data.NUM
+                    let ele_1 = 
+                        `<div class="col-12 v tablecard  d-flex flex-column d-flex align-items-center m-0 mb-2">
+                            <div class="row d-flex flex-row col-12 m-0 align-items-center justify-content-center" style="height: 65px;">
+                                <div class="col-9 h-100 m-2 d-flex align-items-center justify-content-center p-0">
+                                    <p style="font-weight: 500; opacity: 0.9; font-size: 0.9rem;" class="h-100 text-center m-0 p-0">${Creator.NameSort(Data.NAME)}</p>
+                                </div>
+                                <div class="col-2 h-75 p-0 position-relative">
+                                    <input type="number" class="col-11 h-75 rounded-3 input-value" style="border: 0; border-bottom: 2px solid black;  text-align: right; padding-right: 15px;">
+                                    <p class="position-absolute" style="top: 10px; right: 10%;">g</p>
+                                </div>
+                                <div class="row m-0 table-responsive rounded-3" style="height: 142px; width: 95%;">
+                                    <table class="table bg-light m-0 tableposi">
+                                        <thead  class="table-dark">
+                                            <tr class="tr-name">
+                                                <th scope="col" class="tablename">成分名</th>`;
+                    let ele_3 =
+                                            `</tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="td-h tr-100">
+                                                <th scope="row" class="clacDataFront">100g</th>`;
+                    let ele_5 =
+                                            `</tr>
+                                            <tr class="table-secondary clacData tr-calc">
+                                                <th scope="row"><span class="now-value">0</span><span>g</span></th>`
+                    let ele_7 = 
+                                            `</tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>`;
+                    let ele_2 = ""
+                    let ele_4 = ""
+                    let ele_6 = ""
+                    userDataArray.forEach(i => {
+                        ele_2 += `<th scope="col" class="tablename">${nutritionObj[i]}</th>`
+                        let unit = i + "unit"
+                        ele_4  += `<td class="tableper"><span class="tableperin">${Data[i]}</span><span>${nutritionObj[unit]}</span></td>`
+                        ele_6 += `<td class="tableval"><span class="tableValNum">0</span><span>${nutritionObj[unit]}</span></td>`
+                    })
+                    let ele = ele_1 + ele_2 + ele_3 + ele_4 + ele_5 + ele_6 + ele_7
+                    div.innerHTML = ele
+                    place.appendChild(div)
+                    Creator.Set_Table_Ability(div)
                 }
             }
         }
-        let div = document.createElement("div")
-        div.classList.add("col-12","col-md-6")
-        div.dataset.id = Data.NUM
-        let ele_1 = 
-            `<div class="col-12 v tablecard  d-flex flex-column d-flex align-items-center m-0 mb-2">
-                <div class="row d-flex flex-row col-12 m-0 align-items-center justify-content-center" style="height: 65px;">
-                    <div class="col-9 h-100 m-2 d-flex align-items-center justify-content-center p-0">
-                        <p style="font-weight: 500; opacity: 0.9; font-size: 0.9rem;" class="h-100 text-center m-0 p-0">${this.NameSort(Data.NAME)}</p>
-                    </div>
-                    <div class="col-2 h-75 p-0 position-relative">
-                        <input type="text" class="col-11 h-75 rounded-3 input-value" style="border: 0; border-bottom: 2px solid black;  text-align: right; padding-right: 15px;">
-                        <p class="position-absolute" style="top: 10px; right: 10%;">g</p>
-                    </div>
-                    <div class="row m-0 table-responsive rounded-3" style="height: 142px; width: 95%;">
-                        <table class="table bg-light m-0 tableposi">
-                            <thead  class="table-dark">
-                                <tr class="tr-name">
-                                    <th scope="col" class="tablename">成分名</th>`;
-        let ele_3 =
-                                `</tr>
-                            </thead>
-                            <tbody>
-                                <tr class="td-h tr-100">
-                                    <th scope="row" class="clacDataFront">100g</th>`;
-        let ele_5 =
-                                `</tr>
-                                <tr class="table-secondary clacData tr-calc">
-                                    <th scope="row"><span class="now-value">0</span><span>g</span></th>`
-        let ele_7 = 
-                                `</tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>`;
-        let ele_2 = ""
-        let ele_4 = ""
-        let ele_6 = ""
-        userDataArray.forEach(i => {
-            ele_2 += `<th scope="col" class="tablename">${nutritionObj[i]}</th>`
-            let unit = i + "unit"
-            ele_4  += `<td class="tableper"><span class="tableperin">${Data[i]}</span><span>${nutritionObj[unit]}</span></td>`
-            ele_6 += `<td class="tableval"><span class="tableValNum">0</span><span>${nutritionObj[unit]}</span></td>`
-        })
-        let ele = ele_1 + ele_2 + ele_3 + ele_4 + ele_5 + ele_6 + ele_7
-        div.innerHTML = ele
-        console.log(div)
-        return div
     }
 
-    Set_Table_Ability(div) {
+    static Set_Table_Ability(div) {
         let input_value = div.querySelector(".input-value")
         let tableperin = div.querySelectorAll(".tableperin")
         let tableValNum = div.querySelectorAll(".tableValNum")
         let now_value = div.querySelector(".now-value")
         input_value.addEventListener("input", () => {
-            now_value.textContent = Number(this.hankaku2Zenkaku(input_value.value))
+            now_value.textContent = Number(Creator.hankaku2Zenkaku(input_value.value))
             let i = 0
             tableperin.forEach(x => {
-                tableValNum[i].textContent = this.clacResult(Number(x.textContent), Number(this.hankaku2Zenkaku(input_value.value)))
+                tableValNum[i].textContent = Creator.clacResult(Number(x.textContent), Number(Creator.hankaku2Zenkaku(input_value.value)))
                 i++
             })
         })
@@ -193,9 +169,7 @@ class Creator {
         searchCheck.addEventListener("click", (event) => {
             alldata.forEach(data => {
                 if(data.NUM == div.dataset.id) {
-                    let table = this.Make_Table(data)
-                    opencard.appendChild(table)
-                    this.Set_Table_Ability(table)
+                    this.Make_Table(data,opencard)
                 }
             })
             event.stopPropagation();
@@ -229,15 +203,13 @@ class Creator {
         let holder = Page.querySelector(".holder")
         this.List.forEach(Data => {
             if(Data != false) {
-                let div = this.Make_Table(Data)
-                holder.append(div)
-                this.Set_Table_Ability(div)
+                this.Make_Table(Data,holder)
             }
             
         })
     }
 
-    NameSort(newName) {
+    static NameSort(newName) {
         newName = newName.replace(/［/g,"[")
         newName = newName.replace(/］/g,"]")
         newName = newName.replace(/（/g,"(")
@@ -273,13 +245,13 @@ class Creator {
         return newName
     }
 
-    hankaku2Zenkaku(str) {
+    static hankaku2Zenkaku(str) {
         return str.replace(/[０-９]/g, function(s) {
             return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
         });
     }
 
-    clacResult(value, inval) {
+    static clacResult(value, inval) {
         let ans = Number(value * inval / 100);
         return ans.toFixed(2)
     }
@@ -433,7 +405,7 @@ xhrFirst.onload = function() {
 };
 
 window.onload = () => {
-    xhrFirst.open('GET', `../Access/nutrient.php?getDataList=NAME,KANANAME,NUM&startCount=0&range=50`,true);
+    xhrFirst.open('GET', `../Access/nutrient.php?getDataList=NAME,NUM&startCount=0&range=50`,true);
     xhrFirst.setRequestHeader('content-type','application/json');
     xhrFirst.send();
 }
@@ -466,7 +438,7 @@ search.addEventListener("change", () => {
     if(search.value != ""){
         text = search.value
         if(beforeText != text){
-            xhrSearch.open('GET', `../Access/nutrient.php?keyword=${text}`,true);
+            xhrSearch.open('GET', `../Access/nutrient.php?keyword=${text}&getDataList=NAME,NUM`,true);
             xhrSearch.setRequestHeader('content-type','application/json');
             xhrSearch.send();
             xhrSearch.onload = function() {
@@ -504,7 +476,7 @@ const xhrPlus = new XMLHttpRequest();
 let searchPlusBtn_hidden = document.querySelector("#searchPlusBtn-hidden")
 searchPlusBtn.addEventListener("click", () => {
     dataNum += GetRange
-    xhrPlus.open('GET', `../Access/nutrient.php?keyword=${beforeText}&startCount=${dataNum}`,true);
+    xhrPlus.open('GET', `../Access/nutrient.php?keyword=${beforeText}&startCount=${dataNum}&getDataList=NAME,NUM`,true);
             xhrPlus.setRequestHeader('content-type','application/json');
             xhrPlus.send();
             xhrPlus.onload = function() {
@@ -594,12 +566,13 @@ const setCookie = (name, json)=>{
 };
 
 function makeUseDataRequests(usedata) {
-    let text = "getDataList=NAME,KANANAME,NUM"
+    let text = "getDataList=NAME,NUM"
     usedata.forEach(data => {
         text = text  + "," + data
     })
     return text
 }
+
 
 //ページクリックでスクロールトップへ
 function ScrollTop() {

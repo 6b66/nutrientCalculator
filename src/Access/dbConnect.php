@@ -36,7 +36,7 @@ class dbConnecter {
         }
 
         // 下の行はデバッグように残しておく
-        echo "SELECT ".$fieldString." FROM ".self::$tableName." ".$whereCondition." LIMIT ".$startCount.", ".$range;
+        //echo "SELECT ".$fieldString." FROM ".self::$tableName." ".$whereCondition." LIMIT ".$startCount.", ".$range;
 
         $stmt = self::$pdo->prepare("SELECT ".$fieldString." FROM ".self::$tableName." ".$whereCondition." LIMIT :first, :range");
         $stmt->bindParam(':first', $startCount, PDO::PARAM_INT);
