@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>appsLogin</title>
+</head>
+<body>
+  <div class="container-fluid d-flex align-items-center justify-content-center" style="margin-top: 20%;">
+    <div class="row col-11 col-lg-6 d-flex align-items-center justify-content-center">
+      <div class="input-group-lg mb-3">
+        <input type="text" id="userIdField" class="form-control" placeholder="ユーザID" aria-label="UserId" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group-lg mb-3">
+        <input type="text" id="passwordField" class="form-control" placeholder="パスワード" aria-label="Password" aria-describedby="basic-addon1">
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="isUserRegistration">
+        <label class="form-check-label" for="isUserRegistration">新規登録</label>
+      </div>
+      <div class="input-group-lg mb-3">
+        <input type="text" id="userNameField" class="form-control" placeholder="ユーザ名" aria-label="UserName" aria-describedby="basic-addon1" style="display: none;">
+      </div>
+      <button type="button" id="submitBtn" class="btn btn-primary btn-lg">ログイン</button>
+    </div>
+  </div>
+</body>
+<script>
+window.onload = () => {
+  var userIdField = document.getElementById("userIdField");
+  var isValidUserId = false;
+  userIdField.oninput = (e) => {
+    // ユーザ名のバリデーション
+    isValidUserId = true;
+  };
+
+  var passwordField = document.getElementById("passwordField");
+  var isValidPassword = false;
+  passwordField.oninput = (e) => {
+    // パスワードのバリデーション
+    isValidPassword = true;
+  };
+
+  var checkbox = document.getElementById("isUserRegistration");
+  checkbox.onchange = () => {
+    if (checkbox.checked == true) {
+      document.getElementById("userNameField").style.display = "block";
+    } else {
+      document.getElementById("userNameField").style.display = "none";
+    }
+  };
+
+  var userNameField = document.getElementById("userNameField");
+  var isValidUserName = false;
+  userNameField.oninput = (e) => {
+    // ユーザ名のバリデーション
+    isValidUserName = true;
+  };
+
+  document.getElementById("submitBtn").onclick = () => {
+    if (!isValidUserId || !isValidPassword) return;
+
+    var isUserRegistration = checkbox.checked;
+    if (!isUserRegistration || !isValidUserName) return;
+    
+    const xhr = new XMLHttpRequest();
+    var url = isUserRegistration ? '../Access/user.php' : '../Access/user.php?login=yes';
+
+    var postData = new FormData();
+    postData.append('userId', userIdField.value);
+    postData.append('password', passwordField.value);
+    postData.append('userName', userNameField.value);
+
+    xhr.open('POST', url, true);
+    xhr.setRequestHeader('content-type','application/json');
+    xhr.send(postData);
+  };
+};
+</script>
+</html>

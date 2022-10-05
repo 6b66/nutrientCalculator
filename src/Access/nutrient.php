@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $db = new dbConnecter("NutrientTable");
 
     // fieldsの設定
-    $fields = CommaStringToArray($_GET["getDataList"]);
+    $fields = CommaStringToArray($_GET["getDataList"]."");
 
     // 条件の設定
     $condition = null;
