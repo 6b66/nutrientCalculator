@@ -37,14 +37,12 @@ class Creator {
                 this.Set_Card_Ability(clone_div)
                 this.Set_CheckOnlyTable_Ability(clone_div)
                 idList.push(div.dataset.id)
-                setCookie("idList",idList)
                 alldata.forEach(data => {
                     if(data.NUM == div.dataset.id){
                         selectDataList.push(data)
                         this.Make_Table(data,tableCardHolder)
                     }
                 })
-
             }else {
                 if(searchdivs.length > 1){
                     for(let searchdiv in searchdivs) {
@@ -81,13 +79,14 @@ class Creator {
                 let index = idList.indexOf(div.dataset.id)
                 idList.splice(index,1)
                 selectDataList.splice(index,1)
-                setCookie("idList",idList)
+
             }
             Item_Check_Pop()
         })
     }
 
     Make_Table(Data,place) {
+        console.log(Data)
         xhrMakeTable.open('GET', `../Access/nutrient.php?num=${Data.NUM}&${makeUseDataRequests(userDataArray)}`,true);
         xhrMakeTable.setRequestHeader('content-type','application/json');
         xhrMakeTable.send();
@@ -143,6 +142,7 @@ class Creator {
                     let ele = ele_1 + ele_2 + ele_3 + ele_4 + ele_5 + ele_6 + ele_7
                     div.innerHTML = ele
                     place.appendChild(div)
+                    console.log(div)
                     Creator.Set_Table_Ability(div)
                 }
             }
@@ -199,12 +199,16 @@ class Creator {
         
     }
 
-    Write_Table(Page) {
-        let holder = Page.querySelector(".holder")
-        this.List.forEach(Data => {
-            if(Data != false) {
-                this.Make_Table(Data,holder)
-            }
+    Write_Table(idList,place) {
+        tableCardHolder.innerHTML = ""
+        idList.forEach(id => {
+            let promise = new Promise((resolve,reject) => {
+                resolve("true");
+            }).then(() => {
+                let it = {}
+                it.NUM = id
+                this.Make_Table(it,place)
+            })
             
         })
     }
@@ -399,6 +403,7 @@ xhrFirst.onload = function() {
         if(xhrFirst.status === 200) {
             alldata = JSON.parse(xhrFirst.responseText)
             let Maker = new Creator(alldata, GetRange)
+            console.log(Maker)
             Maker.Write_Card(searchPage)
         }
     }
@@ -573,6 +578,135 @@ function makeUseDataRequests(usedata) {
     return text
 }
 
+//成分選択
+let addnutrition = document.querySelector(".addnutrition")
+let nutritionTablePage = document.querySelector(".nutritionTablePage")
+let returnBtn = nutritionTablePage.querySelector(".returnBtn")
+let makeBtn = nutritionTablePage.querySelector(".makeBtn")
+let delBtn = nutritionTablePage.querySelector(".delBtn")
+let nutritionTable = nutritionTablePage.querySelector(".nutritionTable")
+let nutritionTableText = ""
+for(key in nutritionObj) {
+    if(!key.includes("unit")){
+        let nutritionitem = 
+            `<div class="form-check mx-4">
+                <input role="button" class="form-check-input nutritionCheck" type="checkbox" value="" id="${key}">
+                <label role="button" class="form-check-label flex-row" style="font-size: 1.2rem; font-weight: 600" for="${key}">
+                        ${nutritionObj[key]}
+                </label>
+            </div>`;
+        nutritionTableText += nutritionitem
+    }
+}
+nutritionTable.innerHTML = nutritionTableText
+addnutrition.addEventListener("click", () => {
+    nutritionTablePage.classList.remove("visually-hidden")
+    makeBtn.classList.remove("visually-hidden")
+    delBtn.classList.add("visually-hidden")
+})
+returnBtn.addEventListener("click", () => {
+    nutritionTablePage.classList.add("visually-hidden")
+    nutritionTableName.value = ""
+    nutritionCheck.forEach(x => {
+        if(x.checked) {
+            x.checked = false
+        }
+    })
+})
+let nutritionCheck = nutritionTable.querySelectorAll(".nutritionCheck")
+let nutritionTableName = nutritionTablePage.querySelector(".nutritionTableName")
+makeBtn.addEventListener("click", () => {
+    nutritionTablePage.classList.add("visually-hidden")
+    let name = String(nutritionTableName.value)
+    console.log(name)
+    let DataList = []
+    nutritionCheck.forEach(x => {
+        if(x.checked) {
+            DataList.push(x.id)
+            x.checked = false
+        }
+    })
+    let id = createUuid()
+    console.log("id:",id)
+    console.log("name:",name)
+    console.log("array:",DataList)
+    Create_SelectedNutrients(id,name,DataList)
+    nutritionTableName.value = ""
+    ScrollTop()
+})
+delBtn.addEventListener("click",() => {
+    let name =  nutritionTableName.value
+    //console.log(name)
+    let newObj = JSON.parse(JSON.stringify(userDataArrayObj))
+    for(let key in newObj){
+        if(newObj[key][0] == name) {
+            delete userDataArrayObj[key]
+            //console.log(userDataArrayObj)
+            //console.log(key)
+            deleteCookie(key)
+            let div = nutritionSelectHolder.querySelectorAll(".cards")
+            div.forEach(i => {
+                if(i.dataset.name == key) {
+                    i.remove()
+                }
+            })
+        }
+        
+    }
+    nutritionTablePage.classList.add("visually-hidden")
+})
+
+//選択された成分のカード作成
+function Create_SelectedNutrients(id,name,DataList) {
+    let html = document.createElement("div")
+    html.classList.add("col-12","col-md-6","cards")
+    html.dataset.id = id
+    html.dataset.name = name
+    html.dataset.datalist = DataList
+    let innerHtml = 
+        `<div role="button" class="col-12 nutritionSelectcard d-flex flex-row mx-1">
+            <div class="col-9 h-100 mx-3 d-flex align-items-center justify-content-center">
+                <p style="font-size: 0.9rem; font-weight: 500; opacity: 0.9;" class=" cardsname getText nametext text-center m-0 ">${name}</p>
+            </div>
+            <div class="col-2 d-flex align-items-center justify-content-center">
+                <div class="nutritionSelectCheck">
+                    <img src="./img/tool (1).svg" alt="" style="margin-top: 3px; margin-left: 3px;">
+                </div>
+            </div>
+        </div>`;
+    html.innerHTML = innerHtml
+    nutritionSelectHolder.append(html)
+    Ability_SelectedNutrients()
+}
+
+let nutritionSelectcard = document.querySelectorAll(".nutritionSelectcard")
+nutritionSelectcard = nutritionSelectcard[1].parentElement
+nutritionSelectcard.dataset.datalist = userDataArray
+Ability_SelectedNutrients()
+//選択された成分カードの機能
+function Ability_SelectedNutrients() {
+    let pearent = nutritionSelectHolder.lastElementChild
+    let div = pearent.firstElementChild
+    let tableCreate = new Creator()
+    div.addEventListener("click", () => {
+        let nutritionSelectcard = document.querySelectorAll(".nutritionSelectcard")
+        nutritionSelectcard.forEach(target => {
+            target.classList.remove("bg-greenty")
+        })
+        div.classList.add("bg-greenty")
+        userDataArray = pearent.dataset.datalist.split(',')
+        tableCreate.Write_Table(idList,tableCardHolder)
+    })
+
+}
+
+//uuidの作成
+function createUuid(){
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(a) {
+        let r = (new Date().getTime() + Math.random() * 16)%16 | 0, v = a == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+        });
+}
 
 //ページクリックでスクロールトップへ
 function ScrollTop() {
