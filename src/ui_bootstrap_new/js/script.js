@@ -86,7 +86,7 @@ class Creator {
     }
 
     Make_Table(Data,place) {
-        console.log(Data)
+        let xhrMakeTable = new XMLHttpRequest();
         xhrMakeTable.open('GET', `../Access/nutrient.php?num=${Data.NUM}&${makeUseDataRequests(userDataArray)}`,true);
         xhrMakeTable.setRequestHeader('content-type','application/json');
         xhrMakeTable.send();
@@ -142,7 +142,6 @@ class Creator {
                     let ele = ele_1 + ele_2 + ele_3 + ele_4 + ele_5 + ele_6 + ele_7
                     div.innerHTML = ele
                     place.appendChild(div)
-                    console.log(div)
                     Creator.Set_Table_Ability(div)
                 }
             }
@@ -392,7 +391,7 @@ let searchPlusBtn = searchPage.querySelector("#searchPlusBtn")
 let opencard = document.querySelector("#opencard")
 let openCardbox = document.querySelector("#openCardbox")
 
-let xhrMakeTable = new XMLHttpRequest();
+
 const xhrFirst = new XMLHttpRequest();
 
 let alldata = ""
@@ -403,7 +402,6 @@ xhrFirst.onload = function() {
         if(xhrFirst.status === 200) {
             alldata = JSON.parse(xhrFirst.responseText)
             let Maker = new Creator(alldata, GetRange)
-            console.log(Maker)
             Maker.Write_Card(searchPage)
         }
     }
@@ -583,6 +581,7 @@ let addnutrition = document.querySelector(".addnutrition")
 let nutritionTablePage = document.querySelector(".nutritionTablePage")
 let returnBtn = nutritionTablePage.querySelector(".returnBtn")
 let makeBtn = nutritionTablePage.querySelector(".makeBtn")
+let changeBtn = nutritionTablePage.querySelector(".changeBtn")
 let delBtn = nutritionTablePage.querySelector(".delBtn")
 let nutritionTable = nutritionTablePage.querySelector(".nutritionTable")
 let nutritionTableText = ""
@@ -590,7 +589,7 @@ for(key in nutritionObj) {
     if(!key.includes("unit")){
         let nutritionitem = 
             `<div class="form-check mx-4">
-                <input role="button" class="form-check-input nutritionCheck" type="checkbox" value="" id="${key}">
+                <input role="button" class="form-check-input nutritionCheck" type="checkbox" id="${key}">
                 <label role="button" class="form-check-label flex-row" style="font-size: 1.2rem; font-weight: 600" for="${key}">
                         ${nutritionObj[key]}
                 </label>
@@ -602,6 +601,7 @@ nutritionTable.innerHTML = nutritionTableText
 addnutrition.addEventListener("click", () => {
     nutritionTablePage.classList.remove("visually-hidden")
     makeBtn.classList.remove("visually-hidden")
+    changeBtn.classList.add("visually-hidden")
     delBtn.classList.add("visually-hidden")
 })
 returnBtn.addEventListener("click", () => {
@@ -613,12 +613,17 @@ returnBtn.addEventListener("click", () => {
         }
     })
 })
-let nutritionCheck = nutritionTable.querySelectorAll(".nutritionCheck")
-let nutritionTableName = nutritionTablePage.querySelector(".nutritionTableName")
-makeBtn.addEventListener("click", () => {
+changeBtn.addEventListener("click", () => {
+    let divs = nutritionSelectHolder.querySelectorAll(".cards")
+    let oldid = nutritionTableName.dataset.id
+    divs.forEach(div => {
+        if(div.dataset.id == oldid){
+            div.remove()
+        }
+            
+    })
     nutritionTablePage.classList.add("visually-hidden")
     let name = String(nutritionTableName.value)
-    console.log(name)
     let DataList = []
     nutritionCheck.forEach(x => {
         if(x.checked) {
@@ -627,32 +632,36 @@ makeBtn.addEventListener("click", () => {
         }
     })
     let id = createUuid()
-    console.log("id:",id)
-    console.log("name:",name)
-    console.log("array:",DataList)
+    Create_SelectedNutrients(id,name,DataList)
+    nutritionTableName.value = ""
+    ScrollTop()
+})
+let nutritionCheck = nutritionTable.querySelectorAll(".nutritionCheck")
+let nutritionTableName = nutritionTablePage.querySelector(".nutritionTableName")
+makeBtn.addEventListener("click", () => {
+    nutritionTablePage.classList.add("visually-hidden")
+    let name = String(nutritionTableName.value)
+    let DataList = []
+    nutritionCheck.forEach(x => {
+        if(x.checked) {
+            DataList.push(x.id)
+            x.checked = false
+        }
+    })
+    let id = createUuid()
     Create_SelectedNutrients(id,name,DataList)
     nutritionTableName.value = ""
     ScrollTop()
 })
 delBtn.addEventListener("click",() => {
-    let name =  nutritionTableName.value
-    //console.log(name)
-    let newObj = JSON.parse(JSON.stringify(userDataArrayObj))
-    for(let key in newObj){
-        if(newObj[key][0] == name) {
-            delete userDataArrayObj[key]
-            //console.log(userDataArrayObj)
-            //console.log(key)
-            deleteCookie(key)
-            let div = nutritionSelectHolder.querySelectorAll(".cards")
-            div.forEach(i => {
-                if(i.dataset.name == key) {
-                    i.remove()
-                }
-            })
+    let divs = nutritionSelectHolder.querySelectorAll(".cards")
+    let oldid = nutritionTableName.dataset.id
+    divs.forEach(div => {
+        if(div.dataset.id == oldid){
+            div.remove()
         }
-        
-    }
+            
+    })
     nutritionTablePage.classList.add("visually-hidden")
 })
 
@@ -687,6 +696,7 @@ Ability_SelectedNutrients()
 function Ability_SelectedNutrients() {
     let pearent = nutritionSelectHolder.lastElementChild
     let div = pearent.firstElementChild
+    let check = pearent.querySelector(".nutritionSelectCheck")
     let tableCreate = new Creator()
     div.addEventListener("click", () => {
         let nutritionSelectcard = document.querySelectorAll(".nutritionSelectcard")
@@ -697,7 +707,29 @@ function Ability_SelectedNutrients() {
         userDataArray = pearent.dataset.datalist.split(',')
         tableCreate.Write_Table(idList,tableCardHolder)
     })
-
+    check.addEventListener("click", () => {
+        nutritionTableName.value = pearent.dataset.name
+        nutritionTableName.dataset.id = pearent.dataset.id
+        let array = pearent.dataset.datalist.split(',')
+        nutritionCheck.forEach(item => {
+            item.checked = false
+            if(array.includes(item.id)) {
+                item.checked = true
+            }
+        })
+        if(pearent.dataset.id != 1111) {
+            nutritionTablePage.classList.remove("visually-hidden")
+            makeBtn.classList.add("visually-hidden")
+            changeBtn.classList.remove("visually-hidden")
+            delBtn.classList.remove("visually-hidden")
+        }else {
+            nutritionTablePage.classList.remove("visually-hidden")
+            makeBtn.classList.add("visually-hidden")
+            changeBtn.classList.add("visually-hidden")
+            delBtn.classList.add("visually-hidden")
+        }
+        
+    })
 }
 
 //uuidの作成
