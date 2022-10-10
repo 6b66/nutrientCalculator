@@ -620,27 +620,39 @@ returnBtn.addEventListener("click", () => {
     })
 })
 changeBtn.addEventListener("click", () => {
-    let divs = nutritionSelectHolder.querySelectorAll(".cards")
-    let oldid = nutritionTableName.dataset.id
-    divs.forEach(div => {
-        if(div.dataset.id == oldid){
-            div.remove()
-        }
-            
-    })
-    nutritionTablePage.classList.add("visually-hidden")
     let name = String(nutritionTableName.value)
-    let DataList = []
-    nutritionCheck.forEach(x => {
-        if(x.checked) {
-            DataList.push(x.id)
-            x.checked = false
+    console.log(name)
+    if(name != "") {
+        if(NutrientListName(name)) {
+            let divs = nutritionSelectHolder.querySelectorAll(".cards")
+            let oldid = nutritionTableName.dataset.id
+            divs.forEach(div => {
+                if(div.dataset.id == oldid){
+                    div.remove()
+                }
+            })
+            nutritionTablePage.classList.add("visually-hidden")
+            let DataList = []
+            nutritionCheck.forEach(x => {
+                if(x.checked) {
+                    DataList.push(x.id)
+                    x.checked = false
+                }
+            })
+            let id = createUuid()
+            Create_SelectedNutrients(id,name,DataList)
+            nutritionTableName.value = ""
+            ScrollTop()
+        }else {
+            nutritionFlseName.classList.add("border","border-4","border-danger")
+            nutritionAttention.textContent = ("名前が重複：")
+            nutritionAttention.classList.add("text-danger")
         }
-    })
-    let id = createUuid()
-    Create_SelectedNutrients(id,name,DataList)
-    nutritionTableName.value = ""
-    ScrollTop()
+    }else {
+        nutritionFlseName.classList.add("border","border-4","border-danger")
+        nutritionAttention.textContent = ("リスト名を入力：")
+        nutritionAttention.classList.add("text-danger")
+    }
 })
 let nutritionCheck = nutritionTable.querySelectorAll(".nutritionCheck")
 
