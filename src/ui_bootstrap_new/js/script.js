@@ -584,6 +584,9 @@ let makeBtn = nutritionTablePage.querySelector(".makeBtn")
 let changeBtn = nutritionTablePage.querySelector(".changeBtn")
 let delBtn = nutritionTablePage.querySelector(".delBtn")
 let nutritionTable = nutritionTablePage.querySelector(".nutritionTable")
+let nutritionTableName = nutritionTablePage.querySelector(".nutritionTableName")
+let nutritionFlseName = nutritionTableName.parentElement
+let nutritionAttention = nutritionFlseName.firstElementChild
 let nutritionTableText = ""
 for(key in nutritionObj) {
     if(!key.includes("unit")){
@@ -599,6 +602,9 @@ for(key in nutritionObj) {
 }
 nutritionTable.innerHTML = nutritionTableText
 addnutrition.addEventListener("click", () => {
+    nutritionFlseName.classList.remove("border","border-4","border-danger")
+    nutritionAttention.textContent = ("リスト名：")
+    nutritionAttention.classList.remove("text-danger")
     nutritionTablePage.classList.remove("visually-hidden")
     makeBtn.classList.remove("visually-hidden")
     changeBtn.classList.add("visually-hidden")
@@ -637,21 +643,33 @@ changeBtn.addEventListener("click", () => {
     ScrollTop()
 })
 let nutritionCheck = nutritionTable.querySelectorAll(".nutritionCheck")
-let nutritionTableName = nutritionTablePage.querySelector(".nutritionTableName")
+
 makeBtn.addEventListener("click", () => {
-    nutritionTablePage.classList.add("visually-hidden")
     let name = String(nutritionTableName.value)
-    let DataList = []
-    nutritionCheck.forEach(x => {
-        if(x.checked) {
-            DataList.push(x.id)
-            x.checked = false
+    if(name != ""){
+        if(NutrientListName(name)) {
+            nutritionTablePage.classList.add("visually-hidden")
+            let DataList = []
+            nutritionCheck.forEach(x => {
+                if(x.checked) {
+                    DataList.push(x.id)
+                    x.checked = false
+                }
+            })
+            let id = createUuid()
+            Create_SelectedNutrients(id,name,DataList)
+            nutritionTableName.value = ""
+            ScrollTop()
+        }else {
+            nutritionFlseName.classList.add("border","border-4","border-danger")
+            nutritionAttention.textContent = ("名前が重複：")
+            nutritionAttention.classList.add("text-danger")
         }
-    })
-    let id = createUuid()
-    Create_SelectedNutrients(id,name,DataList)
-    nutritionTableName.value = ""
-    ScrollTop()
+    }else {
+        nutritionFlseName.classList.add("border","border-4","border-danger")
+        nutritionAttention.textContent = ("リスト名を入力：")
+        nutritionAttention.classList.add("text-danger")
+    }
 })
 delBtn.addEventListener("click",() => {
     let divs = nutritionSelectHolder.querySelectorAll(".cards")
@@ -664,6 +682,18 @@ delBtn.addEventListener("click",() => {
     })
     nutritionTablePage.classList.add("visually-hidden")
 })
+
+//成分リストに同じ名前がないかチェック
+function NutrientListName(name) {
+    let cards =  nutritionSelectHolder.querySelectorAll(".cardsname")
+    let result = true
+    cards.forEach(card => {
+        if(card.textContent == name) {
+            result = false
+        }
+    })
+    return result
+}
 
 //選択された成分のカード作成
 function Create_SelectedNutrients(id,name,DataList) {
@@ -708,6 +738,9 @@ function Ability_SelectedNutrients() {
         tableCreate.Write_Table(idList,tableCardHolder)
     })
     check.addEventListener("click", () => {
+        nutritionFlseName.classList.remove("border","border-4","border-danger")
+        nutritionAttention.textContent = ("リスト名：")
+        nutritionAttention.classList.remove("text-danger")
         nutritionTableName.value = pearent.dataset.name
         nutritionTableName.dataset.id = pearent.dataset.id
         let array = pearent.dataset.datalist.split(',')
