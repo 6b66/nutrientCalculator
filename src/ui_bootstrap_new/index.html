@@ -212,14 +212,14 @@
                 <!--カードフォルダー-->
                 <div class="row col-12 holder" id="nutritionSelectHolder">
                     <div class="col-12 col-md-6 cards d-flex align-items-center justify-content-center">
-                        <div class="col-10 addnutrition nutritionSelectcard d-flex flex-row mx-1"  style="background-color: #94AE82;">
+                        <div role="button" class="col-10 addnutrition nutritionSelectcard d-flex flex-row mx-1"  style="background-color: #94AE82;">
                             <div class="col-11 h-100 mx-3 d-flex align-items-center justify-content-center">
                                 <p style="font-size: 1.0rem; font-weight: 500; opacity: 0.9;" class=" cardsname getText nametext text-center m-0 ">新しい成分リストを作成する</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 cards" data-name="1111">
-                        <div class="col-12 nutritionSelectcard d-flex flex-row mx-1 bg-greenty">
+                    <div class="col-12 col-md-6 cards" data-id="1111" data-name="デフォルト">
+                        <div role="button" class="col-12 nutritionSelectcard d-flex flex-row mx-1 bg-greenty">
                             <div class="col-9 mx-3 h-100 d-flex align-items-center justify-content-center">
                                 <p style="font-size: 0.9rem; font-weight: 500; opacity: 0.9;" class=" cardsname getText nametext text-center m-0 ">デフォルト</p>
                             </div>
@@ -269,7 +269,7 @@
                     <p class="d-flex align-items-center justify-content-center m-0">
                         リスト名：
                     </p>
-                    <input type="text" class="nutritionTableName rou" style="border: none; border-bottom: solid 1px black; background-color: #CDE9E3;">
+                    <input type="text" class="nutritionTableName rou " style="border: none; border-bottom: solid 1px rgb(0, 0, 0); background-color: #CDE9E3;">
                 </div>
                 <div class="col-12 nutritionTable rounded-4 p-2 d-flex flex-wrap " style="height: 82%; background-color: #CDE9E3;overflow: scroll;">
                     <!--
@@ -283,18 +283,23 @@
                 </div>
                 <div class="col-5"></div>
                 <div class="col-7 d-flex flex-wrap">
-                    <div class="col-3 a d-flex align-items-center justify-content-center rounded-4 bg-primary m-2 makeBtn" style="height: 80%;">
-                        <div class="col-5 p-2 bd-highlight d-flex align-items-center justify-content-center ">
+                    <div role="button" class="col-3 a d-flex align-items-center justify-content-center rounded-4 bg-primary m-2 makeBtn" style="height: 80%;">
+                        <div class=" col-5 p-2 bd-highlight d-flex align-items-center justify-content-center text-light font-weight-bold">
                             追加
                         </div>
                     </div>
-                    <div class="col-3 a d-flex align-items-center justify-content-center rounded-4 bg-danger m-2 delBtn" style="height: 80%;">
-                        <div class="col-5 p-2 bd-highlight d-flex align-items-center justify-content-center ">
+                    <div role="button" class="col-3 a d-flex align-items-center justify-content-center rounded-4 bg-primary m-2 changeBtn" style="height: 80%;">
+                        <div class="col-5 p-2 bd-highlight d-flex align-items-center justify-content-center text-light font-weight-bold">
+                            変更
+                        </div>
+                    </div>
+                    <div role="button" class="col-3 a d-flex align-items-center justify-content-center rounded-4 bg-danger m-2 delBtn" style="height: 80%;">
+                        <div class="col-5 p-2 bd-highlight d-flex align-items-center justify-content-center text-light font-weight-bold">
                             削除
                         </div>
                     </div>
-                    <div class="col-3 a d-flex align-items-center justify-content-center rounded-4 bg-secondary m-2 returnBtn" style="height: 80%;">
-                        <div class="col-5 p-2 bd-highlight d-flex align-items-center justify-content-center ">
+                    <div role="button" class="col-3 a d-flex align-items-center justify-content-center rounded-4 bg-secondary m-2 returnBtn" style="height: 80%;">
+                        <div class="col-5 p-2 bd-highlight d-flex align-items-center justify-content-center text-light font-weight-bold">
                             戻る
                         </div>
                     </div>
