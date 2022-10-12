@@ -8,6 +8,11 @@
     background-color: black;
 }
 
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+} 
 
 @media screen and (min-width:480px) { 
     /*　画面サイズが480pxからはここを読み込む　*/
@@ -108,6 +113,9 @@ ul > li:hover > i >  .name {
 .tableval {
     white-space: nowrap;
     text-align: center;
+}
+.input-value {
+    border: 1px solid #02A893;
 }
 
 /*成分選択*/

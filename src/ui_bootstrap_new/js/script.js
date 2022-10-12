@@ -58,7 +58,10 @@ class Creator {
                     }
                 }else {
                     let ele = searchdivs[0].querySelector(".searchcard")
-                    ele.classList.remove("bg-greenty")
+                    let pearent = ele.parentElement
+                    if(pearent.dataset.id == div.dataset.id) {
+                        ele.classList.remove("bg-greenty")
+                    }
                 }
                 if(selectdivs.length > 1){
                     for(let selectdiv in selectdivs) {
@@ -104,15 +107,11 @@ class Creator {
                                 <div class="col-9 h-100 m-2 d-flex align-items-center justify-content-center p-0">
                                     <p style="font-weight: 500; opacity: 0.9; font-size: 0.9rem;" class="h-100 text-center m-0 p-0">${Creator.NameSort(Data.NAME)}</p>
                                 </div>
-                                <div class="col-2 h-75 p-0 position-relative">
-                                    <input type="number" class="col-11 h-75 rounded-3 input-value" style="border: 0; border-bottom: 2px solid black;  text-align: right; padding-right: 15px;">
-                                    <p class="position-absolute" style="top: 10px; right: 10%;">g</p>
-                                </div>
                                 <div class="row m-0 table-responsive rounded-3" style="height: 142px; width: 95%;">
                                     <table class="table bg-light m-0 tableposi">
                                         <thead  class="table-dark">
                                             <tr class="tr-name">
-                                                <th scope="col" class="tablename">成分名</th>`;
+                                                <th scope="col" class="tablename">　成分名　</th>`;
                     let ele_3 =
                                             `</tr>
                                         </thead>
@@ -122,7 +121,12 @@ class Creator {
                     let ele_5 =
                                             `</tr>
                                             <tr class="table-secondary clacData tr-calc">
-                                                <th scope="row"><span class="now-value">0</span><span>g</span></th>`
+                                                <th scope="row">
+                                                <div class="col-12 p-0 position-relative">
+                                                    <input type="number" class="col-11 h-75 rounded-3 input-value" style="text-align: right; padding-right: 15px;">
+                                                    <p class="position-absolute" style="top: 0px; right: 10%;">g</p>
+                                                </div>
+                                                </th>`
                     let ele_7 = 
                                             `</tr>
                                         </tbody>
@@ -152,9 +156,7 @@ class Creator {
         let input_value = div.querySelector(".input-value")
         let tableperin = div.querySelectorAll(".tableperin")
         let tableValNum = div.querySelectorAll(".tableValNum")
-        let now_value = div.querySelector(".now-value")
         input_value.addEventListener("input", () => {
-            now_value.textContent = Number(Creator.hankaku2Zenkaku(input_value.value))
             let i = 0
             tableperin.forEach(x => {
                 tableValNum[i].textContent = Creator.clacResult(Number(x.textContent), Number(Creator.hankaku2Zenkaku(input_value.value)))
