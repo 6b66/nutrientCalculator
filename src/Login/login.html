@@ -9,7 +9,7 @@
   <div class="container-fluid d-flex align-items-center justify-content-center" style="margin-top: 20%;">
     <div class="row col-11 col-lg-6 d-flex align-items-center justify-content-center">
       <div class="input-group-lg mb-3">
-        <input type="text" id="userIdField" class="form-control" placeholder="ユーザID" aria-label="UserId" aria-describedby="basic-addon1">
+        <input type="text" id="userIdField" class="form-control" placeholder="ユーザID" aria-label="UserId" aria-describedby="basic-addon1" autocomplete="username">
       </div>
       <div class="input-group-lg mb-3">
         <input type="password" id="passwordField" class="form-control" placeholder="パスワード" aria-label="Password" aria-describedby="basic-addon1">
@@ -61,8 +61,13 @@ window.onload = () => {
     if (!isValidUserId || !isValidPassword) return;
 
     var isUserRegistration = checkbox.checked;
-    if (!((isUserRegistration && isValidUserName) || (!isUserRegistration && !isValidUserName))) return;
-    
+    //if (!((isUserRegistration && isValidUserName) || (!isUserRegistration && !isValidUserName))) return;
+    if (isUserRegistration) {
+      if(!isValidUserName){
+        return;
+      }
+    }
+
     const xhr = new XMLHttpRequest();
     var url = isUserRegistration ? '../Access/user.php' : '../Access/user.php?login=yes';
 
@@ -79,7 +84,8 @@ window.onload = () => {
           alert(xhr.responseText);
           console.log(xhr.responseText);
           if (xhr.responseText == "ログイン成功" || xhr.responseText == "ログイン済みです") {
-            window.location.href('../');
+            console.log()
+            window.location.href = '../../';
           }
         }
       }
