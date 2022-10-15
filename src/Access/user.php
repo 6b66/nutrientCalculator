@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             return;
         }
         $isDuplicate = $userDB->IsExist("ID", $_POST["userId"]);
-        if ($isDuplicate > 0) {
+        if ($isDuplicate) {
             echo "エラー: すでに使用されているユーザIdです。";
             return;
         }

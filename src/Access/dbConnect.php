@@ -52,9 +52,15 @@ class dbConnecter {
     }
 
     public function IsExist(string $columnName, string $value) {
-        $stmt = $this->pdo->prepare("SELECT COUNT(".$columnName.") FROM ".$this->tableName." WHERE ".$columnName." = '".$value."'");
+        // echo "SELECT COUNT(".$columnName.") FROM ".$this->tableName." WHERE ".$columnName." = '".$value."'";
+        $stmt = $this->pdo->prepare("SELECT COUNT(".$columnName.") as count FROM ".$this->tableName." WHERE ".$columnName." = '".$value."'");
         $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_OBJ);
+        $count = $stmt->fetch(PDO::FETCH_OBJ)->count;
+        if ($count> 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 ?>
