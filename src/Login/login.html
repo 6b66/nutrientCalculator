@@ -12,7 +12,7 @@
         <input type="text" id="userIdField" class="form-control" placeholder="ユーザID" aria-label="UserId" aria-describedby="basic-addon1">
       </div>
       <div class="input-group-lg mb-3">
-        <input type="text" id="passwordField" class="form-control" placeholder="パスワード" aria-label="Password" aria-describedby="basic-addon1">
+        <input type="password" id="passwordField" class="form-control" placeholder="パスワード" aria-label="Password" aria-describedby="basic-addon1">
       </div>
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="isUserRegistration">
@@ -61,7 +61,7 @@ window.onload = () => {
     if (!isValidUserId || !isValidPassword) return;
 
     var isUserRegistration = checkbox.checked;
-    if (!isUserRegistration || !isValidUserName) return;
+    if (!((isUserRegistration && isValidUserName) || (!isUserRegistration && !isValidUserName))) return;
     
     const xhr = new XMLHttpRequest();
     var url = isUserRegistration ? '../Access/user.php' : '../Access/user.php?login=yes';
@@ -72,8 +72,18 @@ window.onload = () => {
     postData.append('userName', userNameField.value);
 
     xhr.open('POST', url, true);
-    xhr.setRequestHeader('content-type','application/json');
     xhr.send(postData);
+    xhr.onload = () => {
+      if(xhr.readyState === 4) {
+        if(xhr.status === 200) {
+          alert(xhr.responseText);
+          console.log(xhr.responseText);
+          if (xhr.responseText == "ログイン成功" || xhr.responseText == "ログイン済みです") {
+            window.location.href('../');
+          }
+        }
+      }
+    };
   };
 };
 </script>

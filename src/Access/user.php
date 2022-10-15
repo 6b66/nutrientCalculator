@@ -25,17 +25,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($user[0]->PASSWORD == $passHash) {
             // ログイン成功
             session_start();
+            if (isset($_SESSION["userId"])) {
+                echo "ログイン済みです";
+                return;
+            }
+
             $_SESSION["userId"] = $user[0]->ID;
             $_SESSION["name"] = $user[0]->NAME;
 
             $sessionKey = session_id();
+            setcookie("name", $user[0]->NAME);
+
             $timeStamp = date("Y-m-d h:n:d");
             $sessionDB->Create(array("SESSION_KEY", "TIMESTAMP"), array($sessionKey, $timeStamp));
-
+            print_r($_COOKIE);
+            echo "ログイン成功";
             return;
         } else {
             // ログイン失敗
-            echo ".ログイン失敗";
+            echo "ログイン失敗";
         }
 
     }else if (isset($_POST["userId"]) && isset($_POST["password"]) && isset($_POST["userName"])) {
@@ -55,10 +63,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "エラー: ユーザ名に使用できない文字が含まれています。";
             return;
         }
+        $isDuplicate = $userDB->IsExist("ID", $_POST["userId"]);
+        if ($isDuplicate > 0) {
+            echo "エラー: すでに使用されているユーザIdです。";
+            return;
+        }
         $password = hash("sha256", $_POST["password"]);
         $userDB->Create(array("ID", "PASSWORD", "NAME"), array($_POST["userId"], $password, $_POST["userName"]));
     }
-    echo "なにも";
 }
 
 function UserNameValidator($userName) {

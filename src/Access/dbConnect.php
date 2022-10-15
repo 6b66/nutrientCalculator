@@ -46,9 +46,15 @@ class dbConnecter {
     public function Create(array $columns, array $values) {
         $columnString = ArrayToParenthesisCommaString($columns, false);
         $valueString = ArrayToParenthesisCommaString($values, true);
-        echo "INSERT INTO ".$this->tableName." ".$columnString." values ".$valueString;
+        // echo "INSERT INTO ".$this->tableName." ".$columnString." values ".$valueString;
         $stmt = $this->pdo->prepare("INSERT INTO ".$this->tableName." ".$columnString." values ".$valueString);
         $stmt->execute();
+    }
+
+    public function IsExist(string $columnName, string $value) {
+        $stmt = $this->pdo->prepare("SELECT COUNT(".$columnName.") FROM ".$this->tableName." WHERE ".$columnName." = '".$value."'");
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_OBJ);
     }
 }
 ?>

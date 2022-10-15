@@ -12,14 +12,10 @@ function CommaStringToArray(string $commaString) {
 function ArrayToCommaString(array $array, bool $isSurroundQuote = false) {
     $commaString = "";
     if (isset($array) && count($array) > 0) {
-        $endValue = end($array);
         foreach ($array as $item) {
-            if ($item !== $endValue) {
-                $commaString .= $isSurroundQuote ? "'".$item."', " : $item.", ";
-            } else {
-                $commaString .= $isSurroundQuote ? "'".$item."'" : $item;
-            }
+            $commaString .= $isSurroundQuote ? "'".$item."', " : $item.", ";
         }
+        $commaString = rtrim($commaString, ", ");
     }
     return $commaString;
 }
