@@ -38,12 +38,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $timeStamp = date("Y-m-d h:n:d");
             $sessionDB->Create(array("SESSION_KEY", "TIMESTAMP"), array($sessionKey, $timeStamp));
-            print_r($_COOKIE);
             echo "ログイン成功";
             return;
         } else {
             // ログイン失敗
             echo "ログイン失敗";
+            return;
         }
 
     }else if (isset($_POST["userId"]) && isset($_POST["password"]) && isset($_POST["userName"])) {
@@ -70,6 +70,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         $password = hash("sha256", $_POST["password"]);
         $userDB->Create(array("ID", "PASSWORD", "NAME"), array($_POST["userId"], $password, $_POST["userName"]));
+        echo "ユーザを登録しました。ログインしてください。";
+        return;
     }
 }
 
