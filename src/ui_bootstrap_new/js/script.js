@@ -10,7 +10,7 @@ class Creator {
         let ele = 
             `<div class="col-12 searchcard d-flex flex-row mx-1 searchCheckcard" role="button">
                 <div class="col-9 h-100 mx-3 d-flex align-items-center justify-content-center">
-                    <p style="font-size: 0.9rem; font-weight: 500; opacity: 0.9;" class="h-100 cardsname getText nametext text-center m-0">${this.NameSort(Data.NAME)}</p>
+                    <p style="font-size: 0.9rem; font-weight: 500; opacity: 0.9;" class="h-100 cardsname getText nametext text-center m-0">${Creator.NameSort(Data.NAME)}</p>
                 </div>
                 <div class="col-2 d-flex align-items-center justify-content-center">
                     <div class="searchCheck">
@@ -35,17 +35,14 @@ class Creator {
                 let clone_div = div.cloneNode(true);
                 selectCardHolder.appendChild(clone_div)
                 this.Set_Card_Ability(clone_div)
+                this.Set_CheckOnlyTable_Ability(clone_div)
                 idList.push(div.dataset.id)
-                setCookie("idList",idList)
                 alldata.forEach(data => {
                     if(data.NUM == div.dataset.id){
                         selectDataList.push(data)
-                        let table = this.Make_Table(data)
-                        tableCardHolder.appendChild(table)
-                        this.Set_Table_Ability(table)
+                        this.Make_Table(data,tableCardHolder)
                     }
                 })
-
             }else {
                 if(searchdivs.length > 1){
                     for(let searchdiv in searchdivs) {
@@ -61,7 +58,10 @@ class Creator {
                     }
                 }else {
                     let ele = searchdivs[0].querySelector(".searchcard")
-                    ele.classList.remove("bg-greenty")
+                    let pearent = ele.parentElement
+                    if(pearent.dataset.id == div.dataset.id) {
+                        ele.classList.remove("bg-greenty")
+                    }
                 }
                 if(selectdivs.length > 1){
                     for(let selectdiv in selectdivs) {
@@ -82,72 +82,84 @@ class Creator {
                 let index = idList.indexOf(div.dataset.id)
                 idList.splice(index,1)
                 selectDataList.splice(index,1)
-                setCookie("idList",idList)
+
             }
             Item_Check_Pop()
         })
     }
 
-    Make_Table(Data) {
-        let div = document.createElement("div")
-        div.classList.add("col-12","col-md-6")
-        div.dataset.id = Data.NUM
-        let ele_1 = 
-            `<div class="col-12 v tablecard  d-flex flex-column d-flex align-items-center m-0 mb-2">
-                <div class="row d-flex flex-row col-12 m-0 align-items-center justify-content-center" style="height: 65px;">
-                    <div class="col-9 h-100 m-2 d-flex align-items-center justify-content-center p-0">
-                        <p style="font-weight: 500; opacity: 0.9; font-size: 0.9rem;" class="h-100 text-center m-0 p-0">${this.NameSort(Data.NAME)}</p>
-                    </div>
-                    <div class="col-2 h-75 p-0 position-relative">
-                        <input type="text" class="col-11 h-75 rounded-3 input-value" style="border: 0; border-bottom: 2px solid black;  text-align: right; padding-right: 15px;">
-                        <p class="position-absolute" style="top: 10px; right: 10%;">g</p>
-                    </div>
-                    <div class="row m-0 table-responsive rounded-3" style="height: 142px; width: 95%;">
-                        <table class="table bg-light m-0 tableposi">
-                            <thead  class="table-dark">
-                                <tr class="tr-name">
-                                    <th scope="col" class="tablename">成分名</th>`;
-        let ele_3 =
-                                `</tr>
-                            </thead>
-                            <tbody>
-                                <tr class="td-h tr-100">
-                                    <th scope="row" class="clacDataFront">100g</th>`;
-        let ele_5 =
-                                `</tr>
-                                <tr class="table-secondary clacData tr-calc">
-                                    <th scope="row"><span class="now-value">0</span><span>g</span></th>`
-        let ele_7 = 
-                                `</tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>`;
-        let ele_2 = ""
-        let ele_4 = ""
-        let ele_6 = ""
-        userDataArray.forEach(i => {
-            ele_2 += `<th scope="col" class="tablename">${nutritionObj[i]}</th>`
-            let unit = i + "unit"
-            ele_4  += `<td class="tableper"><span class="tableperin">${Data[i]}</span><span>${nutritionObj[unit]}</span></td>`
-            ele_6 += `<td class="tableval"><span class="tableValNum">0</span><span>${nutritionObj[unit]}</span></td>`
-        })
-        let ele = ele_1 + ele_2 + ele_3 + ele_4 + ele_5 + ele_6 + ele_7
-        div.innerHTML = ele
-        return div
+    Make_Table(Data,place) {
+        let xhrMakeTable = new XMLHttpRequest();
+        xhrMakeTable.open('GET', `../Access/nutrient.php?num=${Data.NUM}&${makeUseDataRequests(userDataArray)}`,true);
+        xhrMakeTable.setRequestHeader('content-type','application/json');
+        xhrMakeTable.send();
+        xhrMakeTable.onload = function() {
+            if(xhrMakeTable.readyState === 4) {
+                if(xhrMakeTable.status === 200) {
+                    let getData = JSON.parse(xhrMakeTable.responseText)
+                    Data = getData[0]
+                    let div = document.createElement("div")
+                    div.classList.add("col-12","col-md-6")
+                    div.dataset.id = Data.NUM
+                    let ele_1 = 
+                        `<div class="col-12 v tablecard  d-flex flex-column d-flex align-items-center m-0 mb-2">
+                            <div class="row d-flex flex-row col-12 m-0 align-items-center justify-content-center" style="height: 65px;">
+                                <div class="col-9 h-100 m-2 d-flex align-items-center justify-content-center p-0">
+                                    <p style="font-weight: 500; opacity: 0.9; font-size: 0.9rem;" class="h-100 text-center m-0 p-0">${Creator.NameSort(Data.NAME)}</p>
+                                </div>
+                                <div class="row m-0 table-responsive rounded-3" style="height: 142px; width: 95%;">
+                                    <table class="table bg-light m-0 tableposi">
+                                        <thead  class="table-dark">
+                                            <tr class="tr-name">
+                                                <th scope="col" class="tablename">　成分名　</th>`;
+                    let ele_3 =
+                                            `</tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="td-h tr-100">
+                                                <th scope="row" class="clacDataFront">100g</th>`;
+                    let ele_5 =
+                                            `</tr>
+                                            <tr class="table-secondary clacData tr-calc">
+                                                <th scope="row">
+                                                <div class="col-12 p-0 position-relative">
+                                                    <input type="number" class="col-11 h-75 rounded-3 input-value" style="text-align: right; padding-right: 15px;">
+                                                    <p class="position-absolute" style="top: 0px; right: 10%;">g</p>
+                                                </div>
+                                                </th>`
+                    let ele_7 = 
+                                            `</tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>`;
+                    let ele_2 = ""
+                    let ele_4 = ""
+                    let ele_6 = ""
+                    userDataArray.forEach(i => {
+                        ele_2 += `<th scope="col" class="tablename">${nutritionObj[i]}</th>`
+                        let unit = i + "unit"
+                        ele_4  += `<td class="tableper"><span class="tableperin">${Data[i]}</span><span>${nutritionObj[unit]}</span></td>`
+                        ele_6 += `<td class="tableval"><span class="tableValNum">0</span><span>${nutritionObj[unit]}</span></td>`
+                    })
+                    let ele = ele_1 + ele_2 + ele_3 + ele_4 + ele_5 + ele_6 + ele_7
+                    div.innerHTML = ele
+                    place.appendChild(div)
+                    Creator.Set_Table_Ability(div)
+                }
+            }
+        }
     }
 
-    Set_Table_Ability(div) {
+    static Set_Table_Ability(div) {
         let input_value = div.querySelector(".input-value")
         let tableperin = div.querySelectorAll(".tableperin")
         let tableValNum = div.querySelectorAll(".tableValNum")
-        let now_value = div.querySelector(".now-value")
         input_value.addEventListener("input", () => {
-            now_value.textContent = Number(this.hankaku2Zenkaku(input_value.value))
             let i = 0
             tableperin.forEach(x => {
-                tableValNum[i].textContent = this.clacResult(Number(x.textContent), Number(this.hankaku2Zenkaku(input_value.value)))
+                tableValNum[i].textContent = Creator.clacResult(Number(x.textContent), Number(Creator.hankaku2Zenkaku(input_value.value)))
                 i++
             })
         })
@@ -158,9 +170,7 @@ class Creator {
         searchCheck.addEventListener("click", (event) => {
             alldata.forEach(data => {
                 if(data.NUM == div.dataset.id) {
-                    let table = this.Make_Table(data)
-                    opencard.appendChild(table)
-                    this.Set_Table_Ability(table)
+                    this.Make_Table(data,opencard)
                 }
             })
             event.stopPropagation();
@@ -190,19 +200,21 @@ class Creator {
         
     }
 
-    Write_Table(Page) {
-        let holder = Page.querySelector(".holder")
-        this.List.forEach(Data => {
-            if(Data != false) {
-                let div = this.Make_Table(Data)
-                holder.append(div)
-                this.Set_Table_Ability(div)
-            }
+    Write_Table(idList,place) {
+        tableCardHolder.innerHTML = ""
+        idList.forEach(id => {
+            let promise = new Promise((resolve,reject) => {
+                resolve("true");
+            }).then(() => {
+                let it = {}
+                it.NUM = id
+                this.Make_Table(it,place)
+            })
             
         })
     }
 
-    NameSort(newName) {
+    static NameSort(newName) {
         newName = newName.replace(/［/g,"[")
         newName = newName.replace(/］/g,"]")
         newName = newName.replace(/（/g,"(")
@@ -238,13 +250,13 @@ class Creator {
         return newName
     }
 
-    hankaku2Zenkaku(str) {
+    static hankaku2Zenkaku(str) {
         return str.replace(/[０-９]/g, function(s) {
             return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
         });
     }
 
-    clacResult(value, inval) {
+    static clacResult(value, inval) {
         let ans = Number(value * inval / 100);
         return ans.toFixed(2)
     }
@@ -398,7 +410,7 @@ xhrFirst.onload = function() {
 };
 
 window.onload = () => {
-    xhrFirst.open('GET', '../Access/nutrient.php?startCount=0&range=50',true);
+    xhrFirst.open('GET', `../Access/nutrient.php?getDataList=NAME,NUM&startCount=0&range=50`,true);
     xhrFirst.setRequestHeader('content-type','application/json');
     xhrFirst.send();
 }
@@ -431,7 +443,7 @@ search.addEventListener("change", () => {
     if(search.value != ""){
         text = search.value
         if(beforeText != text){
-            xhrSearch.open('GET', `../Access/nutrient.php?keyword=${text}`,true);
+            xhrSearch.open('GET', `../Access/nutrient.php?keyword=${text}&getDataList=NAME,NUM`,true);
             xhrSearch.setRequestHeader('content-type','application/json');
             xhrSearch.send();
             xhrSearch.onload = function() {
@@ -469,7 +481,7 @@ const xhrPlus = new XMLHttpRequest();
 let searchPlusBtn_hidden = document.querySelector("#searchPlusBtn-hidden")
 searchPlusBtn.addEventListener("click", () => {
     dataNum += GetRange
-    xhrPlus.open('GET', `../Access/nutrient.php?keyword=${beforeText}&startCount=${dataNum}`,true);
+    xhrPlus.open('GET', `../Access/nutrient.php?keyword=${beforeText}&startCount=${dataNum}&getDataList=NAME,NUM`,true);
             xhrPlus.setRequestHeader('content-type','application/json');
             xhrPlus.send();
             xhrPlus.onload = function() {
@@ -557,6 +569,223 @@ const setCookie = (name, json)=>{
     //Cookieを保存する
     document.cookie = cookies;
 };
+
+function makeUseDataRequests(usedata) {
+    let text = "getDataList=NAME,NUM"
+    usedata.forEach(data => {
+        text = text  + "," + data
+    })
+    return text
+}
+
+//成分選択
+let addnutrition = document.querySelector(".addnutrition")
+let nutritionTablePage = document.querySelector(".nutritionTablePage")
+let returnBtn = nutritionTablePage.querySelector(".returnBtn")
+let makeBtn = nutritionTablePage.querySelector(".makeBtn")
+let changeBtn = nutritionTablePage.querySelector(".changeBtn")
+let delBtn = nutritionTablePage.querySelector(".delBtn")
+let nutritionTable = nutritionTablePage.querySelector(".nutritionTable")
+let nutritionTableName = nutritionTablePage.querySelector(".nutritionTableName")
+let nutritionFlseName = nutritionTableName.parentElement
+let nutritionAttention = nutritionFlseName.firstElementChild
+let nutritionTableText = ""
+for(key in nutritionObj) {
+    if(!key.includes("unit")){
+        let nutritionitem = 
+            `<div class="form-check mx-4">
+                <input role="button" class="form-check-input nutritionCheck" type="checkbox" id="${key}">
+                <label role="button" class="form-check-label flex-row" style="font-size: 1.2rem; font-weight: 600" for="${key}">
+                        ${nutritionObj[key]}
+                </label>
+            </div>`;
+        nutritionTableText += nutritionitem
+    }
+}
+nutritionTable.innerHTML = nutritionTableText
+addnutrition.addEventListener("click", () => {
+    nutritionFlseName.classList.remove("border","border-4","border-danger")
+    nutritionAttention.textContent = ("リスト名：")
+    nutritionAttention.classList.remove("text-danger")
+    nutritionTablePage.classList.remove("visually-hidden")
+    makeBtn.classList.remove("visually-hidden")
+    changeBtn.classList.add("visually-hidden")
+    delBtn.classList.add("visually-hidden")
+})
+returnBtn.addEventListener("click", () => {
+    nutritionTablePage.classList.add("visually-hidden")
+    nutritionTableName.value = ""
+    nutritionCheck.forEach(x => {
+        if(x.checked) {
+            x.checked = false
+        }
+    })
+})
+changeBtn.addEventListener("click", () => {
+    let name = String(nutritionTableName.value)
+    console.log(name)
+    if(name != "") {
+        if(NutrientListName(name)) {
+            let divs = nutritionSelectHolder.querySelectorAll(".cards")
+            let oldid = nutritionTableName.dataset.id
+            divs.forEach(div => {
+                if(div.dataset.id == oldid){
+                    div.remove()
+                }
+            })
+            nutritionTablePage.classList.add("visually-hidden")
+            let DataList = []
+            nutritionCheck.forEach(x => {
+                if(x.checked) {
+                    DataList.push(x.id)
+                    x.checked = false
+                }
+            })
+            let id = createUuid()
+            Create_SelectedNutrients(id,name,DataList)
+            nutritionTableName.value = ""
+            ScrollTop()
+        }else {
+            nutritionFlseName.classList.add("border","border-4","border-danger")
+            nutritionAttention.textContent = ("名前が重複：")
+            nutritionAttention.classList.add("text-danger")
+        }
+    }else {
+        nutritionFlseName.classList.add("border","border-4","border-danger")
+        nutritionAttention.textContent = ("リスト名を入力：")
+        nutritionAttention.classList.add("text-danger")
+    }
+})
+let nutritionCheck = nutritionTable.querySelectorAll(".nutritionCheck")
+
+makeBtn.addEventListener("click", () => {
+    let name = String(nutritionTableName.value)
+    if(name != ""){
+        if(NutrientListName(name)) {
+            nutritionTablePage.classList.add("visually-hidden")
+            let DataList = []
+            nutritionCheck.forEach(x => {
+                if(x.checked) {
+                    DataList.push(x.id)
+                    x.checked = false
+                }
+            })
+            let id = createUuid()
+            Create_SelectedNutrients(id,name,DataList)
+            nutritionTableName.value = ""
+            ScrollTop()
+        }else {
+            nutritionFlseName.classList.add("border","border-4","border-danger")
+            nutritionAttention.textContent = ("名前が重複：")
+            nutritionAttention.classList.add("text-danger")
+        }
+    }else {
+        nutritionFlseName.classList.add("border","border-4","border-danger")
+        nutritionAttention.textContent = ("リスト名を入力：")
+        nutritionAttention.classList.add("text-danger")
+    }
+})
+delBtn.addEventListener("click",() => {
+    let divs = nutritionSelectHolder.querySelectorAll(".cards")
+    let oldid = nutritionTableName.dataset.id
+    divs.forEach(div => {
+        if(div.dataset.id == oldid){
+            div.remove()
+        }
+            
+    })
+    nutritionTablePage.classList.add("visually-hidden")
+})
+
+//成分リストに同じ名前がないかチェック
+function NutrientListName(name) {
+    let cards =  nutritionSelectHolder.querySelectorAll(".cardsname")
+    let result = true
+    cards.forEach(card => {
+        if(card.textContent == name) {
+            result = false
+        }
+    })
+    return result
+}
+
+//選択された成分のカード作成
+function Create_SelectedNutrients(id,name,DataList) {
+    let html = document.createElement("div")
+    html.classList.add("col-12","col-md-6","cards")
+    html.dataset.id = id
+    html.dataset.name = name
+    html.dataset.datalist = DataList
+    let innerHtml = 
+        `<div role="button" class="col-12 nutritionSelectcard d-flex flex-row mx-1">
+            <div class="col-9 h-100 mx-3 d-flex align-items-center justify-content-center">
+                <p style="font-size: 0.9rem; font-weight: 500; opacity: 0.9;" class=" cardsname getText nametext text-center m-0 ">${name}</p>
+            </div>
+            <div class="col-2 d-flex align-items-center justify-content-center">
+                <div class="nutritionSelectCheck">
+                    <img src="./img/tool (1).svg" alt="" style="margin-top: 3px; margin-left: 3px;">
+                </div>
+            </div>
+        </div>`;
+    html.innerHTML = innerHtml
+    nutritionSelectHolder.append(html)
+    Ability_SelectedNutrients()
+}
+
+let nutritionSelectcard = document.querySelectorAll(".nutritionSelectcard")
+nutritionSelectcard = nutritionSelectcard[1].parentElement
+nutritionSelectcard.dataset.datalist = userDataArray
+Ability_SelectedNutrients()
+//選択された成分カードの機能
+function Ability_SelectedNutrients() {
+    let pearent = nutritionSelectHolder.lastElementChild
+    let div = pearent.firstElementChild
+    let check = pearent.querySelector(".nutritionSelectCheck")
+    let tableCreate = new Creator()
+    div.addEventListener("click", () => {
+        let nutritionSelectcard = document.querySelectorAll(".nutritionSelectcard")
+        nutritionSelectcard.forEach(target => {
+            target.classList.remove("bg-greenty")
+        })
+        div.classList.add("bg-greenty")
+        userDataArray = pearent.dataset.datalist.split(',')
+        tableCreate.Write_Table(idList,tableCardHolder)
+    })
+    check.addEventListener("click", () => {
+        nutritionFlseName.classList.remove("border","border-4","border-danger")
+        nutritionAttention.textContent = ("リスト名：")
+        nutritionAttention.classList.remove("text-danger")
+        nutritionTableName.value = pearent.dataset.name
+        nutritionTableName.dataset.id = pearent.dataset.id
+        let array = pearent.dataset.datalist.split(',')
+        nutritionCheck.forEach(item => {
+            item.checked = false
+            if(array.includes(item.id)) {
+                item.checked = true
+            }
+        })
+        if(pearent.dataset.id != 1111) {
+            nutritionTablePage.classList.remove("visually-hidden")
+            makeBtn.classList.add("visually-hidden")
+            changeBtn.classList.remove("visually-hidden")
+            delBtn.classList.remove("visually-hidden")
+        }else {
+            nutritionTablePage.classList.remove("visually-hidden")
+            makeBtn.classList.add("visually-hidden")
+            changeBtn.classList.add("visually-hidden")
+            delBtn.classList.add("visually-hidden")
+        }
+        
+    })
+}
+
+//uuidの作成
+function createUuid(){
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(a) {
+        let r = (new Date().getTime() + Math.random() * 16)%16 | 0, v = a == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+        });
+}
 
 //ページクリックでスクロールトップへ
 function ScrollTop() {
