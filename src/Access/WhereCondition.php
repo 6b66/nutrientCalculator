@@ -1,4 +1,5 @@
 <?php
+require_once("./util.php");
 class WhereCondition {
     private static $conditions = [];
     public static $conjunction = "AND";
@@ -60,7 +61,7 @@ class ConditionElement {
 
         if (self::$operator == "in") {
             $condition .= " IN ";
-            $condition .= self::GetValueFormat();
+            $condition .= ArrayToParenthesisCommaString(self::$value, self::$valueType == "string");
         } else if (self::$operator == "startsWith") {
             $condition .= " LIKE ";
             $condition .= "'".reset(self::$value)."%'";
@@ -75,20 +76,6 @@ class ConditionElement {
         }
 
         return $condition;
-    }
-
-    // value配列を ('要素', '要素', '要素') にフォーマットする
-    private function GetValueFormat() {
-        $result = "(";
-        $endValue = end(self::$value);
-        foreach (self::$value as $element) {
-            if ($element !== $endValue) {
-                $result .= self::$valueType == "string" ? "'".$element."', " : $element.", ";
-            } else {
-                $result .= self::$valueType == "string" ? "'".$element."')" : $element.")";
-            }
-        }
-        return $result;
     }
 }
 ?>

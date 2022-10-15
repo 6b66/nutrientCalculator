@@ -1,16 +1,14 @@
 <?php
 require_once("./dbConnect.php");
 require_once("./WhereCondition.php");
+require_once("./util.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
     $db = new dbConnecter("NutrientTable");
 
     // fieldsの設定
-    $fields = null;
-    if(isset($_GET["getDataList"])) {
-        $fields = explode(",", $_GET["getDataList"]);
-    }
+    $fields = CommaStringToArray($_GET["getDataList"]."");
 
     // 条件の設定
     $condition = null;
