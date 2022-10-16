@@ -46,31 +46,25 @@
                 <ul class="col-12 list-group list-unstyled list-group-horizontal align-items-center justify-content-around p-0" id="menuBox" >
                     <li id="searchMenuBtn" role="button" class="col-2 text-center rounded-4 menuBtn h-100 p-1 d-flex align-items-center justify-content-center flex-column bg-green" data-id="searchPage">
                         <img src="./img/search.svg" alt="" style="height: 20px;">
-                        <p class="name" style="width: 50px;">検索</p>
-                        
+                        <p class="name" style="width: 50px;">検索</p>    
                     </li>
                     <li  role="button" class="col-2 text-center rounded-4 menuBtn h-100 p-1 d-flex align-items-center justify-content-center flex-column" data-id="selectPage">
                         <img src="./img/check-square.svg" alt="">
                         <p class="name">選択一覧</p>
-
                     </li>
                     <li  role="button" class="col-2 text-center rounded-4 menuBtn h-100 p-1 d-flex align-items-center justify-content-center flex-column" data-id="tablePage">
                         <img src="./img/file-text.svg" alt="">
                         <p class="name">成分表</p>
                     </li>
+                    <li  role="button" class="col-2 text-center rounded-4 menuBtn h-100 p-1 d-flex align-items-center justify-content-center flex-column" data-id="dishPage">
+                        <img src="./img/dish.svg" style="height: 20px" alt="">
+                        <p class="name">料理</p>
+                    </li>
                     <li  role="button" class="col-2 text-center rounded-4 menuBtn h-100 p-1 d-flex align-items-center justify-content-center flex-column" data-id="nutritionSelectPage">
                         <img src="./img/plus-circle.svg" alt="">
                         <p class="name">成分選択</p>
                     </li>                        
-                    <li  role="button" class="col-2 text-center rounded-4 h-100 p-1 d-flex align-items-center justify-content-center flex-column" id="allDelete">
-                        <div class="position-relative">
-                            <span class="position-absolute translate-middle badge border border-light rounded-4 bg-danger p-1 visually-hidden" style="top: 3px; left: 17px; width: 25px;" id="selectNumBox">
-                                <span id="selectNum" class="p-0" style="font-size: 15px; height: 100%;"></span>
-                            </span>
-                        </div>
-                        <img src="./img/trash (3).svg" alt="">
-                        <p class="name">一括削除</p>
-                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -262,6 +256,36 @@
                 </div>
             </div>
         </div>
+        <!--料理ページ-->
+        <div id="dishPage" class="row Page m-0 pt-2 col-12 position-absolute top-0 d-flex align-content-start justify-content-center" value="searchPage"
+                style="visibility: visible; padding-bottom: 50%;">
+                <!--カードフォルダー-->
+                <div class="row col-12 d-flex flex-row holder" id="dishCardHolder">
+                    <!--カード
+                        <div class="col-12 col-md-6">
+                            <div class="col-12 c searchcard d-flex flex-row mx-1 justify-content-start align-items-start">
+                                <div class="col-1 h-100 d-flex align-items-center justify-content-center"
+                                    style="
+                                        font-size: 23px;
+                                        font-weight: 500;
+                                        color: #00946C;
+                                    "
+                                >
+                                    1
+                                </div>
+                                <div class="col-8 h-100 mx-3 d-flex align-items-center justify-content-center">
+                                    <p style="font-weight: 500; opacity: 0.9;" class="text-center m-0">あいうえおかきくけこさしすせそたちつてとなにぬねのはひ</p>
+                                </div>
+                                <div class="col-2 d-flex align-items-center justify-content-center">
+                                    <div class="s_c_check">
+                                        <img src="./img/plus (1).svg" alt="" style="margin-top: 3px; margin-left: 3px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    --> 
+                </div>
+            </div>
         <!--成分選択表-->
         <div class="nutritionTablePage col-12 position-fixed d-flex align-items-center justify-content-center visually-hidden" style="z-index: 10001; top: -10px; height: 90%; background-color: rgb(255, 255, 255,0.6);">
             <div class="col-11 nutritionTableBox d-flex flex-wrap" style="height: 90%;">
