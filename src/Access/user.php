@@ -16,8 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // ユーザが存在するか検証
         if (!(isset($user) && count($user) > 0)) {
-            echo "ユーザが見つかりません。";
-            return;
+            ErrorResponse(404, "ユーザが見つかりません。");
         } 
 
         // ログインの検証
@@ -42,46 +41,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             return;
         } else {
             // ログイン失敗
-            echo "ログイン失敗";
-            return;
+            ErrorResponse(401, "ログイン失敗");
         }
 
     }else if (isset($_POST["userId"]) && isset($_POST["password"]) && isset($_POST["userName"])) {
         // ユーザ登録処理
         // userIdのバリデーション
         if (!preg_match("/^[a-zA-Z]{8,100}/", $_POST["userId"])) {
-            echo "エラー: ユーザIdに適さない文字列です。";
-            return;
+            ErrorResponse(400, "エラー: ユーザIdに適さない文字列です。");
         }
         // passwordのバリデーション
         if (!preg_match("/^[a-zA-Z\.\?\\\-]{8,100}/", $_POST["password"])) {
-            echo "エラー: パスワードに適さない文字列です。";
-            return;
+            ErrorResponse(400, "エラー: パスワードに適さない文字列です。");
         }
         // userNameのバリデーション
-        if (!UserNameValidator($_POST["userName"])) {
-            echo "エラー: ユーザ名に使用できない文字が含まれています。";
-            return;
+        if (!NameValidator($_POST["userName"])) {
+            ErrorResponse(400, "エラー: ユーザ名に使用できない文字が含まれています。");
         }
-        $isDuplicate = $userDB->IsExist("ID", $_POST["userId"]);
+
+        // 重複チェック
+        $whereCondition = new WhereCondition(array(new ConditionElement("ID", "equal", array($_POST["userId"]))));
+        $isDuplicate = $userDB->IsExist($whereCondition);
         if ($isDuplicate) {
-            echo "エラー: すでに使用されているユーザIdです。";
-            return;
+            ErrorResponse(400, "エラー: すでに使用されているユーザIdです。");
         }
         $password = hash("sha256", $_POST["password"]);
         $userDB->Create(array("ID", "PASSWORD", "NAME"), array($_POST["userId"], $password, $_POST["userName"]));
         echo "ユーザを登録しました。ログインしてください。";
         return;
     }
-}
-
-function UserNameValidator($userName) {
-    $notUseChar = array(",", ".", "?", "!", "-", "^", "\\", "@");
-    foreach ($notUseChar as $char) {
-        if (strpos($userName, $char) !== false) {
-            return false;
-        }
-    }
-    return true;
 }
 ?>

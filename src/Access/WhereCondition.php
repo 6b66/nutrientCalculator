@@ -1,34 +1,34 @@
 <?php
 require_once("./util.php");
 class WhereCondition {
-    private static $conditions = [];
-    public static $conjunction = "AND";
+    private $conditions = [];
+    public $conjunction = "AND";
 
     function __construct(array $conditions) {
-        self::$conditions = $conditions;
+        $this->conditions = $conditions;
     }
 
     public function Add(ConditionElement $conditionElement) {
-        array_push(self::$conditions, $conditionElement);
+        array_push($this->conditions, $conditionElement);
     }
 
     public function SetAND() {
-        self::$conjunction = "AND";
+        $this->conjunction = "AND";
     }
 
     public function SetOR() {
-        self::$conjunction = "OR";
+        $this->conjunction = "OR";
     }
 
     // SQLで使用可能な条件式を取得
     public function GetWhere() {
-        if (count(self::$conditions) !== 0 && !(self::$conjunction == "AND" || self::$conjunction == "OR")) return "";
+        if (count($this->conditions) !== 0 && !($this->conjunction == "AND" || $this->conjunction == "OR")) return "";
         
         $result = "";
-        $endValue = end(self::$conditions);
-        foreach (self::$conditions as $condition) {
+        $endValue = end($this->conditions);
+        foreach ($this->conditions as $condition) {
             if ($condition !== $endValue) {
-                $result .= $condition->GetCondition()." ".self::$conjunction." ";
+                $result .= $condition->GetCondition()." ".$this->conjunction." ";
             } else {
                 $result .= $condition->GetCondition();
             }
@@ -38,39 +38,42 @@ class WhereCondition {
 }
 
 class ConditionElement {
-    private static $fieldName;
-    private static $operator;
-    private static $value;
-    private static $valueType = "string";
+    private $fieldName;
+    private $operator;
+    private $value;
+    private $valueType = "string";
 
     function __construct(string $fieldName, string $operator, array $value) {
-        self::$fieldName = $fieldName;
-        self::$operator = $operator;
-        self::$value = $value;
+        $this->fieldName = $fieldName;
+        $this->operator = $operator;
+        $this->value = $value;
     }
 
     public function SetType(string $type) {
-        self::$valueType = $type;
+        $this->valueType = $type;
     }
 
     // SQLに使用可能な条件式を取得する
     public function GetCondition() {
-        if (!(isset(self::$fieldName) && isset(self::$operator) && isset(self::$value))) return "";
+        if (!(isset($this->fieldName) && isset($this->operator) && isset($this->value))) return "";
 
-        $condition = self::$fieldName;
+        $condition = $this->fieldName;
 
-        if (self::$operator == "in") {
+        if ($this->operator == "in") {
             $condition .= " IN ";
-            $condition .= ArrayToParenthesisCommaString(self::$value, self::$valueType == "string");
-        } else if (self::$operator == "startsWith") {
+            $condition .= ArrayToParenthesisCommaString($this->value, $this->valueType == "string");
+        } else if ($this->operator == "startsWith") {
             $condition .= " LIKE ";
-            $condition .= "'".reset(self::$value)."%'";
-        } else if (self::$operator == "endsWith") {
+            $condition .= "'".reset($this->value)."%'";
+        } else if ($this->operator == "endsWith") {
             $condition .= " LIKE ";
-            $condition .= "'%".reset(self::$value)."'";
-        } else if (self::$operator == "contain") {
+            $condition .= "'%".reset($this->value)."'";
+        } else if ($this->operator == "contain") {
             $condition .= " LIKE ";
-            $condition .= "'%".reset(self::$value)."%'";
+            $condition .= "'%".reset($this->value)."%'";
+        } else if ($this->operator == "equal") {
+            $condition .= " = ";
+            $condition .= $this->valueType == "string" ? "'".reset($this->value)."'" : reset($this->value);
         } else {
             return "";
         }

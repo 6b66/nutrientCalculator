@@ -82,11 +82,11 @@ window.onload = () => {
       if(xhr.readyState === 4) {
         if(xhr.status === 200) {
           alert(xhr.responseText);
-          console.log(xhr.responseText);
           if (xhr.responseText == "ログイン成功" || xhr.responseText == "ログイン済みです") {
-            console.log()
             window.location.href = '../../';
           }
+        } else if (xhr.status === 400) {
+          alert(xhr.responseText);
         }
       }
     };
