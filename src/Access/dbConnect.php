@@ -13,7 +13,7 @@ class dbConnecter {
 
     public function IsKnownTableName($tableName) {
         // テーブルを増やす場合は下のリストをメンテする
-        $knownTableList = ["NutrientTable", "UserTable", "SessionTable"];
+        $knownTableList = ["NutrientTable", "UserTable", "SessionTable", "NutrientListTable"];
         return in_array($tableName, $knownTableList);
     }
 
@@ -29,10 +29,15 @@ class dbConnecter {
 
         // 下の行はデバッグように残しておく
         // echo "SELECT ".$fieldString." FROM ".$this->tableName." ".$whereCondition." LIMIT ".$startCount.", ".$range;
-
-        $stmt = $this->pdo->prepare("SELECT ".$fieldString." FROM ".$this->tableName." ".$whereCondition." LIMIT :first, :range");
-        $stmt->bindParam(':first', $startCount, PDO::PARAM_INT);
-        $stmt->bindParam(':range', $range, PDO::PARAM_INT);
+        $sql = "SELECT ".$fieldString." FROM ".$this->tableName." ".$whereCondition;
+        if ($range != -1) {
+            $sql .= " LIMIT :first, :range";
+        }
+        $stmt = $this->pdo->prepare($sql);
+        if ($range != -1) {
+            $stmt->bindParam(':first', $startCount, PDO::PARAM_INT);
+            $stmt->bindParam(':range', $range, PDO::PARAM_INT);
+        }
         $stmt->execute();
 
         $resultData = [];
@@ -51,12 +56,35 @@ class dbConnecter {
         $stmt->execute();
     }
 
-    public function IsExist(string $columnName, string $value) {
-        // echo "SELECT COUNT(".$columnName.") FROM ".$this->tableName." WHERE ".$columnName." = '".$value."'";
-        $stmt = $this->pdo->prepare("SELECT COUNT(".$columnName.") as count FROM ".$this->tableName." WHERE ".$columnName." = '".$value."'");
+    public function Update(array $updateProp, WhereCondition $condition) {
+        $setString = "";
+        foreach ($updateProp as $columnName => $value) {
+            $setString .= $columnName." = ".$value.", ";
+        }
+        $setString = rtrim($setString, ", ");
+
+        $whereString = $condition->GetWhere();
+        $sql = "UPDATE ".$this->tableName." SET ".$setString." WHERE ".$whereString;
+        // echo $sql;
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+    }
+
+    public function Delete(WhereCondition $condition) {
+        $whereString = $condition->GetWhere();
+        $sql = "DELETE FROM ".$this->tableName." WHERE ".$whereString;
+        // echo $sql
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+    }
+
+    public function IsExist(WhereCondition $condition) {
+        $whereString = $condition->GetWhere();
+        $stmt = $this->pdo->prepare("SELECT COUNT(*) as count FROM ".$this->tableName." WHERE ".$whereString);
+        // echo "SELECT COUNT(*) as count FROM ".$this->tableName." WHERE ".$whereString;
         $stmt->execute();
         $count = $stmt->fetch(PDO::FETCH_OBJ)->count;
-        if ($count> 0) {
+        if ($count > 0) {
             return true;
         } else {
             return false;

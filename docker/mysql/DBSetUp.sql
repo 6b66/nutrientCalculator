@@ -18,6 +18,14 @@ CREATE TABLE appsDB.SessionTable (
     TIMESTAMP   TIMESTAMP NOT NULL
 );
 
+CREATE TABLE appsDB.NutrientListTable (
+    ID          VARCHAR(100) NOT NULL,
+    USERID      VARCHAR(100) NOT NULL,
+    NAME        VARCHAR(100) NOT NULL,
+    LIST        VARCHAR(1024) NOT NULL,
+    PRIMARY KEY(ID, USERID)
+);
+
 CREATE TABLE appsDB.NutrientTable (
     NUM         INT NOT NULL PRIMARY KEY,
     NAME        TEXT NOT NULL,
