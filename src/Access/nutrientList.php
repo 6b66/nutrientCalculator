@@ -12,24 +12,26 @@ if(!isset($_SESSION["userId"])) {
 $nutrientListTable = new dbConnecter("NutrientListTable");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $param = file_get_contents('php://input');
+    $param = json_decode($param, true);
     // 新規作成
-    if (!isset($_POST["name"]) || !isset($_POST["list"])) {
+    if (!isset($param["name"]) || !isset($param["list"])) {
         ErrorResponse(400, "エラー: name、またはlistを設定してください");
     }
 
     // バリデーション
     // 名前属性
-    if (!NameValidator($_POST["name"])) {
+    if (!NameValidator($param["name"])) {
         ErrorResponse(400, "名前に適さない文字列です");
     }
 
     // 成分リスト
-    ListValidator($_POST["list"]);
+    ListValidator($param["list"]);
 
     $newId = uniqid();
 
     // 新規登録処理
-    $nutrientListTable->Create(array("ID", "USERID", "NAME", "LIST"), array($newId, $_SESSION["userId"], $_POST["name"], $_POST["list"]));
+    $nutrientListTable->Create(array("ID", "USERID", "NAME", "LIST"), array($newId, $_SESSION["userId"], $param["name"], $param["list"]));
 
 } else if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // 取得、件数が少ないことを想定し全件返します。
