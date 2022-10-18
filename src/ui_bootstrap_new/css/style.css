@@ -8,15 +8,10 @@
     background-color: black;
 }
 
-input[type="number"]::-webkit-outer-spin-button, 
-input[type="number"]::-webkit-inner-spin-button { 
-    -webkit-appearance: none; 
-    margin: 0; 
-} 
 
 @media screen and (min-width:480px) { 
     /*　画面サイズが480pxからはここを読み込む　*/
-    ul > li:hover {
+    .menu > ul > li:hover {
         background-color: #34bd34;
         transition: 0.2s;
     }
@@ -65,7 +60,12 @@ ul > li:hover > i >  .name {
     margin-top: 150px;
 }
 /*検索カード*/
-
+.cardmenu {
+    width: 38px;
+    height: 38px;
+    background-color: #f8f7f7;
+    border-radius: 50px;
+}
 .cardsname {
     width: 100%;
     table-layout: fixed;
@@ -81,13 +81,9 @@ ul > li:hover > i >  .name {
     border: none;
     background-color: black;
 }
-.searchCheck {
-    width: 38px;
-    height: 38px;
-    background-color: #eeeef1;
-    border-radius: 50px;
+.selectCheck:hover {
+    background-color: #b5d2ff;
 }
-
 /*成分表*/
 .tablecard {
     background-color: #CDE9E3;
@@ -113,9 +109,6 @@ ul > li:hover > i >  .name {
 .tableval {
     white-space: nowrap;
     text-align: center;
-}
-.input-value {
-    border: 1px solid #02A893;
 }
 
 /*成分選択*/

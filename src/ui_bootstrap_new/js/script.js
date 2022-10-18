@@ -12,11 +12,22 @@ class Creator {
                 <div class="col-9 h-100 mx-3 d-flex align-items-center justify-content-center">
                     <p style="font-size: 0.9rem; font-weight: 500; opacity: 0.9;" class="h-100 cardsname getText nametext text-center m-0">${Creator.NameSort(Data.NAME)}</p>
                 </div>
-                <div class="col-2 d-flex align-items-center justify-content-center">
-                    <div class="searchCheck">
-                        <img src="./img/search.svg" alt="" style="margin-top: 5px; margin-left: 5px; height: 27px">
+                <div class="col-2 d-flex align-items-center justify-content-center position-relative">
+                    <div class="cardmenu">
+                        <img src="./img/more-vertical .svg" alt="" style="margin-top: 6px; margin-left: 5.5px; height: 27px">
+                    </div>
+                    <div class="cardmenuChecker position-absolute bg-light invisible" style="height: 60px; width: 150px; top: 2px; left: -135px; z-index:100;">
+                        <ul class=" round-4 list-group h-100 p-0 m-0 d-flex flex-column justify-content-center align-content-center" style="list-style:none;">
+                            <li class="searchCheck selectCheck list-group-item border-primary" style="padding: 0; transition: 0s;">
+                                <p class="m-1 text-center" style="font-weight: 500; margin: 0;">成分表を見る</p>
+                            </li>
+                            <li class="addCheck selectCheck list-group-item border-primary" data-dishes="" style="padding: 0; transition: 0s;">
+                                <p class="m-1 text-center" style="font-weight: 500; margin: 0;">料理に追加する</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+
             </div>`;
         div.innerHTML = ele
         return div
@@ -27,65 +38,72 @@ class Creator {
             ele.classList.add("bg-greenty")
         }
         ele.addEventListener("click",() => {
-            let searchdivs = searchCardHolder.children
-            let selectdivs = selectCardHolder.children
-            let tabledivs = tableCardHolder.children
-            if(!idList.includes(div.dataset.id)) {
-                ele.classList.add("bg-greenty")
-                let clone_div = div.cloneNode(true);
-                selectCardHolder.appendChild(clone_div)
-                this.Set_Card_Ability(clone_div)
-                this.Set_CheckOnlyTable_Ability(clone_div)
-                idList.push(div.dataset.id)
-                alldata.forEach(data => {
-                    if(data.NUM == div.dataset.id){
-                        selectDataList.push(data)
-                        this.Make_Table(data,tableCardHolder)
-                    }
-                })
-            }else {
-                if(searchdivs.length > 1){
-                    for(let searchdiv in searchdivs) {
-                        if(searchdiv < searchdivs.length) {
-                            let nowdiv = searchdivs[searchdiv]
-                            let ele = nowdiv.querySelector(".searchcard")
-                            if(nowdiv.dataset.id == div.dataset.id) {
-                                ele.classList.remove("bg-greenty")
-                                break;
-                            }
-                        }
-                        
-                    }
-                }else {
-                    let ele = searchdivs[0].querySelector(".searchcard")
-                    let pearent = ele.parentElement
-                    if(pearent.dataset.id == div.dataset.id) {
-                        ele.classList.remove("bg-greenty")
-                    }
-                }
-                if(selectdivs.length > 1){
-                    for(let selectdiv in selectdivs) {
-                        if(selectdiv < selectdivs.length){
-                            let nowdiv = selectdivs[selectdiv]
-                            if(nowdiv.dataset.id == div.dataset.id) {
-                                selectdivs[selectdiv].remove()
-                                tabledivs[selectdiv].remove()
-                                break;
-                            }
-                        }
-                        
-                    }
-                }else {
-                    selectdivs[0].remove()
-                    tabledivs[0].remove()
-                }
-                let index = idList.indexOf(div.dataset.id)
-                idList.splice(index,1)
-                selectDataList.splice(index,1)
-
-            }
-            Item_Check_Pop()
+            this.Fuc_Selected (div,ele)
+            //Item_Check_Pop()
         })
+    }
+
+    Fuc_Selected(div,ele) {
+        let searchdivs = searchCardHolder.children
+        let selectdivs = selectCardHolder.children
+        let tabledivs = tableCardHolder.children
+        let addCheck = div.querySelector(".addCheck")
+        if(!idList.includes(div.dataset.id)) {
+            ele.classList.add("bg-greenty")
+            let clone_div = div.cloneNode(true);
+            selectCardHolder.appendChild(clone_div)
+            this.Set_Card_Ability(clone_div)
+            this.Set_Select_CardMenu(clone_div)
+            this.Set_CheckOnlyTable_Ability(clone_div)
+            this.Set_CheckAddFood_Ability(clone_div)
+            idList.push(div.dataset.id)
+            alldata.forEach(data => {
+                if(data.NUM == div.dataset.id){
+                    selectDataList.push(data)
+                    this.Make_Table(data,tableCardHolder)
+                }
+            })
+        }else {
+            if(searchdivs.length > 1){
+                for(let searchdiv in searchdivs) {
+                    if(searchdiv < searchdivs.length) {
+                        let nowdiv = searchdivs[searchdiv]
+                        let ele = nowdiv.querySelector(".searchcard")
+                        if(nowdiv.dataset.id == div.dataset.id) {
+                            ele.classList.remove("bg-greenty")
+                            break;
+                        }
+                    }
+                    
+                }
+            }else {
+                let ele = searchdivs[0].querySelector(".searchcard")
+                let pearent = ele.parentElement
+                if(pearent.dataset.id == div.dataset.id) {
+                    ele.classList.remove("bg-greenty")
+                }
+            }
+            if(selectdivs.length > 1){
+                for(let selectdiv in selectdivs) {
+                    if(selectdiv < selectdivs.length){
+                        let nowdiv = selectdivs[selectdiv]
+                        if(nowdiv.dataset.id == div.dataset.id) {
+                            selectdivs[selectdiv].remove()
+                            tabledivs[selectdiv].remove()
+                            break;
+                        }
+                    }
+                    
+                }
+            }else {
+                selectdivs[0].remove()
+                tabledivs[0].remove()
+            }
+            let index = idList.indexOf(div.dataset.id)
+            idList.splice(index,1)
+            selectDataList.splice(index,1)
+            addCheck.dataset.dishes = ""
+        }
     }
 
     Make_Table(Data,place) {
@@ -102,7 +120,7 @@ class Creator {
                     div.classList.add("col-12","col-md-6")
                     div.dataset.id = Data.NUM
                     let ele_1 = 
-                        `<div class="col-12 v tablecard  d-flex flex-column d-flex align-items-center m-0 mb-2">
+                        `<div class="col-12 v tablecard d-flex flex-column d-flex align-items-center m-0 mb-2">
                             <div class="row d-flex flex-row col-12 m-0 align-items-center justify-content-center" style="height: 65px;">
                                 <div class="col-9 h-100 m-2 d-flex align-items-center justify-content-center p-0">
                                     <p style="font-weight: 500; opacity: 0.9; font-size: 0.9rem;" class="h-100 text-center m-0 p-0">${Creator.NameSort(Data.NAME)}</p>
@@ -165,6 +183,24 @@ class Creator {
         })
     }
 
+    Set_Select_CardMenu(div) {
+        let cardmenu = div.querySelector(".cardmenu")
+        let invisible = div.querySelector(".invisible")
+        let img = cardmenu.lastElementChild
+        cardmenu.addEventListener("click", (event) => {
+            event.stopPropagation();
+            if(invisible.classList.contains("invisible")) {
+                invisible.classList.remove("invisible")
+                img.src = "./img/chevrons-right.svg";
+                
+            }else {
+                invisible.classList.add("invisible")
+                img.src = "./img/more-vertical .svg";
+            }
+            
+        })
+    }
+
     Set_CheckOnlyTable_Ability(div) {
         let searchCheck = div.querySelector(".searchCheck")
         searchCheck.addEventListener("click", (event) => {
@@ -175,6 +211,96 @@ class Creator {
             })
             event.stopPropagation();
             openCardbox.classList.remove("visually-hidden")
+            console.log(div)
+            let cardmenu = div.querySelector(".cardmenu")
+            let invisible = div.querySelector(".cardmenuChecker")
+            let img = cardmenu.lastElementChild
+            invisible.classList.add("invisible")
+            img.src = "./img/more-vertical .svg";
+        })
+    }
+
+    Set_CheckAddFood_Ability(div) {
+        let addCheck = div.querySelector(".addCheck")
+        addCheck.addEventListener("click", (event) => {
+            let makediv = document.createElement("div")
+            makediv.classList.add("col-12","col-md-6")
+            let ele1 = 
+                `<div class="col-12 d-flex flex-column align-items-center rounded-4" style="background-color: white; height: 250px;">
+                    <div class="col-12 d-flex justify-content-center align-items-center">
+                        <p class="text-center col-10" style="font-weight:600; font-size: 1.2rem; border-bottom: 2px solid gray;">料理に追加する</p>
+                    </div>
+                    <div class="col-12 overflow-auto h-75">
+                        <ul class=" p-0 d-flex flex-column " style="list-style:none;">`
+            let ele2 = ""
+            let ele3 =            
+                        `</ul>
+                    </div>
+                </div>`
+                
+            for(key in dishList ) {
+                ele2 += 
+                    `<li class="col-12 row justify-content-center align-items-center mb-2">
+                        <p class="col-8 text-center m-0" style="font-weight:600;">${key}</p>
+                        <div class="col-3 d-flex  justify-content-center align-items-center">
+                            <buttom type="button" data-name="${key}" class="dishAddCheck m-0 btn btn-primary btn-sm" style="font-weight:600;">追加</buttom>
+                        </div>
+                    </li>`
+                
+            }
+            let element = ele1 + ele2 + ele3
+            makediv.innerHTML = element
+            event.stopPropagation();
+            opencard.appendChild(makediv);
+            let dishAddCheck = makediv.querySelectorAll(".dishAddCheck")
+            let selectcheck = div.firstElementChild
+            
+            dishAddCheck.forEach(dish => {
+                /* オブジェクトで｛ID,［料理名,料理名,料理名］で保存して取得したほうがいいかも */
+                let dishes = addCheck.dataset.dishes
+                dishes = dishes.split(',')
+                if(dishes.includes(dish.dataset.name)) {
+                    dish.classList.remove("btn-primary")
+                    dish.classList.add("btn-danger")
+                    dish.textContent = "削除"
+                }
+                dish.addEventListener("click", () => {
+                    dishes = addCheck.dataset.dishes
+                    dishes = dishes.split(',')
+                    if(!selectcheck.classList.contains("bg-greenty")) {
+                        let ele = div.querySelector(".searchcard")
+                        this.Fuc_Selected(div,ele)
+                    }
+                    if(dish.textContent != "削除") {
+                        dish.classList.remove("btn-primary")
+                        dish.classList.add("btn-danger")
+                        dish.textContent = "削除"
+                        dishes.push(dish.dataset.name)
+                        addCheck.dataset.dishes = dishes
+                    }else {
+                        dish.classList.remove("btn-danger")
+                        dish.classList.add("btn-primary")
+                        dish.textContent = "追加"
+                        let index = dishes.indexOf(dish.dataset.name)
+                        dishes.splice(index,1)
+                        addCheck.dataset.dishes = dishes
+                    }
+                    let selectCards = selectCardHolder.querySelectorAll(".cards")
+                    selectCards.forEach(nowDiv => {
+                        if(nowDiv.dataset.id == div.dataset.id) {
+                            let nowAddcheck = nowDiv.querySelector(".addCheck")
+                            nowAddcheck.dataset.dishes = dishes
+                        }
+                    })
+                    
+                })
+            })
+            openCardbox.classList.remove("visually-hidden")
+            let cardmenu = div.querySelector(".cardmenu")
+            let invisible = div.querySelector(".cardmenuChecker")
+            let img = cardmenu.lastElementChild
+            invisible.classList.add("invisible")
+            img.src = "./img/more-vertical .svg";
         })
     }
 
@@ -185,7 +311,9 @@ class Creator {
                 let div = this.Make_Card(Data)
                 holder.append(div)
                 this.Set_Card_Ability(div)
+                this.Set_Select_CardMenu(div)
                 this.Set_CheckOnlyTable_Ability(div)
+                this.Set_CheckAddFood_Ability(div)
             }
             
         })
@@ -377,6 +505,23 @@ const nutritionObj = {
 let idList = []
 let selectDataList = []
 
+let dishList = {
+    piza: [1232,13,13,13,13],
+    takosu: [21,23,13,132,1],
+    piza1: [1232,13,13,13,13],
+    piza2: [1232,13,13,13,13],
+    piza3: [1232,13,13,13,13],
+    piza4: [1232,13,13,13,13],
+    piza5: [1232,13,13,13,13],
+    piza6: [1232,13,13,13,13],
+    piza7: [1232,13,13,13,13],
+    piza8: [1232,13,13,13,13],
+    piza9: [1232,13,13,13,13],
+    piza10: [1232,13,13,13,13]
+}
+
+let dishInUse = {}
+
 let searchPage = document.querySelector("#searchPage")
 let searchCardHolder = document.querySelector("#searchCardHolder")
 
@@ -393,6 +538,7 @@ let searchPlusBtn = searchPage.querySelector("#searchPlusBtn")
 let opencard = document.querySelector("#opencard")
 let openCardbox = document.querySelector("#openCardbox")
 
+let main = document.querySelector(".main")
 
 const xhrFirst = new XMLHttpRequest();
 
@@ -505,6 +651,7 @@ searchPlusBtn.addEventListener("click", () => {
 })
 
 //選択している食品の個数表示
+/*
 let selectsNum = document.querySelector("#selectNum")
 let selectNumBox = document.querySelector("#selectNumBox")
 function Item_Check_Pop() {
@@ -515,6 +662,7 @@ function Item_Check_Pop() {
         selectNumBox.classList.add("visually-hidden")
     }
 }
+*/
 
 //食品名カードから開いた成分表を閉じる
 let closeInfoCard = document.querySelectorAll(".closeInfoCard")
@@ -543,6 +691,7 @@ menuBtn.forEach(x => {
                 if(y.id == "searchPage") {
                 }else if(y.id == "selectPage") {
                 }else if(y.id == "tablePage") {
+                }else if(y.id == "dishPage") {
                 }else if(y.id == "nutritionSelectPage") {
                 }
                 y.style.visibility = "visible";
@@ -786,6 +935,9 @@ function createUuid(){
         return v.toString(16);
         });
 }
+
+//
+
 
 //ページクリックでスクロールトップへ
 function ScrollTop() {
