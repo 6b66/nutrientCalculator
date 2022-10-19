@@ -8,6 +8,12 @@
     background-color: black;
 }
 
+.no-spin::-webkit-inner-spin-button,
+.no-spin::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance:textfield;
+}
 
 @media screen and (min-width:480px) { 
     /*　画面サイズが480pxからはここを読み込む　*/
@@ -77,10 +83,6 @@ ul > li:hover > i >  .name {
     border-radius: 15px;
     margin-bottom: 15px;
 }
-.searchcard div input {
-    border: none;
-    background-color: black;
-}
 .selectCheck:hover {
     background-color: #b5d2ff;
 }
@@ -109,6 +111,24 @@ ul > li:hover > i >  .name {
 .tableval {
     white-space: nowrap;
     text-align: center;
+}
+
+/*料理表*/
+.dishtablecard {
+    background-color: #CDE9E3;
+    height: 300px;
+    border-radius: 15px;
+    margin: 15px;
+}
+.dishInput {
+    width: 85%;
+    border-radius: 4px;
+}
+.dishSelectcard {
+    background-color: #CDE9E3;
+    height: 65px;
+    border-radius: 15px;
+    margin-bottom: 15px;
 }
 
 /*成分選択*/

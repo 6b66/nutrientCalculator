@@ -10,7 +10,7 @@ class Creator {
         let ele = 
             `<div class="col-12 searchcard d-flex flex-row mx-1 searchCheckcard" role="button">
                 <div class="col-9 h-100 mx-3 d-flex align-items-center justify-content-center">
-                    <p style="font-size: 0.9rem; font-weight: 500; opacity: 0.9;" class="h-100 cardsname getText nametext text-center m-0">${Creator.NameSort(Data.NAME)}</p>
+                    <p style="font-size: 0.85rem; font-weight: 500; opacity: 0.9;" class="h-100 cardsname getText nametext text-center m-0">${Creator.NameSort(Data.NAME)}</p>
                 </div>
                 <div class="col-2 d-flex align-items-center justify-content-center position-relative">
                     <div class="cardmenu">
@@ -71,6 +71,8 @@ class Creator {
                         let ele = nowdiv.querySelector(".searchcard")
                         if(nowdiv.dataset.id == div.dataset.id) {
                             ele.classList.remove("bg-greenty")
+                            let nowadd = ele.querySelector(".addCheck")
+                            nowadd.dataset.dishes = ""
                             break;
                         }
                     }
@@ -81,6 +83,8 @@ class Creator {
                 let pearent = ele.parentElement
                 if(pearent.dataset.id == div.dataset.id) {
                     ele.classList.remove("bg-greenty")
+                    let nowadd = ele.querySelector(".addCheck")
+                    nowadd.dataset.dishes = ""
                 }
             }
             if(selectdivs.length > 1){
@@ -123,7 +127,7 @@ class Creator {
                         `<div class="col-12 v tablecard d-flex flex-column d-flex align-items-center m-0 mb-2">
                             <div class="row d-flex flex-row col-12 m-0 align-items-center justify-content-center" style="height: 65px;">
                                 <div class="col-9 h-100 m-2 d-flex align-items-center justify-content-center p-0">
-                                    <p style="font-weight: 500; opacity: 0.9; font-size: 0.9rem;" class="h-100 text-center m-0 p-0">${Creator.NameSort(Data.NAME)}</p>
+                                    <p style="font-weight: 500; opacity: 0.9; font-size: 0.85rem;" class="h-100 text-center m-0 p-0">${Creator.NameSort(Data.NAME)}</p>
                                 </div>
                                 <div class="row m-0 table-responsive rounded-3" style="height: 142px; width: 95%;">
                                     <table class="table bg-light m-0 tableposi">
@@ -141,7 +145,7 @@ class Creator {
                                             <tr class="table-secondary clacData tr-calc">
                                                 <th scope="row">
                                                 <div class="col-12 p-0 position-relative">
-                                                    <input type="number" class="col-11 h-75 rounded-3 input-value" style="text-align: right; padding-right: 15px;">
+                                                    <input type="number" class="col-11 h-75 rounded-3 input-value no-spin" style="text-align: right; padding-right: 15px;">
                                                     <p class="position-absolute" style="top: 0px; right: 10%;">g</p>
                                                 </div>
                                                 </th>`
@@ -211,7 +215,6 @@ class Creator {
             })
             event.stopPropagation();
             openCardbox.classList.remove("visually-hidden")
-            console.log(div)
             let cardmenu = div.querySelector(".cardmenu")
             let invisible = div.querySelector(".cardmenuChecker")
             let img = cardmenu.lastElementChild
@@ -224,11 +227,11 @@ class Creator {
         let addCheck = div.querySelector(".addCheck")
         addCheck.addEventListener("click", (event) => {
             let makediv = document.createElement("div")
-            makediv.classList.add("col-12","col-md-6")
+            makediv.classList.add("col-12","col-md-6","main")
             let ele1 = 
                 `<div class="col-12 d-flex flex-column align-items-center rounded-4" style="background-color: white; height: 250px;">
                     <div class="col-12 d-flex justify-content-center align-items-center">
-                        <p class="text-center col-10" style="font-weight:600; font-size: 1.2rem; border-bottom: 2px solid gray;">料理に追加する</p>
+                        <p class="text-center col-10" style="font-weight:600; font-size: 1.2rem; border-bottom: 2px solid gray;">食品を追加する</p>
                     </div>
                     <div class="col-12 overflow-auto h-75">
                         <ul class=" p-0 d-flex flex-column " style="list-style:none;">`
@@ -238,45 +241,63 @@ class Creator {
                     </div>
                 </div>`
                 
-            for(key in dishList ) {
+            dishList.forEach(dish => {
                 ele2 += 
                     `<li class="col-12 row justify-content-center align-items-center mb-2">
-                        <p class="col-8 text-center m-0" style="font-weight:600;">${key}</p>
+                        <p class="col-8 text-center m-0" style="font-weight:600;">${dish}</p>
                         <div class="col-3 d-flex  justify-content-center align-items-center">
-                            <buttom type="button" data-name="${key}" class="dishAddCheck m-0 btn btn-primary btn-sm" style="font-weight:600;">追加</buttom>
+                            <buttom type="button" data-name="${dish}" class="dishAddCheck m-0 btn btn-primary btn-sm" style="font-weight:600;">追加</buttom>
                         </div>
                     </li>`
                 
-            }
+            })
             let element = ele1 + ele2 + ele3
             makediv.innerHTML = element
             event.stopPropagation();
             opencard.appendChild(makediv);
             let dishAddCheck = makediv.querySelectorAll(".dishAddCheck")
             let selectcheck = div.firstElementChild
-            
             dishAddCheck.forEach(dish => {
-                /* オブジェクトで｛ID,［料理名,料理名,料理名］で保存して取得したほうがいいかも */
-                let dishes = addCheck.dataset.dishes
-                dishes = dishes.split(',')
+                let bedishes = addCheck.dataset.dishes
+                let dishes = []
+                if(bedishes.length > 0) {
+                    dishes = bedishes.split(',')
+                }
                 if(dishes.includes(dish.dataset.name)) {
                     dish.classList.remove("btn-primary")
                     dish.classList.add("btn-danger")
                     dish.textContent = "削除"
                 }
                 dish.addEventListener("click", () => {
-                    dishes = addCheck.dataset.dishes
-                    dishes = dishes.split(',')
+                    bedishes = addCheck.dataset.dishes
+                    if(bedishes.length > 0) {
+                        dishes = dishes.split(',')
+                    }
                     if(!selectcheck.classList.contains("bg-greenty")) {
                         let ele = div.querySelector(".searchcard")
                         this.Fuc_Selected(div,ele)
                     }
                     if(dish.textContent != "削除") {
-                        dish.classList.remove("btn-primary")
-                        dish.classList.add("btn-danger")
-                        dish.textContent = "削除"
-                        dishes.push(dish.dataset.name)
-                        addCheck.dataset.dishes = dishes
+                        let xhrMakeTable = new XMLHttpRequest();
+                        xhrMakeTable.open('GET', `../Access/nutrient.php?num=${div.dataset.id}&${makeUseDataRequests(userDataArray)}`,true);
+                        xhrMakeTable.setRequestHeader('content-type','application/json');
+                        xhrMakeTable.send();
+                        xhrMakeTable.onload = function() {
+                            if(xhrMakeTable.readyState === 4) {
+                                if(xhrMakeTable.status === 200) {
+                                    let getData = JSON.parse(xhrMakeTable.responseText)
+                                    let Data = getData[0]
+                                    Put_Food(Data,dish.dataset.name)
+                                    dish.classList.remove("btn-primary")
+                                    dish.classList.add("btn-danger")
+                                    dish.textContent = "削除"
+                                    console.log(dishes)
+                                    dishes.push(dish.dataset.name)
+                                    console.log(dishes)
+                                    addCheck.dataset.dishes = dishes
+                                }
+                            }
+                        }
                     }else {
                         dish.classList.remove("btn-danger")
                         dish.classList.add("btn-primary")
@@ -285,14 +306,24 @@ class Creator {
                         dishes.splice(index,1)
                         addCheck.dataset.dishes = dishes
                     }
-                    let selectCards = selectCardHolder.querySelectorAll(".cards")
-                    selectCards.forEach(nowDiv => {
-                        if(nowDiv.dataset.id == div.dataset.id) {
-                            let nowAddcheck = nowDiv.querySelector(".addCheck")
-                            nowAddcheck.dataset.dishes = dishes
-                        }
-                    })
-                    
+                    let parent = div.parentElement
+                    if(parent.id != "searchCardHolder") {
+                        let searchCards = searchCardHolder.querySelectorAll(".cards")
+                        searchCards.forEach(nowDiv => {
+                            if(nowDiv.dataset.id == div.dataset.id) {
+                                let nowAddcheck = nowDiv.querySelector(".addCheck")
+                                nowAddcheck.dataset.dishes = dishes
+                            }
+                        })
+                    }else {
+                        let selectCards = selectCardHolder.querySelectorAll(".cards")
+                        selectCards.forEach(nowDiv => {
+                            if(nowDiv.dataset.id == div.dataset.id) {
+                                let nowAddcheck = nowDiv.querySelector(".addCheck")
+                                nowAddcheck.dataset.dishes = dishes
+                            }
+                        })
+                    }
                 })
             })
             openCardbox.classList.remove("visually-hidden")
@@ -505,22 +536,7 @@ const nutritionObj = {
 let idList = []
 let selectDataList = []
 
-let dishList = {
-    piza: [1232,13,13,13,13],
-    takosu: [21,23,13,132,1],
-    piza1: [1232,13,13,13,13],
-    piza2: [1232,13,13,13,13],
-    piza3: [1232,13,13,13,13],
-    piza4: [1232,13,13,13,13],
-    piza5: [1232,13,13,13,13],
-    piza6: [1232,13,13,13,13],
-    piza7: [1232,13,13,13,13],
-    piza8: [1232,13,13,13,13],
-    piza9: [1232,13,13,13,13],
-    piza10: [1232,13,13,13,13]
-}
-
-let dishInUse = {}
+let dishList = []
 
 let searchPage = document.querySelector("#searchPage")
 let searchCardHolder = document.querySelector("#searchCardHolder")
@@ -530,6 +546,9 @@ let selectCardHolder = document.querySelector("#selectCardHolder")
 
 let tablePage = document.querySelector("#tablePage")
 let tableCardHolder = document.querySelector("#tableCardHolder")
+
+let dishPage = document.querySelector("#dishPage")
+let dishCardHolder = document.querySelector("#dishCardHolder")
 
 let nutritionSelectPage = document.querySelector("#nutritionSelectPage")
 let nutritionSelectHolder = document.querySelector("#nutritionSelectHolder")
@@ -622,7 +641,7 @@ search.addEventListener("change", () => {
     }
 })
 
-//食品の追加ボタン
+//食品の50件追加ボタン
 const xhrPlus = new XMLHttpRequest();
 let searchPlusBtn_hidden = document.querySelector("#searchPlusBtn-hidden")
 searchPlusBtn.addEventListener("click", () => {
@@ -668,7 +687,13 @@ function Item_Check_Pop() {
 let closeInfoCard = document.querySelectorAll(".closeInfoCard")
 closeInfoCard.forEach(div => {
     div.addEventListener("click",() => {
-        opencard.innerHTML = ""
+        let child = opencard.lastElementChild
+        if(child.classList.contains("dish")) {
+            child.classList.add("visually-hidden")
+        }else {
+            child.remove()
+        }
+        
         openCardbox.classList.add("visually-hidden")
     })
 })
@@ -772,7 +797,6 @@ returnBtn.addEventListener("click", () => {
 })
 changeBtn.addEventListener("click", () => {
     let name = String(nutritionTableName.value)
-    console.log(name)
     if(name != "") {
         if(NutrientListName(name)) {
             let divs = nutritionSelectHolder.querySelectorAll(".cards")
@@ -926,6 +950,133 @@ function Ability_SelectedNutrients() {
         }
         
     })
+}
+
+//料理を追加
+let addDish = dishPage.querySelector(".addDish")
+let dishAddHtml = document.createElement("div")
+dishAddHtml.classList.add("col-12","col-md-6","dish","main","visually-hidden")
+let ele =
+    `<div class="col-12 d-flex flex-column align-items-center rounded-4" style="background-color: white; height: 150px;">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+            <p class="text-center col-10" style="font-weight:600; font-size: 1.2rem; border-bottom: 2px solid gray;">料理を追加する</p>
+        </div>
+        <div class="col-12 d-flex align-items-center justify-content-center" style="height: 40%;">
+            <input type="text" class="col-9 rounded-3 dishAddName">
+            <div class="col-2 d-flex align-items-center justify-content-center">
+                <button type="button" class="btn btn-primary addBtn">追加</button>
+            </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center align-items-center nameduplication visually-hidden">
+            <p class="text-center text-danger col-10" style="font-weight:600; font-size: 1.2rem;">名前が重複しています</p>
+        </div>
+        <div class="col-12 d-flex justify-content-center align-items-center nameundefine visually-hidden">
+            <p class="text-center text-danger col-10 " style="font-weight:600; font-size: 1.2rem;">名前が入力されていません</p>
+        </div>
+    </div>`
+dishAddHtml.innerHTML = ele
+opencard.appendChild(dishAddHtml)
+Ability_AddDish(dishAddHtml)
+let nameduplication = opencard.querySelector(".nameduplication")
+let nameundefine = opencard.querySelector(".nameundefine")
+addDish.addEventListener("click", () => {
+    nameduplication.classList.add("visually-hidden")
+    nameundefine.classList.add("visually-hidden")
+    openCardbox.classList.remove("visually-hidden")
+    dishAddHtml.classList.remove("visually-hidden")
+})
+
+
+//料理を追加する機能
+function Ability_AddDish(div) {
+    let addBtn = div.querySelector(".addBtn")
+    let addname = div.querySelector(".dishAddName")
+    addBtn.addEventListener("click", () => {
+        if(addname.value != "") {
+            if(!dishList.includes(addname.value)) {
+                let html = document.createElement("div")
+                html.classList.add("col-12","col-md-6","dishCard")
+                html.dataset.name = addname.value
+                let ele1 =
+                    `<div class="col-12 v dishtablecard d-flex flex-column d-flex align-items-center m-0 mb-2">
+                        <div class="row d-flex flex-row col-12 m-0 align-items-around justify-content-center flex-wrap" style="height: 65px;">
+                            <div class="col-9 h-100 p-2 d-flex align-items-center justify-content-center p-0">
+                                <p style="font-weight: 500; opacity: 0.9; font-size: 0.85rem;" class="h-100 text-center m-0 p-0"><br>${addname.value}</p>
+                            </div>
+                            <div class="col-2 h-100  d-flex align-items-center justify-content-center p-0">
+                                    <button type="button" class="btn btn-danger dishRemoveBtn">削除</button>
+                                </div>
+                            <div class="row col-11 d-flex overflow-auto flex-nowrap align-items-center justify-content-start bg-light mb-3 p-0 dishInCardHolder" style="border:2px solid gray; border-radius: 5px; height: 110px;">
+                                
+                            </div>
+                            <div class="row m-0 table-responsive rounded-3" style="height: 100px; width: 95%;">
+                                
+                            `
+                let ele2 = 
+                                `<table class="table bg-light m-0 tableposi">
+                                    <thead class="table-dark">
+                                        <tr class="tr-name">`
+                let ele3 =""
+                let ele4 =
+                                    `</thead>
+                                    <tbody>
+                                        <tr class="table-secondary clacData tr-calc">`
+                let ele5 =""
+                let ele6 =
+                                        `</tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                userDataArray.forEach(i => {
+                    ele3 += `<th scope="col" class="tablename">${nutritionObj[i]}</th>`
+                    let unit = i + "unit"
+                    ele5 += `<td class="tableval"><span class="tableValNum">0</span><span>${nutritionObj[unit]}</span></td>`
+                })
+                html.innerHTML = ele1 + ele2 + ele3 + ele4 + ele5 + ele6
+                dishCardHolder.appendChild(html)
+                dishList.push(addname.value)
+                addname.value = ""
+                div.classList.add("visually-hidden")
+                openCardbox.classList.add("visually-hidden")
+            }else {
+                nameduplication.classList.remove("visually-hidden")
+            }
+        }else {
+            nameundefine.classList.remove("visually-hidden")
+        }
+    })
+}
+
+//食材を料理カードに配置する
+function Put_Food(datas,dish) {
+    let html = document.createElement("div")
+    html.classList.add("col-12","m-auto","cards","px-2","py-0",dish)
+    userDataArray.forEach(data => {
+        html.dataset[data] = datas[data]
+    })
+    let card = 
+        `<div class="col-12 searchcard d-flex flex-row m-2 searchCheckcard" role="button">
+            <div class="col-9 h-100 mx-3 d-flex align-items-center justify-content-center">
+                <p style="font-size: 0.85rem; font-weight: 500; opacity: 0.9;" class="h-100 cardsname getText nametext text-center m-0">${Creator.NameSort(datas.NAME)}</p>
+            </div>
+            <div class="col-2 d-flex align-items-center justify-content-start position-relative ">
+                <input type="number" class="no-spin dishInput">
+                <p class="position-absolute" style="top: 22px; right: 20%; font-weight: 600;">g</p>
+            </div>
+        </div>`
+    html.innerHTML = card
+    let child = dishCardHolder.children
+    for( key in child) {
+        if(!isNaN(key))
+
+            if(child[key].dataset.name == dish) {
+                let holder = child[key].querySelector(".dishInCardHolder")
+                holder.appendChild(html)
+            }
+    }
 }
 
 //uuidの作成

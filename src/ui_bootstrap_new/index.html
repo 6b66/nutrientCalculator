@@ -205,29 +205,75 @@
             <div id="dishPage" class="row Page m-0 pt-2 col-12 position-absolute position-relative top-0 d-flex align-content-start justify-content-center h-100" value="dishPage">
                 <!--カードフォルダー-->
                 <div class="row col-12 d-flex flex-row holder" id="dishCardHolder">
-                    <!--カード
-                        <div class="col-12 col-md-6">
-                            <div class="col-12 c searchcard d-flex flex-row mx-1 justify-content-start align-items-start">
-                                <div class="col-1 h-100 d-flex align-items-center justify-content-center"
-                                    style="
-                                        font-size: 23px;
-                                        font-weight: 500;
-                                        color: #00946C;
-                                    "
-                                >
-                                    1
-                                </div>
-                                <div class="col-8 h-100 mx-3 d-flex align-items-center justify-content-center">
-                                    <p style="font-weight: 500; opacity: 0.9;" class="text-center m-0">あいうえおかきくけこさしすせそたちつてとなにぬねのはひ</p>
-                                </div>
-                                <div class="col-2 d-flex align-items-center justify-content-center">
-                                    <div class="s_c_check">
-                                        <img src="./img/plus (1).svg" alt="" style="margin-top: 3px; margin-left: 3px;">
-                                    </div>
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <div class="col-12 col-md-6 cards d-flex align-items-center justify-content-center">
+                            <div role="button" class="col-10 addDish dishSelectcard d-flex flex-row mx-1"  style="background-color: #94AE82;">
+                                <div class="col-11 h-100 mx-3 d-flex align-items-center justify-content-center">
+                                    <p style="font-size: 1.0rem; font-weight: 500; opacity: 0.9;" class=" cardsname getText nametext text-center m-0 ">料理を追加する</p>
                                 </div>
                             </div>
                         </div>
-                    --> 
+                    </div>
+                    <div class="col-12 col-md-6 dishCard" data-name="piza">
+                        <div class="col-12 v dishtablecard d-flex flex-column d-flex align-items-center m-0 mb-2">
+                            <div class="row d-flex flex-row col-12 m-0 align-items-around justify-content-center flex-wrap" style="height: 65px;">
+                                <div class="col-9 h-100 p-2 d-flex align-items-center justify-content-center p-0">
+                                    <p style="font-weight: 500; opacity: 0.9; font-size: 0.85rem;" class="h-100 text-center m-0 p-0"><br>piza</p>
+                                </div>
+                                <div class="col-2 h-100  d-flex align-items-center justify-content-center p-0">
+                                    <button type="button" class="btn btn-danger">削除</button>
+                                </div>
+                                <div class="row col-11 d-flex overflow-auto flex-nowrap align-items-center justify-content-start bg-light mb-3 p-0 dishInCardHolder" style="border:2px solid gray; border-radius: 5px; height: 110px;">
+                                    <div class="col-12 cards m-auto px-2 py-0" data-id="0">
+                                        <div class="col-12 searchcard d-flex flex-row m-2 searchCheckcard" role="button">
+                                            <div class="col-9 h-100 mx-3 d-flex align-items-center justify-content-center">
+                                                <p style="font-size: 0.85rem; font-weight: 500; opacity: 0.9;" class="h-100 cardsname getText nametext text-center m-0"><br>アマランサス  玄穀</p>
+                                            </div>
+                                            <div class="col-2 d-flex align-items-center justify-content-start position-relative ">
+                                                <input type="number" class="no-spin dishInput">
+                                                <p class="position-absolute" style="top: 22px; right: 20%; font-weight: 600;">g</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 cards m-auto px-2 py-0" data-id="0">
+                                        <div class="col-12 searchcard d-flex flex-row m-2 searchCheckcard" role="button">
+                                            <div class="col-9 h-100 mx-3 d-flex align-items-center justify-content-center">
+                                                <p style="font-size: 0.85rem; font-weight: 500; opacity: 0.9;" class="h-100 cardsname getText nametext text-center m-0"><br>アマランサス  玄穀</p>
+                                            </div>
+                                            <div class="col-2 d-flex align-items-center justify-content-start position-relative ">
+                                                <input type="number" class="no-spin dishInput">
+                                                <p class="position-absolute" style="top: 22px; right: 20%; font-weight: 600;">g</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 cards m-auto px-2 py-0" data-id="0">
+                                        <div class="col-12 searchcard d-flex flex-row m-2 searchCheckcard" role="button">
+                                            <div class="col-9 h-100 mx-3 d-flex align-items-center justify-content-center">
+                                                <p style="font-size: 0.85rem; font-weight: 500; opacity: 0.9;" class="h-100 cardsname getText nametext text-center m-0"><br>アマランサス  玄穀</p>
+                                            </div>
+                                            <div class="col-2 d-flex align-items-center justify-content-start position-relative ">
+                                                <input type="number" class="no-spin dishInput">
+                                                <p class="position-absolute" style="top: 22px; right: 20%; font-weight: 600;">g</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row m-0 table-responsive rounded-3" style="height: 100px; width: 95%;">
+                                    <table class="table bg-light m-0 tableposi">
+                                        <thead class="table-dark">
+                                            <tr class="tr-name">
+                                                <th scope="col" class="tablename">エネルギー(kcal)</th><th scope="col" class="tablename">たんぱく質</th><th scope="col" class="tablename">脂質</th><th scope="col" class="tablename">食物繊維総量</th><th scope="col" class="tablename">炭水化物</th><th scope="col" class="tablename">カルシウム</th><th scope="col" class="tablename">カリウム</th><th scope="col" class="tablename">鉄</th><th scope="col" class="tablename">レチノール活性当量</th><th scope="col" class="tablename">ビタミンB1</th><th scope="col" class="tablename">ビタミンB2</th><th scope="col" class="tablename">ビタミンC</th><th scope="col" class="tablename">食塩相当量</th><th scope="col" class="tablename">葉酸</th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="table-secondary clacData tr-calc">
+                                                <td class="tableval"><span class="tableValNum">0</span><span>kcal</span></td><td class="tableval"><span class="tableValNum">0</span><span>g</span></td><td class="tableval"><span class="tableValNum">0</span><span>g</span></td><td class="tableval"><span class="tableValNum">0</span><span>g</span></td><td class="tableval"><span class="tableValNum">0</span><span>g</span></td><td class="tableval"><span class="tableValNum">0</span><span>mg</span></td><td class="tableval"><span class="tableValNum">0</span><span>mg</span></td><td class="tableval"><span class="tableValNum">0</span><span>mg</span></td><td class="tableval"><span class="tableValNum">0</span><span>μg</span></td><td class="tableval"><span class="tableValNum">0</span><span>mg</span></td><td class="tableval"><span class="tableValNum">0</span><span>mg</span></td><td class="tableval"><span class="tableValNum">0</span><span>mg</span></td><td class="tableval"><span class="tableValNum">0</span><span>g</span></td><td class="tableval"><span class="tableValNum">0</span><span>μg</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--成分選択ページ-->
@@ -335,20 +381,16 @@
             <div id="bgclose" class="closeInfoCard"></div>
             <div id="opencard" class="row col-12 d-flex m-auto align-items-center justify-content-center">
                 <!--
-                <div class="col-12 col-md-6">
-                    <div class="col-12 d-flex flex-column align-items-center rounded-4" style="background-color: white; height: 250px;">
+                <div class="col-12 col-md-6 visually-hidden" id="addDishCard">
+                    <div class="col-12 d-flex flex-column align-items-center rounded-4" style="background-color: white; height: 150px;">
                         <div class="col-12 d-flex justify-content-center align-items-center">
-                            <p class="text-center col-10" style="font-weight:600; font-size: 1.2rem; border-bottom: 2px solid gray;">料理に追加する</p>
+                            <p class="text-center col-10" style="font-weight:600; font-size: 1.2rem; border-bottom: 2px solid gray;">料理を追加する</p>
                         </div>
-                        <div class="col-12 overflow-auto h-75">
-                            <ul class=" p-0 d-flex flex-column " style="list-style:none;">
-                                <li class="col-12 row justify-content-center align-items-center mb-2">
-                                    <p class="col-8 text-center m-0" style="font-weight:600;">ピザ</p>
-                                    <div class="col-2 border border-3 border-primary rounded-3 d-flex justify-content-center align-items-center">
-                                        <p class="m-0" style="font-size: 1rem; font-weight:600;">追加</p>
-                                    </div>
-                                </li>
-                            </ul>
+                        <div class="col-12 h-50 d-flex align-items-center justify-content-center">
+                            <input type="text" class="col-9 rounded-3 dishAddName">
+                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                <button type="button" class="btn btn-primary addBtn">追加</button>
+                            </div>
                         </div>
                     </div>
                 </div>
