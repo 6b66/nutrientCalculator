@@ -15,7 +15,7 @@
           <div class="card-body">
             <h5 class="card-title">栄養計算</h5>
             <p class="card-text">栄養計算アプリ。食品を複数選択しグラムを指定すると単品の栄養素と全品を合計した栄養素を算出します。</p>
-            <a href="/ui_bootstrap_new/index.html" class="btn btn-primary">開く</a>
+            <a href="/Nutrients/index.html" class="btn btn-primary">開く</a>
           </div>
         </div>
       </div>
