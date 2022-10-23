@@ -107,6 +107,7 @@ class Creator {
             idList.splice(index,1)
             selectDataList.splice(index,1)
             addCheck.dataset.dishes = ""
+            Del_Food(div.dataset.id,"ALL")
         }
     }
 
@@ -121,7 +122,7 @@ class Creator {
                     let getData = JSON.parse(xhrMakeTable.responseText)
                     Data = getData[0]
                     let div = document.createElement("div")
-                    div.classList.add("col-12","col-md-6")
+                    div.classList.add("col-12","col-md-6","tables")
                     div.dataset.id = Data.NUM
                     let ele_1 = 
                         `<div class="col-12 v tablecard d-flex flex-column d-flex align-items-center m-0 mb-2">
@@ -169,6 +170,10 @@ class Creator {
                     div.innerHTML = ele
                     place.appendChild(div)
                     Creator.Set_Table_Ability(div)
+                    let dishes = dishCardHolder.querySelectorAll(".dishCard")
+                    dishes.forEach(dish => {
+                        Fn_dishCalc(dish)
+                    })
                 }
             }
         }
@@ -257,10 +262,11 @@ class Creator {
             opencard.appendChild(makediv);
             let dishAddCheck = makediv.querySelectorAll(".dishAddCheck")
             let selectcheck = div.firstElementChild
+            
             dishAddCheck.forEach(dish => {
-                let bedishes = addCheck.dataset.dishes
                 let dishes = []
-                if(bedishes.length > 0) {
+                let bedishes = addCheck.dataset.dishes
+                if(bedishes.length != 0) {
                     dishes = bedishes.split(',')
                 }
                 if(dishes.includes(dish.dataset.name)) {
@@ -270,14 +276,19 @@ class Creator {
                 }
                 dish.addEventListener("click", () => {
                     bedishes = addCheck.dataset.dishes
-                    if(bedishes.length > 0) {
-                        dishes = dishes.split(',')
+                    if(bedishes.length != 0) {
+                        dishes = bedishes.split(',')
                     }
                     if(!selectcheck.classList.contains("bg-greenty")) {
                         let ele = div.querySelector(".searchcard")
                         this.Fuc_Selected(div,ele)
                     }
                     if(dish.textContent != "削除") {
+                        dish.classList.remove("btn-primary")
+                        dish.classList.add("btn-danger")
+                        dish.textContent = "削除"
+                        dishes.push(dish.dataset.name)
+                        addCheck.dataset.dishes = dishes
                         let xhrMakeTable = new XMLHttpRequest();
                         xhrMakeTable.open('GET', `../Access/nutrient.php?num=${div.dataset.id}&${makeUseDataRequests(userDataArray)}`,true);
                         xhrMakeTable.setRequestHeader('content-type','application/json');
@@ -288,13 +299,6 @@ class Creator {
                                     let getData = JSON.parse(xhrMakeTable.responseText)
                                     let Data = getData[0]
                                     Put_Food(Data,dish.dataset.name)
-                                    dish.classList.remove("btn-primary")
-                                    dish.classList.add("btn-danger")
-                                    dish.textContent = "削除"
-                                    console.log(dishes)
-                                    dishes.push(dish.dataset.name)
-                                    console.log(dishes)
-                                    addCheck.dataset.dishes = dishes
                                 }
                             }
                         }
@@ -305,6 +309,7 @@ class Creator {
                         let index = dishes.indexOf(dish.dataset.name)
                         dishes.splice(index,1)
                         addCheck.dataset.dishes = dishes
+                        Del_Food(div.dataset.id,dish)
                     }
                     let parent = div.parentElement
                     if(parent.id != "searchCardHolder") {
@@ -923,6 +928,7 @@ function Ability_SelectedNutrients() {
         div.classList.add("bg-greenty")
         userDataArray = pearent.dataset.datalist.split(',')
         tableCreate.Write_Table(idList,tableCardHolder)
+        UpData_dishTable()
     })
     check.addEventListener("click", () => {
         nutritionFlseName.classList.remove("border","border-4","border-danger")
@@ -1016,12 +1022,12 @@ function Ability_AddDish(div) {
                                 `<table class="table bg-light m-0 tableposi">
                                     <thead class="table-dark">
                                         <tr class="tr-name">`
-                let ele3 =""
+                let ele3 =`<th scope="col" class="tablename">使用料</th>`
                 let ele4 =
                                     `</thead>
                                     <tbody>
                                         <tr class="table-secondary clacData tr-calc">`
-                let ele5 =""
+                let ele5 =`<td class="tableval"><span class="tableUseInput">0</span><span>g</span></td>`
                 let ele6 =
                                         `</tr>
                                     </tbody>
@@ -1037,6 +1043,7 @@ function Ability_AddDish(div) {
                 })
                 html.innerHTML = ele1 + ele2 + ele3 + ele4 + ele5 + ele6
                 dishCardHolder.appendChild(html)
+                Del_dish(html)
                 dishList.push(addname.value)
                 addname.value = ""
                 div.classList.add("visually-hidden")
@@ -1049,14 +1056,11 @@ function Ability_AddDish(div) {
         }
     })
 }
-
 //食材を料理カードに配置する
 function Put_Food(datas,dish) {
     let html = document.createElement("div")
-    html.classList.add("col-12","m-auto","cards","px-2","py-0",dish)
-    userDataArray.forEach(data => {
-        html.dataset[data] = datas[data]
-    })
+    html.classList.add("col-12","col-xl-11","col-xxl-12","m-auto","cards","px-2","py-0","food","dish")
+    html.dataset.id = datas.NUM
     let card = 
         `<div class="col-12 searchcard d-flex flex-row m-2 searchCheckcard" role="button">
             <div class="col-9 h-100 mx-3 d-flex align-items-center justify-content-center">
@@ -1069,18 +1073,150 @@ function Put_Food(datas,dish) {
         </div>`
     html.innerHTML = card
     let child = dishCardHolder.children
+    let input = html.querySelector(".dishInput")
+    Fn_dishInput(dish,input)
     for( key in child) {
         if(!isNaN(key))
-
             if(child[key].dataset.name == dish) {
                 let holder = child[key].querySelector(".dishInCardHolder")
                 holder.appendChild(html)
             }
     }
 }
+//食材を料理カードから食品を削除する
+function Del_Food(Id,dish) {
+    let child = dishCardHolder.children
+    if(dish == "ALL") {
+        let dishes = dishCardHolder.querySelectorAll(".dishCard")
+        dishes.forEach(dish => {
+            let foods = dish.querySelectorAll(".food")
+                foods.forEach(food => {
+                    if(food.dataset.id == Id) {
+                        food.remove()
+                    }
+                })
+        })
+    }else {
+        for( key in child) {
+            if(!isNaN(key)){
+                if(child[key].dataset.name == dish.dataset.name) {
+                    let holder = child[key].querySelector(".dishInCardHolder")
+                    let foods = holder.querySelectorAll(".food")
+                    foods.forEach(food => {
+                        if(food.dataset.id == Id) {
+                            food.remove()
+                        }
+                    })
+                }
+            }
+        }
+    }
+    
+}
+//使用する成分表を作り直す
+function UpData_dishTable() {
+    let ele1 = 
+            `<thead class="table-dark">
+                <tr class="tr-name">`
+    let ele2 = `<th scope="col" class="tablename">使用料</th>`
+    let ele3 =
+            `</thead>
+            <tbody>
+                <tr class="table-secondary clacData tr-calc">`
+    let ele4 = `<td class="tableval"><span class="tableUseInput"></span><span>g</span></td>`
+    let ele5 = 
+                `</tr>
+            </tbody>`
+    userDataArray.forEach(i => {
+        ele2 += `<th scope="col" class="tablename">${nutritionObj[i]}</th>`
+        let unit = i + "unit"
+        ele4 += `<td class="tableval"><span class="tableValNum">0</span><span>${nutritionObj[unit]}</span></td>`
+    })
+    let html = ele1 + ele2 + ele3 + ele4 + ele5
+    let dishes = dishCardHolder.querySelectorAll(".dishCard")
+        dishes.forEach(dish => {
+            let table = dish.querySelector(".table")
+            table.innerHTML = html
+        })
+    //reset_dishInfood()
+}
+//料理カード内で食品の入力値を受け取る
+function Fn_dishInput(dishName,input) {
+    let dishes = dishCardHolder.querySelectorAll(".dishCard")
+    //console.log(dishes)
+    let dish = ""
+    dishes.forEach(item => {
+        if(item.dataset.name == dishName) {
+            dish = item
+        }
+    })
+    input.addEventListener("input", () => {
+        Fn_dishCalc(dish)
+        
+    })
+}
+//料理カードを計算して出力
+function Fn_dishCalc(dish) {
+    let tables = tableCardHolder.querySelectorAll(".tables")
+    let tableUseInput = dish.querySelector(".tableUseInput")
+    let tableValNums = dish.querySelectorAll(".tableValNum")
+    let foods = dish.querySelectorAll(".food")
+    let result = []
+    let input_value = ""
+    userDataArray.forEach((i,index) => {
+        result[index] = Number(0)
+    })
+    foods.forEach(food => {
+        let inputs = food.querySelector(".dishInput")
+        let inputNum =  Number(inputs.value)
+        input_value = Number(inputs.value) + Number(input_value)
+        if(!(inputNum > 0)) {
+            inputNum = Number(0)
+        }
+        tables.forEach(table => {
+            if(table.dataset.id == food.dataset.id) {
+                let datas = table.querySelectorAll(".tableperin")
+                let i = 0
+                datas.forEach(data => {
+                    let oldValue = Number(result[i])
+                    let control = Number(data.textContent)
+                    let CalcValue =  Number(Creator.clacResult(control,inputNum))
+                    let NewValue = Number(CalcValue)
+                    result[i] = Number(NewValue).toFixed(2)
+                    let resultValue = Number(oldValue) + Number(NewValue)
+                    result[i] = Number(resultValue).toFixed(2)
+                    i++
+                })
+            }
+        })
+        
+        tableValNums.forEach((tableValNum,index) => {
+            tableValNum.textContent = result[index]
+        })
+        tableUseInput.textContent = input_value
+    })
+}
+
+//料理カードの削除
+function Del_dish(div) {
+    let del = div.querySelector(".dishRemoveBtn")
+    del.addEventListener("click", () => {
+        div.remove()
+        let index = dishList.indexOf(div.dataset.id)
+        dishList.splice(index,1)
+    })
+}
+//料理カード内の食品の使用料リセット
+function reset_dishInfood() {
+    let foods = dishCardHolder.querySelectorAll(".dishInput")
+    foods.forEach(food => {
+        console.log(food)
+        food.value = ""
+    })
+}
 
 //uuidの作成
-function createUuid(){
+function createUuid() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(a) {
         let r = (new Date().getTime() + Math.random() * 16)%16 | 0, v = a == 'x' ? r : (r & 0x3 | 0x8);
         return v.toString(16);
