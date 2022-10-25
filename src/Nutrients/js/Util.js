@@ -26,6 +26,43 @@ class Util {
         return false;
     }
 
+    // [new]名前を表示用に変更
+    static NameSort(newName) {
+        newName = newName.replace(/［/g,"[")
+        newName = newName.replace(/］/g,"]")
+        newName = newName.replace(/（/g,"(")
+        newName = newName.replace(/）/g,")")
+        newName = newName.replace(/＜/g,"<")
+        newName = newName.replace(/＞/g,">")
+        newName = newName.replace(/\'/g,"")
+        newName = newName.replace(/,/g," ")
+        newName = newName.slice(1)
+        newName = newName.slice(0,-1)
+        let kakko1 = ""
+        if(newName.includes("[") && newName.includes("]")) {
+            let s = newName.indexOf("[")
+            let e = newName.indexOf("]")
+            kakko1 = newName.slice(s,e+1)
+            newName = newName.replace(kakko1,"")
+        }
+        let kakko2 = ""
+        if(newName.includes("<") && newName.includes(">")) {
+            let s = newName.indexOf("<")
+            let e = newName.indexOf(">")
+            kakko2 = newName.slice(s,e+1)
+            newName = newName.replace(kakko2,"")
+        }
+        let kakko3 = ""
+        if(newName.includes("(") && newName.includes(")")) {
+            let s = newName.indexOf("(")
+            let e = newName.indexOf(")")
+            kakko3 = newName.slice(s,e+1)
+            newName = newName.replace(kakko3,"")
+        }
+        newName = kakko1 + kakko2 + kakko3 + "<br>" + newName
+        return newName
+    }
+
     //ページクリックでスクロールトップへ
     static ScrollTop() {
         window.scroll(0,0)
