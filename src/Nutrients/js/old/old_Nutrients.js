@@ -121,6 +121,7 @@ class Creator {
                 if(xhrMakeTable.status === 200) {
                     let getData = JSON.parse(xhrMakeTable.responseText)
                     Data = getData[0]
+                    console.log(Data)
                     let div = document.createElement("div")
                     div.classList.add("col-12","col-md-6","tables")
                     div.dataset.id = Data.NUM
@@ -544,13 +545,13 @@ let selectDataList = []
 let dishList = []
 
 let searchPage = document.querySelector("#searchPage")
-let searchCardHolder = document.querySelector("#searchCardHolder")
+let searchCardHolder = document.querySelector("#SearchCardHolder")
 
 let selectPage = document.querySelector("#selectPage")
-let selectCardHolder = document.querySelector("#selectCardHolder")
+let selectCardHolder = document.querySelector("#SelectCardHolder")
 
 let tablePage = document.querySelector("#tablePage")
-let tableCardHolder = document.querySelector("#tableCardHolder")
+let tableCardHolder = document.querySelector("#TableCardHolder")
 
 let dishPage = document.querySelector("#dishPage")
 let dishCardHolder = document.querySelector("#dishCardHolder")
@@ -1022,12 +1023,12 @@ function Ability_AddDish(div) {
                                 `<table class="table bg-light m-0 tableposi">
                                     <thead class="table-dark">
                                         <tr class="tr-name">`
-                let ele3 =`<th scope="col" class="tablename">使用料</th>`
+                let ele3 =              `<th scope="col" class="tablename">使用料</th>`
                 let ele4 =
                                     `</thead>
                                     <tbody>
                                         <tr class="table-secondary clacData tr-calc">`
-                let ele5 =`<td class="tableval"><span class="tableUseInput">0</span><span>g</span></td>`
+                let ele5 =              `<td class="tableval"><span class="tableUseInput">0</span><span>g</span></td>`
                 let ele6 =
                                         `</tr>
                                     </tbody>

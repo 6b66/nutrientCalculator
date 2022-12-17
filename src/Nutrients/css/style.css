@@ -1,3 +1,6 @@
+html {
+    overflow: 'hidden'
+}
 .a {
 
 }
@@ -6,6 +9,7 @@
 }
 .c {
 }
+
 
 .no-spin::-webkit-inner-spin-button,
 .no-spin::-webkit-outer-spin-button {
@@ -30,6 +34,9 @@
 }
 .bg-gray {
     background-color: #EAEAF3;
+}
+.bg-lightGreen {
+    background-color: #CDE9E3;
 }
 .rounded-4 {
     border-radius: 20px;
@@ -57,12 +64,9 @@ ul > li:hover > i >  .name {
     visibility: visible;
 }
 /*ページ*/
-.Page {
-    visibility: hidden;
-
-}
 .holder {
-    margin-top: 150px;
+    margin-top: 160px;
+    position: relative;
 }
 /*検索カード*/
 .cardmenu {
@@ -115,7 +119,7 @@ ul > li:hover > i >  .name {
 /*料理表*/
 .dishtablecard {
     background-color: #CDE9E3;
-    height: 300px;
+    height: 235px;
     border-radius: 15px;
     margin: 15px;
 }
@@ -150,6 +154,12 @@ ul > li:hover > i >  .name {
     background-color: white;
     border-radius: 50px;
 }
+.nutrientcard {
+    height: 45px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
 
 
 /*成分合計*/
@@ -178,7 +188,7 @@ ul > li:hover > i >  .name {
 }
 #opencard {
     position: fixed;
-    top: 120px;
+    top: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -250,3 +260,20 @@ ul > li:hover > i >  .name {
     top: 120px;
     left: 0;
 }
+
+.fadeDown{
+    animation-name:fadeDownAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    @keyframes fadeDownAnime{
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    } 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }

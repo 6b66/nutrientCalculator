@@ -1,9 +1,14 @@
 class CardManager {
+    SearchPage = document.getElementById("SearchPage");
     SearchCardHolder = document.getElementById("SearchCardHolder");
+    SelectedPage = document.getElementById("SelectedPage");
     SelectedCardHolder = document.getElementById("SelectedCardHolder");
     searchPlusBtn = document.querySelector("#searchPlusBtn");
     searchPlusBtn_hidden = document.querySelector("#searchPlusBtn-hidden");
     SelectedList = new Array();
+    
+    TableManager = new TableManager()
+    opencard = document.getElementById("opencard");
 
     // 画面を作る
     CreateDisplay(jsonData) {
@@ -22,20 +27,6 @@ class CardManager {
         });
     }
 
-    // 検索カードホルダの表示を切り替える
-    DisplayIs(holder) {
-        if (holder === "Search") {
-            this.SearchCardHolder.classList.remove("visually-hidden")
-            this.SelectedCardHolder.classList.add("visually-hidden")
-            this.searchPlusBtn.classList.remove("visually-hidden");
-        } else {
-            this.SearchCardHolder.classList.add("visually-hidden");
-            this.SelectedCardHolder.classList.remove("visually-hidden");
-            this.searchPlusBtn.classList.add("visually-hidden");
-
-        }
-    }
-
     // カード作る
     CreateCard(Data) {
         let div = document.createElement("div");
@@ -48,48 +39,66 @@ class CardManager {
                 </div>
                 <div class="col-2 d-flex align-items-center justify-content-center position-relative">
                     <div class="cardmenu">
-                        <img src="./img/more-vertical .svg" alt="" style="margin-top: 6px; margin-left: 5.5px; height: 27px">
-                    </div>
-                    <div class="cardmenuChecker position-absolute bg-light invisible" style="height: 60px; width: 150px; top: 2px; left: -135px; z-index:100;">
-                        <ul class=" round-4 list-group h-100 p-0 m-0 d-flex flex-column justify-content-center align-content-center" style="list-style:none;">
-                            <li class="searchCheck selectCheck list-group-item border-primary" style="padding: 0; transition: 0s;">
-                                <p class="m-1 text-center" style="font-weight: 500; margin: 0;">成分表を見る</p>
-                            </li>
-                            <li class="addCheck selectCheck list-group-item border-primary" data-dishes="" style="padding: 0; transition: 0s;">
-                                <p class="m-1 text-center" style="font-weight: 500; margin: 0;">料理に追加する</p>
-                            </li>
-                        </ul>
+                        <img src="./img/search.svg" alt="" style="margin-top: 5px; margin-left: 5px; height: 27px">
                     </div>
                 </div>
             </div>`;
         div.innerHTML = ele;
-        if ((Object.keys(this.SelectedList).includes(Data.NUM))) {
+
+        if (this.SelectedList.includes(Data.NUM)) {
             // 選択済みだった場合の処理
             div.firstChild.classList.add("bg-greenty");
         }
-        div.firstChild.onclick = () => {
-            if (Object.keys(this.SelectedList).includes(Data.NUM)) {
+        div.firstChild.addEventListener("click", () => {
+            if (this.SelectedList.includes(Data.NUM)) {
                 // 選択済みだった場合の処理
                 div.firstChild.classList.remove("bg-greenty");
-                delete this.SelectedList[Data.NUM];
+                let index = this.SelectedList.indexOf(Data.NUM)
+                delete this.SelectedList[index];
+                this.SelectedList = this.SelectedList.filter(Boolean)
                 this.RemoveSelectedCard(Data.NUM);
+                Food.delFoodsList(Data.NUM)
             } else {
                 // 未選択だった場合の処理
                 div.firstChild.classList.add("bg-greenty");
-                this.SelectedList[Data.NUM] = Data.NAME;
+                this.SelectedList.push(Data.NUM);
                 this.AddSelectedCard(div.cloneNode(true));
             }
-            
-        };
+            Food.SetSelectedIdList(this.SelectedList)
+
+        });
+        this.oneceTable(div,Data.NUM)
         return div;
     }
 
-    AddSelectedCard(card) {
+    AddSelectedCard(getCard) {
         // ここで選択一覧画面のカード特有の処理を実装
-        card.onclick = () => {
-            // 選択切り替え
-        };
-        this.SelectedCardHolder.append(card);
+        this.SelectedCardHolder.appendChild(getCard);
+        getCard.addEventListener("click", () => {
+        let cards = this.SearchCardHolder.querySelectorAll(".cards")
+            getCard.remove()
+            let index = this.SelectedList.indexOf(getCard.dataset.id)
+            delete this.SelectedList[index];
+            this.SelectedList = this.SelectedList.filter(Boolean)
+            Food.delFoodsList(getCard.dataset.id)
+            cards.forEach(card => {
+                if(card.dataset.id === getCard.dataset.id) {
+                    card.firstChild.classList.remove("bg-greenty");
+                }
+            })
+        })
+        this.oneceTable(getCard,getCard.dataset.id);
+    }
+
+    //一時的な成分表の表示
+    oneceTable(ele,id) {
+        ele.querySelector(".cardmenu").addEventListener("click", async (event) => {
+            event.stopPropagation();
+            let data = await this.TableNutrientRequest(id)
+            let ele = this.TableManager.CreateTable(data[0])
+            opencard.appendChild(ele)
+            Util.BgGray()
+        })
     }
 
     RemoveSelectedCard(dataNum) {
@@ -99,18 +108,37 @@ class CardManager {
                 card.remove()
             }
         })
-        //this.SelectedCardHolder.children.map(x => x.dataset.id === dataNum)[0].remove();
     }
 
     //　[new]50件追加ボタンの表示・非表示
     Plus50Decision(dataCount) {
-        if(!(dataCount < 50)) {
-            this.searchPlusBtn_hidden.classList.add("visually-hidden");
-            this.searchPlusBtn.textContent = "さらに見る";
-            this.searchPlusBtn.classList.remove("visually-hidden");
+        if(!(dataCount < 50 )) {
+        this.searchPlusBtn_hidden.classList.add("visually-hidden");
+        this.searchPlusBtn.textContent = "さらに見る";
+        //this.searchPlusBtn.classList.remove("visually-hidden");
         }else {
             this.searchPlusBtn.textContent = "これ以上ありません";
             this.searchPlusBtn_hidden.classList.remove("visually-hidden");
         }
+    }
+
+    async TableCreate(id) {
+        let responseData = await this.TableNutrientRequest(id);
+        // 画面の表示
+        this.TableManager.CreateDisplay(responseData);
+        
+        this.oldList = Food.GetSelectedIdList().concat()
+        Util.ScrollTop()
+        
+    }
+
+    async TableNutrientRequest(id) {
+        let response =  (await fetch(`../Access/nutrient.php?num=${id}&${Util.makeUseDataRequests(Food.GetUseNutrientsData())}`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })).json();
+        return response;
     }
 }

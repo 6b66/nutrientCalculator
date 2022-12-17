@@ -126,4 +126,67 @@ class Util {
             ZN: "亜鉛"
         }
     }
+
+    //成分計算
+    static ClacResult(value, inval) {
+        let ans = Number(value * inval / 100);
+        return ans.toFixed(2)
+    }
+
+    //リクエストする成分をテキストに変換
+    static makeUseDataRequests(usedata) {
+        let text = "getDataList=NAME,NUM"
+        usedata.forEach(data => {
+            text = text  + "," + data
+        })
+        return text
+    }
+
+    //ウィンドウ表示時の背景グレー
+    openCardbox = document.querySelector("#openCardbox")
+    opencard = document.getElementById("opencard");
+    static BgGray() {
+        openCardbox.classList.remove("visually-hidden")
+    }
+    static BgCloseGray() {
+        openCardbox.classList.add("visually-hidden")
+        opencard.innerHTML = ""
+    }
+
+
+
+    static alert(text, place) {
+        let alertBox = document.querySelector(".alertBox")
+        if(alertBox !== null) {
+            alertBox.remove()
+        }
+        let html = document.createElement("div")
+            html.classList.add("fadeDown","row", "col-12","d-flex","justify-content-center","align-content-center","position-absolute","alertBox")
+            html.style.height = "0px"
+            html.style.top = "-25px"
+            let ele =
+                `
+                <div class="fadeDown col-10 col-md-7 alert bg-light m-0 p-0 border border-danger rounded-3" style="height: 45px">
+                    <div class="d-flex h-100 justify-content-around align-content-center">
+                        <div class="alert-body col-10 h-100">
+                            <p class="lh-sm fw-bolder text-center text-danger" style="font-size: 0.9rem; margin-top: 1%;">
+                                ${text}
+                            </p>
+                        </div>
+                        <div class="alert-close bg-gradient h-100 d-flex justify-content-center align-items-center">
+                            <div class="bg-gray rounded-3" style="height: 27px;">
+                                <img src="./img/x.svg" alt="" class="mb-1" style="height: 27px;">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>`
+        html.innerHTML = ele
+        html.querySelector(".alert-close").addEventListener("click", (event) => {
+            event.stopPropagation()
+            html.remove()
+        })
+        place.appendChild(html)
+    }
+
 }

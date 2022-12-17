@@ -6,6 +6,8 @@ class SearchAndSelection {
     // [new]今表示されている件数を格納
     #DataCounter = 0;
     #BeforeKeyword;
+    oldNutrientList = Food.GetUseNutrientsData()
+    oldList = []
 
     constructor(cardManager) {
         this.CardManager = cardManager;
@@ -30,6 +32,7 @@ class SearchAndSelection {
         this.SearchBox.addEventListener("change",() => {
             this.Search();
         })
+        
 
         //50件追加 [new]50件追加ボタンイベント
         this.searchPlusBtn = document.querySelector("#searchPlusBtn")
@@ -43,7 +46,7 @@ class SearchAndSelection {
         this.Search();
     }
 
-    // 検索処理 newAddがaddだった場合は食品の追加
+    // 検索処理
     async Search() {
         let keyword = this.SearchBox.value;
         // 検索文字列の取得　[new]前回のキーワードと同じ且つ食品追加ではなかったとき
@@ -67,6 +70,7 @@ class SearchAndSelection {
         this.CardManager.Plus50Decision(responseData.length);
         
         // 画面の表示
+        
         this.CardManager.CreateDisplay(responseData);
         Util.ScrollTop()
     }
@@ -85,23 +89,12 @@ class SearchAndSelection {
         this.CardManager.AddCardToDisplay(responseData);
     }
 
-    GetSelectedList() {
-        return this.SelectedList;
-    }
-
     GetBeforeKeyword() {
         return this.BeforeKeyword;
     }
     
     async NutrientRequest(keyword, startCount, dataList) {
         // リクエスト
-        // const xhrSearch = new XMLHttpRequest();
-        // [new]50件追加だった場合のリクエスト
-        // xhrSearch.open('GET', `../Access/nutrient.php?keyword=${keyword}&startCount=${startCount}&getDataList=${dataList.join(",")}`,true);
-        // xhrSearch.setRequestHeader('content-type','application/json');
-        // xhrSearch.send();
-        // xhrSearch.onload = 1;
-
         let response =  (await fetch(`../Access/nutrient.php?keyword=${keyword}&startCount=${startCount}&getDataList=${dataList.join(",")}`, {
             method: "GET",
             headers: {
@@ -114,6 +107,30 @@ class SearchAndSelection {
         // 検索欄からのフォーカスを外す
         this.SearchBox.blur();
 
+        return response;
+    }
+
+    async SetGetData() {
+        let responseData = await this.AllNutrientRequest(Food.GetSelectedIdList());
+        Food.SetFoodsList(responseData)
+        Food.SetNutrientData(responseData)
+        Food.SetOldFoodsNameData(Food.GetSelectedIdList().concat())
+    }
+
+    async AllNutrientRequest(SelectedList) {
+        let requestText = "num="
+        SelectedList.forEach((Id) => {
+            let text = `${Id}`
+            requestText += text
+            if(SelectedList.length - 1 !== Id)
+            requestText += `,`
+        });
+        let response =  (await fetch(`../Access/nutrient.php?${requestText}&${Util.makeUseDataRequests(Food.GetUseNutrientsData())}`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })).json();
         return response;
     }
 }
