@@ -165,64 +165,66 @@ class DishCardManager {
         let useNumber = thisHtml.querySelector(".use-number")
         let useValue = useNumber.textContent
         Food.GetFoodsList().forEach((ele) => {
-            let cardHtml = document.createElement("div")
-            cardHtml.classList.add("col-12", "cards")
-            cardHtml.dataset.id = ele.NUM
-            let inner =
-            `<div class="col-12 searchcard d-flex justify-content-center searchCheckcard" role="button">
-                <div class="col-11 h-100 d-flex align-items-center justify-content-center">
-                    <p style="font-size: 0.85rem; font-weight: 500; opacity: 0.9;" class="h-100 cardsname getText nametext text-center m-0">${Util.NameSort(ele.NAME)}</p>
-                </div>
-            </div>`
-            cardHtml.innerHTML = inner
-            Food.GetDishList().forEach((dish) => {
-                if(dish.name == dishName) {
-                    for (const foodId in dish) {
-                        if(ele.NUM == foodId) {
-                            cardHtml.querySelector(".searchCheckcard").classList.add("bg-greenty")
-                        }
-                    }
-                }
-            })
-            cardHtml.querySelector(".searchCheckcard").addEventListener("click", () => {
-                let check = false
+            if(Food.GetSelectedIdList().includes(ele.NUM)) {
+                let cardHtml = document.createElement("div")
+                cardHtml.classList.add("col-12", "cards")
+                cardHtml.dataset.id = ele.NUM
+                let inner =
+                `<div class="col-12 searchcard d-flex justify-content-center searchCheckcard" role="button">
+                    <div class="col-11 h-100 d-flex align-items-center justify-content-center">
+                        <p style="font-size: 0.85rem; font-weight: 500; opacity: 0.9;" class="h-100 cardsname getText nametext text-center m-0">${Util.NameSort(ele.NAME)}</p>
+                    </div>
+                </div>`
+                cardHtml.innerHTML = inner
                 Food.GetDishList().forEach((dish) => {
                     if(dish.name == dishName) {
                         for (const foodId in dish) {
                             if(ele.NUM == foodId) {
-                                check = true
+                                cardHtml.querySelector(".searchCheckcard").classList.add("bg-greenty")
                             }
-                        }
-                        if(check) {
-                            cardHtml.querySelector(".searchCheckcard").classList.remove("bg-greenty")
-                            Food.delFoodInDish(dishName, ele.NUM)
-                            tableholder.querySelectorAll(".tables").forEach(tableCard => {
-                                if(tableCard.dataset.id == cardHtml.dataset.id) {
-                                    tableCard.remove()
-                                    let temporarily = opencard.querySelector(".bottom-table")
-                                    this.ChangeCalctable(temporarily, dishName)
-                                }
-                            })
-                            useValue--
-                        }else {
-                            cardHtml.querySelector(".searchCheckcard").classList.add("bg-greenty")
-                            Food.pushFoodInDish(dishName, ele.NUM)
-                            let table = tableManager.CreateTable(ele)
-                            table.classList.remove("col-md-6")
-                            let inputValue = table.querySelector(".input-value")
-                            inputValue.addEventListener("input", () => {
-                                Food.setFoodValueInDish(dishName, cardHtml.dataset.id, inputValue.value)
-                                let temporarily = opencard.querySelector(".bottom-table")
-                                this.ChangeCalctable(temporarily, dishName)
-                            })
-                            tableholder.appendChild(table)
-                            useValue++
                         }
                     }
                 })
-                useNumber.textContent = useValue
-            })
-            cardholder.appendChild(cardHtml)
+                cardHtml.querySelector(".searchCheckcard").addEventListener("click", () => {
+                    let check = false
+                    Food.GetDishList().forEach((dish) => {
+                        if(dish.name == dishName) {
+                            for (const foodId in dish) {
+                                if(ele.NUM == foodId) {
+                                    check = true
+                                }
+                            }
+                            if(check) {
+                                cardHtml.querySelector(".searchCheckcard").classList.remove("bg-greenty")
+                                Food.delFoodInDish(dishName, ele.NUM)
+                                tableholder.querySelectorAll(".tables").forEach(tableCard => {
+                                    if(tableCard.dataset.id == cardHtml.dataset.id) {
+                                        tableCard.remove()
+                                        let temporarily = opencard.querySelector(".bottom-table")
+                                        this.ChangeCalctable(temporarily, dishName)
+                                    }
+                                })
+                                useValue--
+                            }else {
+                                cardHtml.querySelector(".searchCheckcard").classList.add("bg-greenty")
+                                Food.pushFoodInDish(dishName, ele.NUM)
+                                let table = tableManager.CreateTable(ele)
+                                table.classList.remove("col-md-6")
+                                let inputValue = table.querySelector(".input-value")
+                                inputValue.addEventListener("input", () => {
+                                    Food.setFoodValueInDish(dishName, cardHtml.dataset.id, inputValue.value)
+                                    let temporarily = opencard.querySelector(".bottom-table")
+                                    this.ChangeCalctable(temporarily, dishName)
+                                })
+                                tableholder.appendChild(table)
+                                useValue++
+                            }
+                        }
+                    })
+                    useNumber.textContent = useValue
+                })
+                cardholder.appendChild(cardHtml)
+            }
         })
 
         html.appendChild(this.CreateCalctable(dishName))
@@ -308,9 +310,11 @@ class DishCardManager {
                     if(foodId != "name"){
                         allValue = Number(allValue) + Number(dish[foodId])
                         Food.GetFoodsList().forEach(food => {
-                            if(food.NUM === foodId) {
-                                for(const Nutrient in food){
-                                    calculated[Nutrient] = (Number(calculated[Nutrient]) + Number(Util.ClacResult(Number(food[Nutrient]), Number(dish[foodId])))).toFixed(2)
+                            if(Food.GetSelectedIdList().includes(food.NUM)) {
+                                if(food.NUM === foodId) {
+                                    for(const Nutrient in food){
+                                        calculated[Nutrient] = (Number(calculated[Nutrient]) + Number(Util.ClacResult(Number(food[Nutrient]), Number(dish[foodId])))).toFixed(2)
+                                    }
                                 }
                             }
                         })
@@ -341,9 +345,11 @@ class DishCardManager {
                     if(foodId != "name"){
                         allValue = Number(allValue) + Number(dish[foodId])
                         Food.GetFoodsList().forEach(food => {
-                            if(food.NUM === foodId) {
-                                for(const Nutrient in food){
-                                    calculated[Nutrient] = (Number(calculated[Nutrient]) + Number(Util.ClacResult(Number(food[Nutrient]), Number(dish[foodId])))).toFixed(2)
+                            if(Food.GetSelectedIdList().includes(food.NUM)) {
+                                if(food.NUM === foodId) {
+                                    for(const Nutrient in food){
+                                        calculated[Nutrient] = (Number(calculated[Nutrient]) + Number(Util.ClacResult(Number(food[Nutrient]), Number(dish[foodId])))).toFixed(2)
+                                    }
                                 }
                             }
                         })

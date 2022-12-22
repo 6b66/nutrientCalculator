@@ -1,3 +1,8 @@
+const searchAndSelectionBtn = document.getElementById("SearchAndSelectionBtn");
+let nowCurrentTub = searchAndSelectionBtn;
+const pages = document.querySelectorAll(".Page")
+const searchPage = document.querySelector("#SearchPage")
+
 class CardManager {
     SearchPage = document.getElementById("SearchPage");
     SearchCardHolder = document.getElementById("SearchCardHolder");
@@ -17,6 +22,8 @@ class CardManager {
         Object.keys(jsonData).forEach(key => {
             this.SearchCardHolder.append(this.CreateCard(jsonData[key]));
         });
+        let place = document.querySelector("#"+nowCurrentTub.dataset.id).firstElementChild
+        Util.alert(Food.GetSearchText(), place, "green")
     }
 
     // カードを追加
@@ -51,15 +58,15 @@ class CardManager {
         }
         div.firstChild.addEventListener("click", () => {
             if (this.SelectedList.includes(Data.NUM)) {
-                // 選択済みだった場合の処理
+                // 今の状態が選択済みだった場合の処理
                 div.firstChild.classList.remove("bg-greenty");
                 let index = this.SelectedList.indexOf(Data.NUM)
                 delete this.SelectedList[index];
                 this.SelectedList = this.SelectedList.filter(Boolean)
                 this.RemoveSelectedCard(Data.NUM);
-                Food.delFoodsList(Data.NUM)
+                Food.delFoodInAllDish(Data.NUM)
             } else {
-                // 未選択だった場合の処理
+                // 今の状態が未選択だった場合の処理
                 div.firstChild.classList.add("bg-greenty");
                 this.SelectedList.push(Data.NUM);
                 this.AddSelectedCard(div.cloneNode(true));
@@ -80,7 +87,8 @@ class CardManager {
             let index = this.SelectedList.indexOf(getCard.dataset.id)
             delete this.SelectedList[index];
             this.SelectedList = this.SelectedList.filter(Boolean)
-            Food.delFoodsList(getCard.dataset.id)
+            Food.delFoodInAllDish(getCard.dataset.id)
+            //Food.delFoodsList(getCard.dataset.id)
             cards.forEach(card => {
                 if(card.dataset.id === getCard.dataset.id) {
                     card.firstChild.classList.remove("bg-greenty");

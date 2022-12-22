@@ -1,7 +1,8 @@
 class Food {
+    static SearchText = "すべての食品を検索しています"
     static SelectedIdList = new Array;
     NutrientData;
-    static OldFoodsNameData = new Array;
+    static OldSelectedIdList = new Array;
     static DishList = new Array;
     static Foods = []
     static UseNutrientsData = [
@@ -101,12 +102,12 @@ class Food {
     }
 
     //変更前の食品名リストを更新する
-    static SetOldFoodsNameData(data) {
-        Food.OldFoodsNameData = data
+    static SetOldSelectedIdList(data) {
+        Food.OldSelectedIdList = data
     }
     //変更前の食品名リストを返す
-    static GetOldFoodsNameData() {
-        return Food.OldFoodsNameData
+    static GetOldSelectedIdList() {
+        return Food.OldSelectedIdList
     }
 
     //成分の単位を返す
@@ -192,7 +193,6 @@ class Food {
                 Food.DishList = Food.DishList.filter(Boolean)
             }
         })
-
     }
     //食品を料理に追加する
     static pushFoodInDish(dish, food) {
@@ -217,5 +217,30 @@ class Food {
                 thisDish[food] = value
             }
         })
+    }
+    //食品をすべて料理から削除する
+    static delFoodInAllDish(food) {
+        Food.DishList.forEach((thisDish) => {
+            Object.keys(thisDish).forEach(thisFood => {
+                if(thisFood == food) {
+                    delete thisDish[food]
+                }
+            })
+            
+        })
+    }
+
+    //検索文字をアラートに返す
+    static GetSearchText() {
+        return Food.SearchText
+    }
+    //検索文字をアラート用の文字列に変更する
+    static SetSearchText(text) {
+        if(text == undefined || text == "") {
+            text = "すべての食品を検索しています"
+        }else {
+            text = "「" + text + "」で検索しました。"
+        }
+        Food.SearchText = text
     }
 }   

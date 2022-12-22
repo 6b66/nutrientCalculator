@@ -155,7 +155,7 @@ class Util {
 
 
 
-    static alert(text, place) {
+    static alert(text, place, color = "red") {
         let alertBox = document.querySelector(".alertBox")
         if(alertBox !== null) {
             alertBox.remove()
@@ -164,12 +164,18 @@ class Util {
             html.classList.add("fadeDown","row", "col-12","d-flex","justify-content-center","align-content-center","position-absolute","alertBox")
             html.style.height = "0px"
             html.style.top = "-25px"
+            html.style.zIndex = "1000"
+            if(color == "red" ){
+                color = "danger"
+            }else {
+                color = "success"
+            }
             let ele =
                 `
-                <div class="fadeDown col-10 col-md-7 alert bg-light m-0 p-0 border border-danger rounded-3" style="height: 45px">
+                <div class="fadeDown col-10 col-md-7 alert bg-light m-0 p-0 border border-${color} rounded-3" style="height: 45px">
                     <div class="d-flex h-100 justify-content-around align-content-center">
                         <div class="alert-body col-10 h-100">
-                            <p class="lh-sm fw-bolder text-center text-danger" style="font-size: 0.9rem; margin-top: 1%;">
+                            <p class="lh-sm fw-bolder text-center text-${color}" style="font-size: 0.9rem; margin-top: 1%;">
                                 ${text}
                             </p>
                         </div>
@@ -187,6 +193,8 @@ class Util {
             html.remove()
         })
         place.appendChild(html)
+        setTimeout(() => {
+            html.remove()
+        },4500)
     }
-
 }

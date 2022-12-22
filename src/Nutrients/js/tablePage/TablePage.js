@@ -8,10 +8,15 @@ class TablePage  {
 
     CreateDisplay() {
         if(this.CreateChecker()) {
-            let responseData = Food.GetFoodsList()
+            let foodsList = new Array
+            Food.GetFoodsList().forEach(food => {
+                if(Food.GetSelectedIdList().includes(food.NUM)) {
+                    foodsList.push(food)
+                }
+            })
             this.nowList = Food.GetSelectedIdList().filter(Boolean)
             // 画面の表示
-            this.TableManager.CreateDisplay(responseData);
+            this.TableManager.CreateDisplay(foodsList);
             Util.ScrollTop()
         }
         
@@ -23,10 +28,10 @@ class TablePage  {
 
     CreateChecker() {
         let idCheck = false
-        if(JSON.stringify(this.nowList)  != JSON.stringify(Food.GetSelectedIdList().filter(Boolean))) {
+        if(JSON.stringify(this.nowList)  != JSON.stringify(Food.GetSelectedIdList())) {
             idCheck = true
         }
-        if((undefined != Food.GetSelectedIdList()) && (idCheck || (this.TableManager.getnowList() !== Food.GetUseNutrientsData))) {
+        if((undefined != Food.GetSelectedIdList()) && (idCheck || (JSON.stringify(this.TableManager.getnowList()) !== JSON.stringify(Food.GetUseNutrientsData())))) {
             return true
         }else {
             return false
