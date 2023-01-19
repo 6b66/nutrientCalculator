@@ -104,19 +104,6 @@ class SearchAndSelection {
         })).json();
         // 前の検索文字列の更新
         this.#BeforeKeyword = keyword;
-    
-        /*
-        nowCurrentTub.classList.remove("bg-green");
-        searchAndSelectionBtn.classList.add("bg-green");
-        pages.forEach(page => {
-                page.classList.add("visually-hidden")
-                
-        })
-        searchPage.classList.remove("visually-hidden")
-        nowCurrentTub = searchAndSelectionBtn;
-        */
-        
-        Util.ScrollTop();
 
         // 検索欄からのフォーカスを外す
         this.SearchBox.blur();
