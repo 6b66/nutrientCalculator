@@ -121,12 +121,11 @@ class CardManager {
     //　[new]50件追加ボタンの表示・非表示
     Plus50Decision(dataCount) {
         if(!(dataCount < 50 )) {
-        this.searchPlusBtn_hidden.classList.add("visually-hidden");
+        this.searchPlusBtn.removeAttribute("disabled");
         this.searchPlusBtn.textContent = "さらに見る";
-        //this.searchPlusBtn.classList.remove("visually-hidden");
         }else {
+            this.searchPlusBtn.setAttribute("disabled", true);
             this.searchPlusBtn.textContent = "これ以上ありません";
-            this.searchPlusBtn_hidden.classList.remove("visually-hidden");
         }
     }
 
@@ -136,6 +135,7 @@ class CardManager {
         this.TableManager.CreateDisplay(responseData);
         
         this.oldList = Food.GetSelectedIdList().concat()
+        console.log("1")
         Util.ScrollTop()
         
     }
