@@ -188,7 +188,7 @@ ul > li:hover > i >  .name {
 }
 #opencard {
     position: fixed;
-    top: 130px;
+    top: 17%;
     display: flex;
     align-items: center;
     justify-content: center;

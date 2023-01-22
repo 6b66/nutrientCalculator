@@ -41,7 +41,7 @@ class CardManager {
         div.dataset.id = Data.NUM;
         let ele = 
             `<div class="col-12 searchcard d-flex flex-row mx-1 searchCheckcard" role="button">
-                <div class="col-9 h-100 mx-3 d-flex align-items-center justify-content-center">
+                <div class="col-9 h-100 mx-2 d-flex align-items-center justify-content-center">
                     <p style="font-size: 0.85rem; font-weight: 500; opacity: 0.9;" class="h-100 cardsname getText nametext text-center m-0">${Util.NameSort(Data.NAME)}</p>
                 </div>
                 <div class="col-2 d-flex align-items-center justify-content-center position-relative">

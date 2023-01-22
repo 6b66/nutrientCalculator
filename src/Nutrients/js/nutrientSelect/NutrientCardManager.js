@@ -9,23 +9,25 @@ class NutrientCardManager {
         html.classList.add("col-12", "col-md-6", "nutrient", "main")
         html.style.height = "60vh";
         let ele =
-            `<div class="col-12 d-flex flex-column align-items-center rounded-4 h-100" style="background-color: white;">
-                <div class="col-12 d-flex justify-content-center align-items-center">
-                    <p class="text-center col-10" style="font-weight:600; font-size: 1.2rem; border-bottom: 2px solid gray;">成分を選択する</p>
-                </div>
-                <div class="row col-12 d-flex align-items-center justify-content-center" style="height: 15%;">
-                    <input type="text" class="col-11 rounded-3 nutrientAddName">
-                    <div class="col-11 row d-flex align-items-center justify-content-around">
-                        <div class="col-4 d-flex align-items-center justify-content-center">
-                            <button type="button" class="btn btn-primary addBtn lh-1">変更</button>
-                        </div>
-                        <div class="col-4 d-flex align-items-center justify-content-center">
-                            <button type="button" class="btn btn-danger delBtn lh-1">削除</button>
+            `<div class="col-12 d-flex flex-column align-items-around rounded-4 h-100" style="background-color: white;">
+                <div class="col-12 d-flex flex-column justify-content-center align-items-center" style="height: 25%;">
+                    <div class="col-12 d-flex justify-content-center align-items-center" style="height: 35%;">
+                        <p class="text-center col-10 m-0" style="font-weight:600; font-size: 1rem; border-bottom: 2px solid gray;">成分を選択する</p>
+                    </div>
+                    <div class="row col-10 d-flex align-items-center justify-content-center" style="height: 70%;">
+                        <input type="text" class="col-12 rounded-3 nutrientAddName" style="height: 1.4rem;">
+                        <div class="col-11 row d-flex align-items-center justify-content-center">
+                            <div class="col-4 d-flex align-items-center justify-content-center">
+                                <button type="button" class="btn btn-primary addBtn lh-1 p-1">変更</button>
+                            </div>
+                            <div class="col-4 d-flex align-items-center justify-content-center">
+                                <button type="button" class="btn btn-danger delBtn lh-1 p-1">削除</button>
+                            </div>
                         </div>
                     </div>
-                    
                 </div>
-                <div class="cardholder col-11 flex-column overflow-auto d-flex justify-content-start align-items-center p-0 pt-4" style="height: 70%;">             
+                <div class="col-12 d-flex justify-content-center align-items-end" style="height: 72%; margin-top: 3%;">
+                    <div class="cardholder col-11 flex-column overflow-auto d-flex justify-content-start align-items-center p-0" style="height: 100%"></div>
                 </div>
             </div>`
         html.innerHTML = ele
@@ -73,7 +75,7 @@ class NutrientCardManager {
         GetName.value = name
         if(name == "") {
             addBtn.textContent = "追加"
-            delBtn.classList.add("visually-hidden")
+            delBtn.parentElement.remove()
             addBtn.addEventListener("click", () => {
                 this.makeCard(GetName.value, checkIn)
             })
@@ -155,7 +157,7 @@ class NutrientCardManager {
         html.dataset.name = name
         let ele = 
             `<div role="button" class="col-12 nutritionSelectcard d-flex flex-row mx-1">
-                <div class="col-9 mx-3 h-100 d-flex align-items-center justify-content-center">
+                <div class="col-9 mx-2 h-100 d-flex align-items-center justify-content-center">
                     <p style="font-size: 0.9rem; font-weight: 500; opacity: 0.9;" class=" cardsname getText nametext text-center m-0 ">${name}</p>
                 </div>
                 <div class="col-2 d-flex align-items-center justify-content-center">
