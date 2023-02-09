@@ -125,8 +125,8 @@ class DishCardManager {
                 ${name}を削除しますか？
             </div>
             <div class="col-7 h-50 d-flex justify-content-around align-items-center">
-                <button class="col-4 btn btn-danger h-50">削除</button>
-                <button class="col-4 btn btn-primary h-50">戻る</button>
+                <button class="col-4 btn btn-danger h-50 p-0">削除</button>
+                <button class="col-4 btn btn-primary h-50 p-0">戻る</button>
             </div>`
         html.innerHTML = ele
         html.querySelector(".btn-danger").addEventListener("click", () => {
