@@ -15,7 +15,7 @@ class NutrientCardManager {
                         <p class="text-center col-10 m-0" style="font-weight:600; font-size: 1rem; border-bottom: 2px solid gray;">成分を選択する</p>
                     </div>
                     <div class="row col-10 d-flex align-items-center justify-content-center" style="height: 70%;">
-                        <input type="text" class="col-12 rounded-3 nutrientAddName" style="height: 1.4rem;">
+                        <input type="text" class="col-12 rounded-3 nutrientAddName p-0" style="height: 1.4rem; >
                         <div class="col-11 row d-flex align-items-center justify-content-center">
                             <div class="col-4 d-flex align-items-center justify-content-center">
                                 <button type="button" class="btn btn-primary addBtn lh-1 p-1">変更</button>
